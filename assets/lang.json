@@ -1,0 +1,1422 @@
+{
+ "langs": [ "English", "Deutsch", "Español", "Français", "Português", "Русский", "Italiano" ],
+
+ "codes": { "english":"en", "deutsch":"de", "español":"es", "français":"fr", "português":"pt", "русский":"ru", "italiano":"it" },
+
+ "trans" :
+ {
+    "SelectLang" : { 
+        "en":"Please select your prefered language from the 'Settings' menu", 
+		"de":"Bitte wähle deine Sprache in den 'Settings' aus",
+        "es":"Selecciona tu idioma preferido en el menú 'Settings'",
+		"fr":"Sélectionnez votre langue préférée dans le menu 'Settings'",
+    	"pt":"Por favor selecione o idioma desejado em 'Settings'",
+		"ru":"Пожалуйста, выберите предпочитаемый язык в меню настроек",
+		"it":"Per favore, seleziona la tua lingua preferita dal menú 'Settings'"
+    },
+    "ExitDroidScript" : { 
+        "en":"Exit DroidScript?", 
+		"de":"Droidscript beenden?",
+        "es":"Salir de DroidScript?",
+		"fr":"Quitter Droidscript ?",
+		"pt":"Sair de DroidScript?",
+		"ru":"Вы действительно хотите выйти из DroidScript?",
+		"it":"Esci da Droidscript"
+    },
+    "TapYoyo" : { 
+		"en":"Double tap yoyo for copy/paste",
+		"de":"Ippen Sie zweimal auf yoyo zum Kopieren/Einfügen",
+		"es":"Doble toque yoyo para copiar/pegar",
+		"fr":"Double tap yoyo pour copier/coller",
+		"pt":"Toque duas vezes no yoyo para copiar/colar",
+		"ru":"Дважды нажмите yoyo для копирования/вставки",
+		"it":"Doppio tocca yoyo per copia/incolla"
+    },
+    
+    "UseADB" : { 
+        "en":"To edit apps using your PC, run DroidScript Connect and type the following  address into your web browser's address bar\n\n127.0.0.1:8088", 
+        "de":"Um Apps über den PC zu bearbeiten, öffne Droidscript Connect und tippe die folgende Adresse in den Webbrowser\n\n127.0.0.1:8088",
+		"es":"Para editar apps usando tu PC, corre Conectar DroidScript y escribe la siguiente dirección en la barra de su navegador web\n\n127.0.0.1:8088",
+        "fr":"Pour éditer des applications depuis votre ordinateur, exécutez Droidscript Connect and saisissez l'adresse suivante dans votre navigateur\n\n127.0.0.1:8088",
+        "pt":"Para editar seus projetos usando seu computador, execute DroidScript Connect e digite o seguinte endereço na barra de endereços do seu navegador\n\n127.0.0.1:8088",
+		"ru":"Чтобы редактировать программы с помощью вашего ПК, запустите DroidScript Connect и введите следующий адрес в ваш браузер\n\n127.0.0.1:8088",
+		"it":"Per editare le app usando il tuo PC, esegui Droidscript Connect e digita il seguente indirzzo nella barra degli indirizzi del browser\n\n127.0.0.1:8088"
+    },
+   "UseWifi" : { 
+        "en":"To edit apps using your PC, type the following address into your web browser's address bar\n\n", 
+        "de":"Um Apps mit dem PC zu bearbeiten, tippe die folgende Adresse in deinen Webbrowser\n\n",
+        "es":"Para editar apps usando tu PC, escribe la siguiente dirección en la barra de su navegador web\n\n",
+        "fr":"Pour éditer une application depuis votre PC, saisissez l'adresse suivante dans votre navigateur internet\n\n",
+        "pt":"Para editar seus projetos usando seu computador, digite o seguinte endereço na barra de endereços do seu navegador\n\n",
+		"ru":"Чтобы редактировать приложения с помощью вашего ПК, введите следующий адрес в ваш браузер\n\n",
+		"it":"Per editare le app usando il tuo PC, scrivi il seguente indirizzo nella barra degli indirizzi del tuo browser\n\n "
+    },
+    "APKPluginRequired" : { 
+        "en":"The 'ApkBuilder' plugin is required for building APKs. You can download this plugin from the 'Plugins' menu.", 
+        "de":"Die 'ApkBuilder'-Erweiterung wird benötigt, um APK Dateien zu erstellen. Sie steht im 'Erweiterungen'-Menü zum Download bereit.",
+        "es":"El plugin 'ApkBuilder' es requerido para construir APKs.  Puedes descargar este plugin de 'Plugins' menu.",
+        "fr":"Le plugin 'ApkBuilder' est nécessaire pour construire des APKs. Vous pouvez le télécharger depuis le menu 'Plugins'.",
+        "pt":"É preciso ter o plugin 'ApkBuilder' para construir APKs. Você pode baixar em 'Plugins' no menu.",
+		"ru":"Для создания APK файлов требуется плагин 'ApkBuilder'. Вы можете загрузить его в меню 'Плагины'.",
+		"it":"Il plugin 'ApkBuilder' e' richiesto per costruire le APK. Puoi scaricare il plugin dal menú' 'Plugin'"
+    },
+    "Password" : { 
+        "en":"Password", 
+		"de":"Passwort",
+        "es":"Contraseña",
+		"fr":"Mot de passe",
+        "pt":"Senha",
+		"ru":"Пароль",
+		"it":"Password"
+    },
+    
+    "Group" : { 
+        "en":"Discussion Group", 
+		"de":"Diskussionsgruppe",
+        "es":"Grupo de Discución",
+		"fr":"Groupe de discussion",
+        "pt":"Grupo de Discussões",
+		"ru":"Группа для обсуждений",
+		"it":"Gruppo Discussione"
+    },
+    "PrivacyPolicy" : { 
+        "en":"Privacy Policy", 
+		"de":"Rechtliches",
+        "es":"Política de Privacidad",
+		"fr":"Politique de confidentialité",
+        "pt":"Política de Privacidade",
+		"ru":"Политика конфиденциальности",
+		"it":"Informativa Privacy"
+    },
+    "ActivateWifi" : { 
+        "en":"Please Enable Network/WiFi", 
+		"de":"Bitte aktiviere Netzwerkzugriff",
+        "es":"Por favor, activa el WiFi",
+		"fr":"Activez le réseau/WiFi",
+        "pt":"Por favor, habilite a Internet/WiFi",
+		"ru":"Пожалуйста, включите WiFi",
+		"it":"Per favore, attiva Internet/Wifi"
+    },
+    "WifiConnect" : { 
+        "en":"WiFi Connect", 
+		"de":"Mit dem PC verbinden",
+        "es":"Conexión WiFi",
+		"fr":"Connexion WiFi",
+        "pt":"WiFi Connect",
+		"ru":"Подключение по WiFi",
+		"it":"Connettiti al Wifi"
+    },
+    "Disconnect" : { 
+        "en":"Disconnect", 
+		"de":"Verbindung trennen",
+        "es":"Desconectar",
+		"fr":"Déconnexion",
+        "pt":"Desconectar",
+		"ru":"Отключить",
+		"it":"Disconnettiti"
+    },
+    "NewApp" : { 
+        "en":"New App", 
+		"de":"Neue App",
+        "es":"Nueva App",
+		"fr":"Nouvelle application",
+        "pt":"Novo Projeto",
+		"ru":"Новая программа",
+		"it":"Nuova App"
+    },
+    "RenameApp" : { 
+        "en":"Rename App", 
+		"de":"App umbenennen",
+        "es":"Renombrar App",
+		"fr":"Renommer l'application",
+        "pt":"Renomear Projeto",
+		"ru":"Переименовать программу",
+		"it":"Rinomina App"
+    },
+    "CopyApp" : { 
+        "en":"Copy App", 
+		"de":"App kopieren",
+        "es":"Copiar App",
+		"fr":"Copier l'application",
+        "pt":"Clonar Projeto",
+		"ru":"Скопировать программу",
+		"it":"Copia App"
+    },
+    "DeleteSure" : { 
+        "en":"Are you sure you want to delete app", 
+		"de":"Willst du die App wirklich löschen",
+        "es":"Estás seguro que quieres eliminar la app",
+		"fr":"Êtes-vous sûr de vouloir supprimer cette application",
+        "pt":"Tem certeza de que deseja apagar o projeto",
+		"ru":"Вы уверены, что хотите удалить программу",
+		"it":"Sei sicuro di voler eliminare l'app?"
+    },
+    
+    "Actions" : { 
+        "en":"Actions", 
+		"de":"Aktionen",
+        "es":"Acciones",
+		"fr":"Actions",
+        "pt":"Ações",
+		"ru":"Действия",
+		"it":"Azioni"
+    },
+    "Edit" : { 
+        "en":"Edit", 
+		"de":"Bearbeiten",
+        "es":"Editar",
+		"fr":"Editer",
+        "pt":"Editar",
+		"ru":"Редактировать",
+		"it":"Edita"
+    },
+    "Rename" : { 
+        "en":"Rename", 
+		"de":"Umbenennen",
+        "es":"Renombrar",
+		"fr":"Renommer",
+        "pt":"Renomear",
+		"ru":"Переименовать",
+		"it":"Rinomina"
+    },
+    "Copy" : { 
+        "en":"Copy", 
+		"de":"Kopieren",
+        "es":"Copiar",
+		"fr":"copier",
+        "pt":"Clonar",
+		"ru":"Скопировать",
+		"it":"Copia"
+    },
+    "Delete" : { 
+        "en":"Delete", 
+		"de":"Löschen",
+        "es":"Borrar",
+		"fr":"Supprimer",
+        "pt":"Deletar",
+		"ru":"Удалить",
+		"it":"Elimina"
+    },
+    "CreateShortcut" : { 
+        "en":"Create Shortcut", 
+		"de":"Verknüpfung erstellen",
+        "es":"Crear acceso directo",
+		"fr":"Créer un raccourci",
+        "pt":"Criar atalho",
+		"ru":"Создать ярлык",
+		"it":"Crea Scorciatoia "
+    },
+    "ShareSPK" : { 
+        "en":"Share SPK", 
+		"de":"SPK teilen",
+        "es":"Compartir SPK",
+		"fr":"Partager SPK",
+        "pt":"Compartilhar SPK",
+		"ru":"Поделиться SPK",
+		"it":"Condividi SPK"	
+    },
+    "SaveSPK" : { 
+        "en":"Save SPK", 
+		"de":"SPK speichern",
+        "es":"Guardar SPK",
+		"fr":"Sauvegarder SPK",
+        "pt":"Salvar SPK",
+		"ru":"SPK speichern",
+		"it":"Salva SPK"
+    },
+    "BuildAPK" : { 
+        "en":"Build APK", 
+		"de":"APK erstellen",
+        "es":"Construir APK",
+		"fr":"Construire APK",
+        "pt":"Construir APK",
+		"ru":"Создать APK",
+		"it":"Costruisci APK"
+    },
+    "DeviceName" : { 
+        "en":"Device Name", 
+		"de":"Gerätename",
+        "es":"Nombre Dispositivo",
+		"fr":"Nom de l'appareil",
+        "pt":"Nome do Dispositivo",
+		"ru":"Имя устройства",
+		"it":"Nome Dispositivo"
+    },
+    "Use" : { 
+        "en":"Use", 
+		"de":"Benutzen",
+        "es":"Usa",
+		"fr":"Utiliser",
+        "pt":"Usar",
+		"ru":"Использовать",
+		"it":"Usa"
+    },
+    "StayAwake" : { 
+        "en":"Stay Awake", 
+		"de":"Ruhezustand ausschalten",
+        "es":"Mantén Despierto",
+		"fr":"Pas de veille",
+        "pt":"Manter Acordado",
+		"ru":"Отключить спящий режим",
+		"it":"Rimani Sveglio"
+    },
+    "DarkTheme" : { 
+        "en":"Dark Theme", 
+		"de":"Dunkler Modus",
+        "es":"Tema Oscuro",
+		"fr":"Thème Sombre",
+        "pt":"Tema escuro",
+		"ru":"Тёмная тема",
+		"it":"Tema Scuro"
+    },
+    "FontSize" : { 
+        "en":"FontSize", 
+		"de":"Textgröße",
+        "es":"TamañoTexto",
+		"fr":"Taille de police",
+        "pt":"Texto",
+		"ru":"Размер шрифта",
+		"it":"Dimensione Carattere"
+    },
+    
+    "New" : { 
+        "en":"New", 
+		"de":"Neu",
+        "es":"Nueva",
+		"fr":"Nouveau",
+        "pt":"Novo",
+		"ru":"Создать",
+		"it":"Nuovo"
+    },
+    "Plugins" : { 
+        "en":"Plugins", 
+		"de":"Erweiterungen",
+        "es":"Plugins",
+		"fr":"Plugins",
+        "pt":"Plugins",
+		"ru":"Плагины",
+		"it":"Plugin"
+    },
+    "Settings" : { 
+        "en":"Settings", 
+		"de":"Einstellungen",
+        "es":"Configurar",
+		"fr":"Paramètres",
+        "pt":"Ajustes",
+		"ru":"Настройки",
+		"it":"Impostazioni"
+    },
+    "Demos" : { 
+        "en":"Demos", 
+		"de":"Beispiele",
+        "es":"Demos",
+		"fr":"Démos",
+        "pt":"Demos",
+		"ru":"Примеры",
+		"it":"Demo"
+		
+    },
+    "News" : { 
+        "en":"News", 
+		"de":"Neuigkeiten",
+        "es":"Noticias",
+		"fr":"Actualités",
+        "pt":"Notícias",
+		"ru":"Новости",
+		"it":"Notizie"
+    },
+    "Premium" : { 
+        "en":"Premium", 
+		"de":"Premium",
+        "es":"Premium",
+		"fr":"Premium",
+        "pt":"Premium",
+		"ru":"Премиум",
+		"it":"Premium"
+    },
+    "Shop" : { 
+        "en":"Shop", 
+		"de":"Shop",
+        "es":"Tienda",
+		"fr":"Boutique",
+        "pt":"Loja",
+		"ru":"Магазин",
+		"it":"Negozio"
+    },
+    "About" : { 
+        "en":"About", 
+		"de":"Über",
+        "es":"Sobre",
+		"fr":"À propos",
+        "pt":"Sobre",
+		"ru":"О программе",
+		"it":"A proposito"
+    },
+    
+    "SupportPremium" : { 
+        "en":"Please support the developers of this product by upgrading to Premium", 
+		"de":"Bitte unterstützen Sie die Entwickler dieses Produkts durch ein Upgrade auf Premium",
+        "es":"Por favor, apoye a los desarrolladores de este producto actualizando a Premium",
+		"fr":"S'il vous plaît aider les développeurs de ce produit en passant à Premium",
+        "pt":"Por favor, apoie os desenvolvedores deste produto atualizando para o Premium",
+		"ru":"Пожалуйста, поддержите разработчиков этого продукта, перейдя на Премиум",
+		"it":"Supporta gli sviluppatori di questo prodotto eseguendo l'aggiornamento a Premium"
+    }, 
+    "PremiumFeatures" : { 
+        "en":"Premium Features", 
+		"de":"Premium Features",
+        "es":"Características Premium",
+		"fr":"Fonctionnalités Premium",
+        "pt":"Recursos Premium",
+		"ru":"Возможности премиума",
+		"it":"Funzionalita' Premium"
+    }, 
+    "FreeAccessTo" : { 
+        "en":"Free access to", 
+		"de":"Kostenloser Zugriff auf",
+        "es":"Libre acceso a",
+		"fr":"Accès gratuit à",
+        "pt":"Acesso gratuito a",
+		"ru":"Бесплатный доступ ко",
+		"it":"Accesso libero a"
+    }, 
+    "AllPlugins" : { 
+        "en":"All Plugins", 
+		"de":"Alle Erweiterungen",
+        "es":"Todos los Plugins",
+		"fr":"Tous les plugins",
+        "pt":"Todos os Plugins",
+		"ru":"Всем Плагинам",
+		"it":"Tutti i Plugin"
+    }, 
+    "IncludingAPKBuilder" : { 
+        "en":"including the APKBuilder", 
+		"de":"inklusive des APKBuilders",
+        "es":"Todos los Plugins",
+		"fr":"y compris l'APKBuilder",
+        "pt":"Incluindo APKBuilder",
+		"ru":"включая ApkBuilder",
+		"it":"Incluso l'APKBuilder"
+    }, 
+    "AccessTo" : { 
+        "en":"Access to", 	
+        "de":"Zugriff auf",
+        "es":"Accede a",
+		"fr":"Accès aux",
+        "pt":"Acesso a",
+		"ru":"Доступ к",
+		"it":"Accesso a"
+    }, 
+     "UseOf" : { 
+        "en":"Use of", 	
+        "de":"Zugriff auf",
+        "es":"Accede a",
+		"fr":"Accès aux",
+        "pt":"Acesso a",
+		"ru":"Доступ к",
+		"it":"Accesso a"
+    }, 
+    "AdvancedFeatures" : { 
+        "en":"Advanced Features", 
+		"de":"Besondere Features",
+        "es":"Características Avanzadas",
+		"fr":"Fonctionnalités Avancées",
+        "pt":"Recursos Avançados",
+		"ru":"Дополнительным Возможностям",
+		"it":"Funzionalita' Avanzate"
+    }, 
+    "PremiumTemplates" : { 
+        "en":"Premium app Templates", 
+		"de":"Premium-App-Vorlagen",
+        "es":"Plantillas de aplicaciones premium",
+		"fr":"Modèles de l'application Premium",
+        "pt":"Modelos Premium de aplicativos",
+		"ru":"Премиум шаблоны приложений",
+		"it":"Modelli di app premium"
+    }, 
+    "AdvancedSamples" : { 
+        "en":"Advanced Samples", 
+		"de":"Erweiterte Beispiele",
+        "es":"Muestras Avanzadas",
+		"fr":"Exemples Avancés",
+        "pt":"Amostras Avançadas",
+		"ru":"Дополнительным Примерам",
+		"it":"Esempi Avanzati"
+    }, 
+    "SuchAs" : { 
+        "en":"such as the WiFi device browser, themed and transparent Apps", 
+		"de":"wie den WLAN Dateibrowser, farblich veränderbare und transparente Apps",
+        "es":"tales como el Navegador WiFi en tu Dispositivo Temáticas y Apps Transparentes",
+		"fr":"comme l'explorateur de fichiers WiFi, les thèmes et les applications transparentes", 
+        "pt":"como navegador do dispositivo WiFi, aplicativos com tema e transparentes",
+		"ru":"таким как файловый менеджер в WiFi IDE, темы и прозрачные приложения",
+		"it":"come il browser del dispositivo Wifi,  App tematiche e trasparenti"
+    },
+    "PriorityHelp" : { 
+        "en":"Priority help and bug fixing through an exclusive", 
+		"de":"Vorrang auf Hilfe und Fehlerbehebungen durch einen exklusiven",
+        "es":"Ayuda privilegiada y arreglos de errores mediante un exclusivo",
+		"fr":"Support et correction de bugs prioritaires via le",
+        "pt":"Prioridade na ajuda ou reporte de erros e terá acesso a",
+		"ru":"Приоритетная поддержка и исправление багов через эксклюзивный",
+		"it":"Help prioritario e correzione di bug in esclusiva"
+    }, 
+    "PremiumSupport" : { 
+        "en":"Premium Support", 
+		"de":"Premium Support",
+        "es":"Soporte Premium",
+		"fr":"Support Premium",
+        "pt":"Suporte Premium",
+		"ru":"Премиум",
+		"it":"Supporto Premium"
+    }, 
+    "YouArePremium" : { 
+        "en":"You are Premium!", 
+		"de":"Du bist Premium!",
+        "es":"Ya eres Premium!",
+		"fr":"Vous êtes Premium !",
+        "pt":"Você é Premium!",
+		"ru":"Вы Премиум!",
+		"it":"Tu sei Premium!"
+    },
+    "EnterPremiumEmail" : { 
+        "en":"Please enter a Gmail address you wish to use for the premium support forum", 
+		"de":"BItte gib deine Gmail für den Premium Support ein",
+        "es":"Por favor, introduzca el correo electrónico que desea utilizar para el soporte premium del foro",
+		"fr":"Saisissez l'adresse Gmail que vous souhaitez utiliser pour l'accès au forum premium",
+        "pt":"Digite o Gmail que deseja usar para entrar no fórum Premium",
+		"ru":"Пожалуйста, введите электронную почту, на которую вы хотите получить приглашение в премиум форум",
+		"it":"Per favore, entra la mail che desideri usare per il forum supporto premium"
+    }, 
+	"SignMeUp" : { 
+        "en":"Sign me up!", 
+		"de":"Registriere mich!",
+        "es":"¡Inscríbeme!",
+		"fr":"Inscrivez moi !",
+        "pt":"Inscrever-se!",
+		"ru":"Купить",
+		"it":"Registrami!"
+    },
+    "GoPremium" : { 
+        "en":"Go Premium!", 
+		"de":"Premium werden!",
+        "es":"Hazte Premium!",
+		"fr":"Devenez Premium !",
+        "pt":"Tornar-se Premium!",
+		"ru":"Купить премиум!",
+		"it":"Vai Premium!"
+    },
+
+    
+	"SampHelloWorld" : { 
+			"en":"Shows an image and a popup message", 
+			"de":"Zeigt ein Bild und eine Benachrichtigung an",
+			"es":"Muestra una imagen y un mensaje emergente",
+			"fr":"Affiche une image et un message popup",
+			"pt":"Mostrar imagem e pop-up de mensagem",
+			"ru":"Показывает изображение и всплывающее сообщение",
+			"it":"Mostra immagine e messaggio popup"
+	},
+	"SampControlsDemoD" : { 
+			"en":"Demo of controls using default dark theme", 
+			"de":"Zeigt, wie einfache Elemente benutzt werden",
+			"es":"Muestra cómo usar los controles básicos",
+			"pt":"Mostra como usar os controles básicos",
+			"fr":"Montre comment utiliser les contrôles de base",
+			"ru":"Пример использования основных элементов управления",
+			"it":"Mostra come usare controlli base"
+	},
+	"SampControlsDemoL" : { 
+			"en":"Demo of controls using light theme", 
+			"de":"Zeigt, wie einfache Elemente benutzt werden",
+			"es":"Muestra cómo usar los controles básicos",
+			"pt":"Mostra como usar os controles básicos",
+			"fr":"Montre comment utiliser les contrôles de base",
+			"ru":"Пример использования основных элементов управления",
+			"it":"Mostra come usare controlli base"
+	},
+	"SampButtonStyles" : {
+			"en":"Demos various button styles", 
+			"de":"Demonstriert verschiedene Tastenstile",
+			"es":"Demos de varios estilos de botones",
+			"fr":"Montre differents styles de boutons",
+			"pt":"Vários estilos de botão que pode usar",
+			"ru":"Пример различных стилей кнопок",
+			"it":"Mostra vari stili di pulsanti"
+	},  
+	"SampDrawingDemo" : { 
+			"en":"Shows how to use drawing functions", 
+			"de":"Zeigt, wie Zeichenfunktionen benutzt werden",
+			"es":"Muestra cómo utilizar las funciones de dibujo",
+			"fr":"Montre comment utiliser les fonctions de dessin",
+			"pt":"Mostra como usar o modo desenhar",
+			"ru":"Пример рисования на изображении",
+			"it":"Mostra come usare funzionalità di disegno"
+	},
+	"SampDrawingOrder" : { 
+			"en":"Shows how to change drawing order", 
+			"de":"Zeigt, wie die Reihenfolge von Elementen geändert werden kann",
+			"es":"Muestra cómo cambiar el orden de dibujo",
+			"fr":"Montre comment modifier l'ordre de dessin",
+			"pt":"Mostra como mudar a ordem das imagems/outros",
+			"ru":"Меняем порядок отображения изображений",
+			"it":"Mostra come cambiare ordine di disegno"
+	}, 
+	"SampImageRotate" : { 
+			"en":"Image rotation", 
+			"de":"Bildrotation",
+			"es":"Rotación de la Imagen",
+			"fr":"Rotation d'une image",
+			"pt":"Rotação de uma imagem",
+			"ru":"Вращение изображения",
+			"it":"Rotazione immagine"	
+	},
+	"SampImageTween" : { 
+			"en":"Image Tweening", 
+			"de":"Bildverzerrung",
+			"es":"Tweening de imágenes",
+			"fr":"Interpolation d'images",
+			"pt":"Animação de imagem usando Tween",
+			"ru":"Анимация движения изображения",
+			"it":"Tweening d'immagine"
+	},
+	"SampLayoutSlide" : { 
+			"en":"Page slide effect", 
+			"de":"Seitenwechseleffekt",
+			"es":"Efecto de diapositiva de página",
+			"fr":"Effets de glissement de pages",
+			"pt":"Mudar de uma página para outra usando efeito",
+			"ru":"Анимация смены одного слоя другим",
+			"it":"Effetto slittamento pagina"
+	},
+	"SampDrawerMenu" : { 
+			"en":"Sliding menu drawers", 
+			"de":"Menüleisten",
+			"es":"Cajones de menú deslizantes",
+			"fr":"Menus de navigation glissants",
+			"pt":"Menus de Deslizar",
+			"ru":"Создаём боковое меню",
+			"it":"Cassetti menú scorrevole"
+	},
+	"SampDialogProgress" : { 
+			"en":"Shows how to use a progress bar dialog", 
+			"de":"Zeigt, wie Ladebalken benutzt werden",
+			"es":"Muestra cómo usar un diálogo de barra de progreso",
+			"fr":"Montre comment utiliser une boîte de dialogue avec une barre de progession",
+			"pt":"Mostra como usar um diálogo de Carregamento",
+			"ru":"Пример использования прогресс бара",
+			"it":"Mostra come usare finestra di dialogo della barra d'avanzamento "
+	},
+	"SampDialogCustom" : { 
+			"en":"Shows how to create custom dialogs", 
+			"de":"Zeigt, wie eigene Dialoge erstellt werden können",
+			"es":"Muestra cómo crear cuadros de diálogo personalizados",
+			"fr":"Montre comment créer des boîtes de dialogue personnalisées",
+			"pt":"Mostra como usar diálogos personalizados",
+			"ru":"Пример создания настраиваемых диалогов",
+			"it":"Mostra come creare una finestra di dialogo personalizzata"
+	},
+	"SampTabsDemo" : { 
+			"en":"Shows how to use tabs", 
+			"de":"Zeigt die Benutzung von Tabs",
+			"es":"Muestra cómo usar las pestañas",
+			"fr":"Montre comment utiliser des onglets",
+			"pt":"Mostra como usar abas",
+			"ru":"Пример использования вкладок",
+			"it":"Mostra come usare i tab"
+	},
+	"SampIconFonts" : { 
+			"en":"Uses FontAwesome to show icons", 
+			"de":"Benutzt FantAwesome um Symbole anzuzeigen",
+			"es":" Utiliza FontAwesome para mostrar iconos",
+			"fr":"Utilise FontAwesome pour afficher des icônes",
+			"pt":"Use FontAwesome para criar ícones",
+			"ru":"Используем FontAwesome для отображения иконок",
+			"it":"Usa FontAwesome per mostrare icone"
+	},
+	"SampIconButtons" : { 
+			"en":"Uses FontAwesome to show icon buttons", 
+			"de":"Benutzt FantAwesome um Symbole auf Tasten anzuzeigen",
+			"es":"Usa FontAwesome para mostrar botones de icono",
+			"fr":"Utilise FontAwesome pour créer des icônes-boutons",
+			"pt":"Use FontAwesome para criar botões com ícones",
+			"ru":"Используем FontAwesome для отображения иконок в кнопках",
+			"it":"Usa FontAwesome per mostrare pulsanti icona"
+	},
+	"SampTextFormatting" : { 
+			"en":"Use HTML tags to format text", 
+			"de":"Text mit HTML formatieren",
+			"es":"Usar etiquetas HTML para dar formato al texto",
+			"fr":"Utilise des balises HTML pour formater du texte",
+			"pt":"Usar HTML para formatar textos",
+			"ru":"Используем HTML теги для форматирования текста",
+			"it":"Usa tag HTML per formattare testo"
+	},
+	"SampScroller" : { 
+			"en":"Shows how to use a scroller", 
+			"de":"Wie ein Scroller benutzt wird",
+			"es":"Muestra cómo usar un rollo (scroll)",
+			"fr":"Montre comment utiliser les zones de défilement",
+			"pt":"Mostra como usar um Scroller",
+			"ru":"Пример использования скроллера",
+			"it":"Mostra come usare scroller"
+	},
+	"SampTiltAndDraw" : { 
+			"en":"Use accelerometer to draw", 
+			"de":"Zeichnen mit dem Beschleunigungssensor",
+			"es":"Utilice el acelerómetro para dibujar",
+			"fr":"Utilise l'accéléromètre pour dessiner",
+			"pt":"Use o acelerômetro para desenhar",
+			"ru":"Используем акселерометр для рисования",
+			"it":"Usa accelerometro per disegnare"
+	},
+	"SampLocation" : { 
+	
+			"en":"Use GPS and/or network to find location", 
+			"de":"Den Standort per GPS finden",
+			"es":"Utilice el GPS y/o la Red para encontrar la ubicación",
+			"fr":"Utilise le GPS et/ou le réseau pour déterminer la position",
+			"pt":"Use GPS e/ou internet para encontrar uma localização",
+			"ru":"Используем GPS и/или сеть чтобы найти местоположение",
+			"it":"Usa GPS e/o rete per trovare posizionamento"
+	},
+	"SampNotify" : { 
+			"en":"Put messages in the notification drawer", 
+			"de":"Nachrichten für die Nachrichtenleiste",
+			"es":"Poner mensajes en el cajón de notificaciones",
+			"fr":"Affiche des messages dans la barre de notification",
+			"pt":"Coloque mensagens de notificações na gaveta",
+			"ru":"Создаём уведомления",
+			"it":"Metti messaggi in cassetto notifiche"
+	},
+	"SampAlarms" : { 
+			"en":"Set alarms to wake up your app",
+			"de":"Mit Alarmen die App aktivieren",
+			"es":"Establecer alarmas para activar la aplicación",
+			"fr":"Configure des alarmes pour réveiller votre application",
+			"pt":"Criar alarmes para acordar/abrir seu aplicativo",
+			"ru":"Устанавливаем будильники, запускающие ваше приложение",
+			"it":"Imposta sveglia per risvegliare la tua app"
+	},
+	"SampChoose" : { 
+			"en":"Allow user to choose files or contacts", 
+			"de":"Dem Benutzer erlauben, Kontakte oder Dateien auszuwählen",
+			"es":"Permitir que el usuario elija archivos o contactos",
+			"fr":"Permet à l'utilisateur de sélectionner des fichiers ou des contacts",
+			"pt":"Buscar arquivos ou contatos do usuário",
+			"ru":"Позволяем пользователь выбрать файл или контакт",
+			"it":"Permetti a utente di scegliere file e contatti"
+	},
+	"SampOrientation" : { 
+			"en":"Use digital compass to find orientation", 
+			"de":"Himmelsrichtung mit dem digitalen Kompass finden",
+			"es":"Usar la brújula digital para encontrar la orientación",
+			"fr":"Utilise la boussole électronique pour déterminer l'orientation",
+			"pt":"Use bússola digital para encontrar orientação",
+			"ru":"Используем компас для вычисления ориентации",
+			"it":"Usa compasso digitale per trovare orientamento"
+	},
+	"SampPhoneStates" : { 
+			"en":"Detect changes in phone state", 
+			"de":"Veränderungen des Telefonnetzwerks spüren",
+			"es":"Detectar cambios en el estado del teléfono",
+			"fr":"Détecte les changements d'état du téléphone",
+			"pt":"Detectar mudanças no estado do dispositivo",
+			"ru":"Обнаруживаем изменения состояния телефона",
+			"it":"Rilevare cambiamenti nello stato del telefono"
+	},
+	"SampAudioOutput" : { 
+			"en":"Play a sound file", 
+			"de":"Einen Ton abspielen",
+			"es":"Reproducir un archivo de sonido",
+			"fr":"Joue un fichier son",
+			"pt":"Reproduzir um som",
+			"ru":"Воспроизводим музыку",
+			"it":"Riproduci file sonoro"
+	},
+	"SampAudioPlayer" : { 
+			"en":"Simple audio player", 
+			"de":"Einfaches Mediengerät",
+			"es":"Reproductor de audio simple",
+			"fr":"Lecteur audio simple",
+			"pt":"Reprodutor de som simples",
+			"ru":"Простой аудиоплеер",
+			"it":"Riproduttore audio semplice"
+	},
+	"SampAudioRecord" : { 
+			"en":"Audio recording demo", 
+			"de":"Tonaufnahme-Beispiel",
+			"es":"Demostración de grabación de audio",
+			"fr":"Démonstration d'enregistrement audio",
+			"pt":"Usando um gravador de áudio",
+			"ru":"Пример диктофона",
+			"it":"Demo registrazione audio"
+	},
+	"SampAudioSample" : { 
+			"en":"Extract audio samples and display a waveform", 
+			"de":"Einen Geräuschabschnitt als Wellenform darstellen",
+			"es":"Demostración de grabación de audio",
+			"fr":"Extrait des échantillons audio et affiche une forme d'onde",
+			"pt":"Usando um gravador de áudio",
+			"ru":"Пример диктофона",
+			"it":"Estrai esempio audio e mostra forma d'onda"
+	},
+	"SampAudioSignal" : { 
+			"en":"Signal generator", 
+			"de":"Tongenerator",
+			"es":"Generador de señales",
+			"fr":"Générateur de signal",
+			"pt":"Gerador de sinal sonoro",
+			"ru":"Генератор звуковых сигналов",
+			"it":"Generatore di segnale"
+	},
+	"SampAudioSynth" : { 
+			"en":"Software synthesizer", 
+			"de":"Geräuschsynthetisierer",
+			"es":"Sintetizador de software",
+			"fr":"Synthétiseur audio",
+			"pt":"Sintetizador de som",
+			"ru":"Программный синтезатор",
+			"it":"Sintetizzatore software"
+	},
+	"SampAudioMidi" : { 
+			"en":"Play a simple MIDI tune", 
+			"de":"Eine einfache MIDI-Datei abspielen",
+			"es":"Reproducir una melodía MIDI simple",
+			"fr":"Joue une mélodie MIDI simple",
+			"pt":"Reproduzir um toque MIDI simples",
+			"ru":"Воспроизводим простую MIDI-мелодию",
+			"it":"Riproduci una semplice melodia MIDI"
+	},
+	"SampSoundBoard" : { 
+			"en":"Simple sound board demo", 
+			"de":"Einfaches Soundboard Beispiel",
+			"es":"Demo simple de la placa de sonido",
+			"fr":"Boîte à sons simple",
+			"pt":"Demonstração de som em imagens",
+			"ru":"Пружинка с ксилофоном",
+			"it":"Semplice demo soundboard"
+	},
+	"SampSpeechRec" : { 
+			"en":"How to recognize speech", 
+			"de":"Sprache erkennen",
+			"es":"Cómo reconocer el habla",
+			"fr":"Comment reconnaître la voix",
+			"pt":"Como falar com seu dispositivo",
+			"ru":"Распознование речи",
+			"it":"Come riconoscere la voce"
+	},
+	"SampVoiceCommand" : { 
+			"en":"Continuous speech recognition", 			
+			"de":"Vollständige Spracherkennung",
+			"es":"Reconocimiento de voz continua",
+			"fr":"Reconnaissance vocale en continue",
+			"pt":"Reconhecimento contínuo de fala",
+			"ru":"Непрерывно распознаём речь",
+			"it":"Riconoscimento vocale continuo"
+	},
+	"SampMediaStore" : { 
+			"en":"Query the media store for music", 
+			"de":"Nach Musik durchsuchen",
+			"es":"Consultar el almacén de medios para obtener música",
+			"fr":"Consulte le gestionnaire multimédia",
+			"pt":"Busque informações sobre a música",
+			"ru":"Запрашиваем у MediaStore данные по музыке",
+			"it":"Consulta il Media Store per Musica"
+	},
+	"SampVideoPlayer" : { 
+			"en":"Simple video player", 
+			"de":"Einfacher Videospieler",
+			"es":"Reproductor de video simple",
+			"fr":"Lecteur vidéo simple",
+			"pt":"Reprodutor simples de vídeo",
+			"ru":"Простой видеоплеер",
+			"it":"Semplice video player"
+	},
+	"SampVideoStream" : { 
+			"en":"Video streaming sample", 
+			"de":"Video-Stream Beispiel",
+			"es":"Muestra de streaming de vídeo",
+			"fr":"Exemple de lecture de flux vidéo",
+			"pt":"Reproduzindo vídeo da internet",
+			"ru":"Онлайн воспроизведение видео",
+			"it":"Esempio video streaming"
+	},
+	"SampGamePong" : { 
+			"en":"Classic game demo", 
+			"de":"Demo eines Klassischen Spiels",
+			"es":"Demostración clásica del juego",
+			"fr":"Démonstration de jeu classique",
+			"pt":"Demonstração simples de jogo",
+			"ru":"Классическая игра",
+			"it":"Demo di un gioco classico"
+	},
+	"SampGameBounce" : { 
+			"en":"Simple GameView physics demo", 
+			"de":"Grafikanimations Beispiel",
+			"es":"Demostración de rendimiento de gráficos",
+			"fr":"Démonstration de performances graphiques",
+			"pt":"Demonstração de desempenho gráfico",
+			"ru":"Производительность графики",
+			"it":"Demo Performance Grafica"
+	},
+	"SampGameBunnyStorm" : { 
+			"en":"GameView perfomance demo", 
+			"de":"Grafikanimations Beispiel",
+			"es":"Demostración de rendimiento de gráficos",
+			"fr":"Démonstration de performances graphiques",
+			"pt":"Demonstração de desempenho gráfico",
+			"ru":"Производительность графики",
+			"it":"Demo Performance Grafica"
+	},
+	"SampGameVScroll" : { 
+			"en":"Vertical scroller game template", 
+			"de":"Vertikales Scroller-Spiel",
+			"es":"Plantilla de juego de desplazamiento vertical",
+			"fr":"Modèle de jeu avec défilement vertical",
+			"pt":"Jogo simples na vertical",
+			"ru":"Игра вертикальный скроллер",
+			"it":"Templato di gioco con scroller verticale"
+	},
+	"SampGameHScroll" : { 
+			"en":"Horizontal scroller game template", 
+			"de":"Horizontales Scroller-Spiel",
+			"es":"Plantilla de juego scroller horizontal",
+			"fr":"Modèle de jeu avec défilement horizontal",
+			"pt":"Jogo simples na horizontal",
+			"ru":"Игра горизонтальный скроллер",
+			"it":"Templato di gioco con scroller orrizzontale"
+	},
+	"SampGameFlappy" : { 
+			"en":"Flappy bird style game", 
+			"de":"Flappy-Bird",
+			"es":"Juego estilo Flappy Bird",
+			"fr":"Jeu du type Flappy Bird",
+			"pt":"Jogo estilo Flappy Bird",
+			"ru":"Игра в стиле Flappy Bird",
+			"it":"Gioco stile Flappy Bird"
+	},
+	"SampJoystick" : { 
+			"en":"Simple Joystick/Gamepad sample", 
+			"de":"Wie Joystick und Gamepad benutzt werden",
+			"es":"Muestra simple de Joystick/Gamepad",
+			"fr":"Exemple d'utilisation de Joystick/Gamepad",
+			"pt":"Reconhecimento de Joystick/Controle",
+			"ru":"Простой джойстик/геймпад",
+			"it":"Semplice esempio Joystick/Gamepad"
+	},
+	"SampGLVSimple" : { 
+			"en":"Basic fast 2d graphics demo", 
+			"de":"Einfache 2D-Grafiken",
+			"es":"Demostración básica de gráficos 2D rápidos",
+			"fr":"Démonstation de graphismes 2D basiques et rapides",
+			"pt":"Demonstração básica de gráficosem Fast2D",
+			"ru":"Базовый пример работы с GLView",
+			"it":"Demo base grafica 2D rapida"
+	},
+	"SampGLVSprite" : { 
+			"en":"Fast 2d sprite sheet demo", 
+			"de":"Schnelle 2D-Sprites",
+			"es":"Demostración de SpriteSheets en 2D rápidos",
+			"fr":"Démonstation d'utilisation de sprite sheet 2D rapide",
+			"pt":"Demonstração de SpriteSheet em Fast2D",
+			"ru":"Пример использования спрайт-листа",
+			"it":"Demo sprite sheet 2D rapida"
+	},
+	"SampGLVAdvanced" : { 
+			"en":"Fast 2d advanced demo", 
+			"de":"Fortgeschrittene 2D-Demo",
+			"es":"Demostración avanzada de 2D rápido",
+			"fr":"Démonstation 2D rapide avancée",
+			"pt":"Demonstração avançada de Fast2D",
+			"ru":"Продвинутый пример работы с GLView",
+			"it":"Demo 2D Rapida Avanzata"
+	},
+	"SampTextToSpeech" : { 
+			"en":"Make your device speak", 
+			"de":"Lass dein Gerät sprechen",
+			"es":"Haz que tu dispositivo hable",
+			"fr":"Fais parler votre appareil",
+			"pt":"Faça seu dispositivo falar",
+			"ru":"Озвучивание текста",
+			"it":"Fai parlare il tuo dispositivo"
+	},
+	"SampTextEdit" : { 
+			"en":"Simple text editor", 
+			"de":"Einfache Textbearbeitung",
+			"es":"Editor de texto simple",
+			"fr":"Editeur de texte simple",
+			"pt":"Editor de texto simples",
+			"ru":"Простой текстовый редактор",
+			"it":"Text Editor semplice"
+	},
+	"SampSMS" : { 
+			"en":"Send and receive text messages", 
+			"de":"Textnachrichten senden un empfangen",
+			"es":"Enviar y recibir mensajes de texto",
+			"fr":"Envoie et reçoit des SMS",
+			"pt":"Enviar e Receber mensagens de texto",
+			"ru":"Отправляем и получаем СМС",
+			"it":"Manda e ricevi messaggi testuali"
+	},
+	"SampMailShare" : { 
+			"en":"Send email via an external app", 
+			"de":"Email über externe App versenden",
+			"es":"Enviar correo electrónico a través de una aplicación externa",
+			"fr":"Envoie un email avec une application externe",
+			"pt":"Enviar e-mails por aplicativo externo",
+			"ru":"Отправляем электронные сообщения через другое приложение",
+			"it":"Manda mail via app esterna"
+	},
+	"SampMailSend" : { 
+			"en":"Send email messages directly", 
+			"de":"Emails direkt senden",
+			"es":"Enviar mensajes de correo electrónico directamente",
+			"fr":"Envoie des messages par email directement",
+			"pt":"Enviar e-mails diretamente",
+			"ru":"Отправляем электронные сообщения",
+			"it":"Manda messaggi mail direttamente"
+	},
+	"SampMailReceive" : { 
+			"en":"Receive email messages directly", 
+			"de":"Emails direkt empfangen",
+			"es":"Recibir mensajes de correo electrónico directamente",
+			"fr":"Reçoit des messages par email directement",
+			"pt":"Receber mensagens de e-mail diretamente",
+			"ru":"Получаем электронные сообщения",
+			"it":"Ricevi messaggi mail direttamente"
+	},
+	"SampSecurityEncrypt" : { 
+			"en":"Encrypt and Decrypt text", 
+			"de":"Text ver- und entschlüsseln",
+			"es":"Cifrar y Descifrar texto",
+			"fr":"Chiffre et déchiffre du texte",
+			"pt":"Criptografar e Decriptografar texto",
+			"ru":"Шифруем и расшифровываем текст",
+			"it": "Cripta e decritta testo"
+	},
+	"SampDatabase" : { 
+			"en":"Using local SQLite databases", 
+			"de":"SQLite-Datenbanken benutzen",
+			"es":"Uso de bases de datos SQLite locales",
+			"fr":"Utilisation de bases de données SQLite locales",
+			"pt":"Usando bancos de dados SQLite locais",
+			"ru":"Используем базы данных SQLite",
+			"it":"Utilizzo database SQLite locali"
+	},
+	"SampCalculator" : { 
+			"en":"A simple calculator", 
+			"de":"EIn einfacher Taschenrechner",
+			"es":"Una calculadora simple",
+			"fr":"Une calculatrice simple",
+			"pt":"Calculadora simples",
+			"ru":"Простой калькулятор",
+			"it":"Un semplice calcolatore"
+	},
+	"SampWebViewDemo" : { 
+			"en":"Display local and remote web pages", 
+			"de":"Lokale und Fremde Websiten anzeigen",
+			"es":"Mostrar páginas web locales y remotas",
+			"fr":"Affiche des pages web locales et distantes",
+			"pt":"Mostrar páginas da web locais e remotas",
+			"ru":"Отображение локальных веб страниц и с сервера",
+			"it":"Mostra pagine web locali e remote"
+	},
+	"SampWebViewGauges" : { 
+			"en":"Using the 'CanvGauge' HTML5 library", 
+			"de":"Benutzung der 'CanvGauge' HTML5 Bibliothek",
+			"es":"Uso de la biblioteca HTML5 'CanvGauge'",
+			"fr":"Utilisation de la bibliothèque HTML5 'CanvGauge'",
+			"pt":"Usando HTML5 'CanvGauge'",
+			"ru":"Используем HTML5 библиотеку 'CanvGauge'",
+			"it":"Utilizzo della libreria HTML5 'CanvGauge'"
+	},
+	"SampWebViewGraphs" : { 
+			"en":"Using the 'jqPlot' HTML5 library", 
+			"de":"Benutzung der 'jqPlot' HTML5 Bibliothek",
+			"es":"Uso de la biblioteca HTML5 'jqPlot'",
+			"fr":"Utilisation de la bibliothèque HTML5 'jqPlot'",
+			"pt":"Usando HTML5 'jqPlot'",
+			"ru":"Используем HTML5 библиотеку 'jqPlot'",
+			"it":"Utilizzo della libreria HTML5 'jqPlot'"
+	},
+	"SampHTMLSensors" : { 
+			"en":"Live sensor plotting with Flot Charts", 
+			"de":"Echtzeit Sensoren mit Flot Charts",
+			"es":"Representación gráfica de sensores en vivo con Flot Charts",
+			"fr":"Tracé en temps réel de l'accéléromètre avec la librairie Flot Charts",
+			"pt":"Representação gráfica de sensores sendo alterados 'Flot Charts'",
+			"ru":"Отображение данных с сенсоров на графике в реальном времени с помощью Flot Charts",
+			"it":"Tracciato di sensore live con Flot Charts"
+	},
+	"SampHTTPServer" : { 
+			"en":"Run a web server on your device", 
+			"de":"Webserver über das Gerät hosten",
+			"es":"Ejecutar un servidor web en su dispositivo",
+			"fr":"Lance un serveur web sur votre appareil",
+			"pt":"Executar um servidor em seu dispositivo",
+			"ru":"Запуск веб сервера на вашем устройстве",
+			"it":"Esgui un web server sul tuo dispositivo"
+	},
+	"SampHTTPGet" : { 
+			"en":"Get data from a remote web server", 
+			"de":"Daten von einem Server abfragen",
+			"es":"Obtener datos de un servidor web remoto",
+			"fr":"Récupère des données à partir d'un serveur web distant",
+			"pt":"Obter dados de um servidor web remoto",
+			"ru":"Получаем данные от сервера",
+			"it":"Acquisisci dati da un web server remoto"
+	},
+	"SampDownload" : { 
+			"en":"Download a file from a remote server", 
+			"de":"Eine Datei von einem Server herunterladen",
+			"es":"Descargar un archivo desde un servidor remoto",
+			"fr":"Télécharge un fichier depuis un serveur distant",
+			"pt":"Baixar arquivos de um servidor web remoto",
+			"ru":"Загружаем файл с сервера",
+			"it":"Scarica un file da un server remoto"
+	},
+	"SampWifiDemo" : { 
+			"en":"Send commands to and from PC via Wifi", 
+			"de":"Commandos mit dem PC über WLAN austauschen",
+			"es":"Enviar comandos desde y hacia una PC vía Wi-Fi",
+			"fr":"Envoie des commandes vers et depuis un PC à travers le WiFi",
+			"pt":"Enviar comandos para e do PC via WiFi",
+			"ru":"Отправляем и получаем команды с ПК по Wi-Fi",
+			"it":"Manda comandi a e da PC via wifi"
+	},
+	"SampWifiBroadcast" : { 
+			"en":"Send UDP messages to multiple devices", 
+			"de":"Nachrichten an mehrere Geräte senden",
+			"es":"Enviar mensajes a varios dispositivos",
+			"fr":"Envoie des messages à plusieurs appareils",
+			"pt":"Enviar mensagens para vários dispositivos",
+			"ru":"Отправляем сообщения на несколько устройств",
+			"it":"Manda Mmssaggi a molteplici dispositivi"
+	},
+	"SampTCPClient" : { 
+			"en":"Raw TCP client sample", 
+			"de":"Grober TCP Client",
+			"es":"Ejemplo de cliente TCP sin procesar",
+			"fr":"Exemple de client TCP brut",
+			"pt":"Amostra de cliente TCP",
+			"ru":"Пример TCP клиента",
+			"it":"Esempio di client TCP grezzo"
+	},
+	"SampCameraRecord" : { 
+			"en":"Record video to sdcard", 
+			"de":"Ein Video aufnehmen",
+			"es":"Grabar vídeo en SDCard",
+			"fr":"Enregistre une vidéo sur la sdcard",
+			"pt":"Gravar vídeo e salvar vídeos",
+			"ru":"Записываем видео на карту памяти",
+			"it":"Registra video a SDCard"
+	},
+	"SampCameraStream" : { 
+			"en":"Stream video from camera to PC", 
+			"de":"Video von der Kamera an den PC streamen",
+			"es":"Transmitir vídeo de la cámara al PC",
+			"fr":"Envoi le flux vidéo de la caméra vers le PC",
+			"pt":"Transmita vídeos da câmera para o PC",
+			"ru":"Стримим видео с камеры на ПК",
+			"it":"Trasmetti in streaming video da telecamera a PC "
+	},
+	"SampCameraSnap" : { 
+			"en":"Take pictures and save to sdcard", 
+			"de":"Fotos auf SD-Karte speichern",
+			"es":"Toma fotos y guardalas en la SDCard",
+			"fr":"Prend des photos et les enregistre sur la sdcard",
+			"pt":"Tire fotos e salve-as",
+			"ru":"Делаем изображение и сохраняем его",
+			"it":"Scatta foto e salva su SDCard"
+	},
+	"SampCameraMotion" : { 
+			"en":"Detect motion", 
+			"de":"Bewegung erkennen",
+			"es":"Detectar movimiento",
+			"fr":"Détecte les mouvements",
+			"pt":"Detectar movimento para tirar fotos",
+			"ru":"Детектор движения",
+			"it":"Rileva movimento"
+	},
+	"SampCameraColor" : { 
+			"en":"Detect pixel colors", 
+			"de":"Pixelfarben erkennen",
+			"es":"Detectar colores de pixeles",
+			"fr":"Détecte la couleur des pixels",
+			"pt":"Detectar mudança de pixels para tirar fotos",
+			"ru":"Цвет пикселя",
+			"it":"Rileva colori pixel"
+	},
+	"SampCameraFaces" : { 
+			"en":"Find faces in the image", 
+			"de":"Gesichter erkennen",
+			"es":"Buscar caras en la imagen",
+			"fr":"Trouve les visages dans une image",
+			"pt":"Buscar rostos na câmera",
+			"ru":"Ищем лица на изображении с камеры",
+			"it":"Trova facce nell'immagine"
+	},
+	"SampSharedData" : { 
+			"en":"Receive text and files from other apps", 
+			"de":"Text und Dateien von anderen Apps empfangen",
+			"es":"Recibe texto y archivos de otras aplicaciones",
+			"fr":"Reçoit du texte et des fichiers à partir d'autres applications",
+			"pt":"Receber arquivos e textos de outros aplicativos",
+			"ru":"Получаем текст и файлы от других приложений",
+			"it":"Ricevi testo e file da altre app"
+	},
+	"SampReceiveIntent" : { 
+			"en":"Receive intents from other apps", 
+			"de":"Intents von anderen Apps empfangen",
+			"es":"Recibe intenciones de otras aplicaciones",
+			"fr":"Reçoit des intents à partir d'autres applications",
+			"pt":"Receber Intent de outros aplicativos",
+			"ru":"Получаем данные из Intent",
+			"it":"Ricevi intent da altre app"
+	},
+	"SampSendIntent" : { 
+			"en":"Send an intent to other app", 
+			"de":"Intents an andere Apps senden",
+			"es":"Enviar una intención a otra aplicación",
+			"fr":"Envoie un intent à une autre application",
+			"pt":"Enviar Intent para outros aplicativos",
+			"ru":"Отправляем письмо с помощью Intent",
+			"it":"Manda un intent ad altre app"
+	},
+	"SampSendFiles" : { 
+			"en":"Send files to other apps", 
+			"de":"Dateien an andere Apps senden",
+			"es":"Enviar archivos a otras aplicaciones",
+			"fr":"Envoie des fichiers à d'autres applications",
+			"pt":"Enviar arquivos para outros aplicativos",
+			"ru":"Отправляем файлы другим приложениям",
+			"it":"Manda file ad altre app"
+	},
+	"SampAppEvents" : { 
+			"en":"Demos all available app events", 
+			"de":"Demonstriert alle App-Events",
+			"es":"Demostración de todos los eventos de aplicaciones disponibles",
+			"fr":"Démonstration de tous les évènements d'application disponibles",
+			"pt":"Demonstra todos os eventos de aplicativos disponíveis",
+			"ru":"Все возможные события в приложении",
+			"it":"Demo tutti eventi app disponibili"
+	},
+	"SampUSBSerial" : { 
+			"en":"Control USB serial devices using OTG cable", 
+			"de":"USB Geräte per OTG Kabel steuern",
+			"es":"Controle los dispositivos serie USB utilizando el cable OTG",
+			"fr":"Contrôle des dispositifs USB série en utilisant un câble OTG",
+			"pt":"Controlar dispositivos em série USB usando o cabo OTG",
+			"ru":"Управляем устройствами, подключенными через OTG-кабель",
+			"it":"Controlla dispositivi USB seriali usando cavo OTG"
+	},
+	"SampUSBGPS" : { 
+			"en":"Control USB GPS devices using OTG cable", 
+			"de":"Steuern Sie USB-GPS-Geräte mit einem OTG-Kabel",
+			"es":"Controle los dispositivos GPS USB con un cable OTG",
+			"fr":"Contrôle des périphériques GPS USB à l'aide d'un câble OTG",
+			"pt":"Controlar dispositivos GPS USB usando o cabo OTG",
+			"ru":"Управление USB GPS-устройствами с помощью OTG-кабеля",
+			"it":"Controlla i dispositivi GPS USB tramite cavo OTG"
+	},
+	"SampUSBEspruino" : { 
+			"en":"Program Espruino boards with an OTG cable", 
+			"de":"Espurino-Boards per OTG-Kabel programmieren",
+			"es":"Programa placas Espruino con un cable OTG",
+			"fr":"Programme des cartes Espruino avec un câble OTG",
+			"pt":"Programe placas Espruino com um cabo OTG",
+			"ru":"Управляем Espruino по OTG-кабелю",
+			"it":"Programma scheda Espruino con cavo OTG"
+	},
+	"SampUSBArduino" : { 
+			"en":"Control Arduino boards with an OTG cable", 
+			"de":"Kontrolliere Arduion-Boards per OTG-Kabel",
+			"es":"Controle las placas Arduino con un cable OTG",
+			"fr":"Programme des cartes Arduino avec un câble OTG",
+			"pt":"Controle as placas Arduino com um cabo OTG",
+			"ru":"Управляем Arduino по OTG-кабелю",
+			"it":"Controlla schede Arduino con un cavo OTG "
+	},
+	"SampBluetoothSerial" : { 
+			"en":"Control Bluetooth serial port devices", 
+			"de":"Kontrolliere Bluetooth-Serial-Port-Geräte",
+			"es":"Control de los dispositivos del puerto serie Bluetooth",
+			"fr":"Contrôle les dispositifs de port série Bluetooth",
+			"pt":"Controlar dispositivos de porta serial Bluetooth",
+			"ru":"Управляем устройствами по Bluetooth",
+			"it":"Controlla dispositivi di porta seriale Bluetooth"
+	},
+	"SampBluetoothListen" : { 
+			"en":"Accept Bluetooth serial connections from other devices", 
+			"de":"Akzeptiere Bluetooth-Serial-Verbindungen von anderen Geräten",
+			"es":"Control de los dispositivos del puerto serie Bluetooth",
+			"fr":"Accèpte des connexions série Bluetooth à partir d'autres applications",
+			"pt":"Controlar dispositivos de porta serial Bluetooth",
+			"ru":"Управляем устройствами по Bluetooth",
+			"it":"Accetta connessioni seriali Bluetooth da altri dispositivi"
+	},
+	"SampBluetoothSelect" : { 
+			"en":"Select paired Bluetooth devices", 
+			"de":"Wähle gepaarte Bluetooth-Geräte aus",
+			"es":"Control de los dispositivos del puerto serie Bluetooth",
+			"fr":"Sélectionne les dispositifs Bluetooth appariés",
+			"pt":"Controlar dispositivos de porta serial Bluetooth",
+			"ru":"Управляем устройствами по Bluetooth",
+			"it":"Seleziona dispositivi Bluetooth accoppiati"
+	},
+	"SampBluetoothLEDs" : { 
+			"en":"Control tri-color LED strips via Bluetooth", 
+			"de":"Kontrolliere dreifach-Farben LED-Streifen über Bluetooth",
+			"es":"Controle las tiras tricolores LED a través de Bluetooth",
+			"fr":"Contrôle des blandes de LED tricolores via Bluetooth",
+			"pt":"Controlar tiras de LED tri-color via Bluetooth",
+			"ru":"Управляем трехцветной светодиодной лентой по Bluetooth",
+			"it":"Controlla striscia Led RGB via Bluetooth"
+	},
+	"SampNXTMotors" : { 
+			"en":"Simple Lego Mindstorms motor control", 
+			"de":"Einfache Lego-Mindstorms Steuerung",
+			"es":"Simple control del motor con Lego Mindstorms",
+			"fr":"Contrôle simplement des moteurs Lego Mindstorms",
+			"pt":"Controle do motor Lego Mindstorms simples",
+			"ru":"Простой пример управления моторами Lego Mindstorms",
+			"it":"Semplice controllo motore Lego Mindstroms"
+	},
+	"SampNXTBeep" : { 
+			"en":"Make the NXT play a tone", 
+			"de":"Mit dem NXT einen Ton abspielen",
+			"es":"Haga que el NXT reproduzca un tono",
+			"fr":"Fais jouer un son au NXT",
+			"pt":"Faça o NXT tocar um som",
+			"ru":"Воспроизводим мелодию на NXT",
+			"it":"Fai riprodurre un suono a NXT"
+	},
+	"SampNXTSensors" : { 
+			"en":"Reads NXT sensors", 
+			"de":"NXT-Sensoren auslesen",
+			"es":"Lee los sensores NXT",
+			"fr":"Lis les capteurs du NXT",
+			"pt":"Lê sensores NXT",
+			"ru":"Читаем данные сенсоров NXT",
+			"it":"Legge sensori NXT"
+	},
+	"SampNXTJoypad" : { 
+			"en":"Joypad NXT control", 		
+			"de":"Joypad-NXT-Steuerung",
+			"es":"Control del Joypad NXT",
+			"fr":"Contrôle le NXT avec une manette",
+			"pt":"Controle Joypad NXT",
+			"ru":"Управление NXT с помощью джойстика",
+			"it":"Controllo Joypad NXT"
+	},
+	"SampInAppPurchase" : { 
+			"en":"How to add Google Play purchasing to your app", 
+			"de":"Gogle Play Bezahlungssystem zur App hinzufügen",
+			"es":"Cómo agregar compras de Google Play a tu aplicación",
+			"fr":"Comment ajouter des achats Google Play à votre application",
+			"pt":"Como adicionar compras do Google Play ao seu aplicativo",
+			"ru":"Как добавить внутриигровые покупки",
+			"it":"Come aggiungere un acquisto Google Play alla tua app"
+	},
+	"SampSubsTemplate" : { 
+			"en":"Google Play subscriptions template", 
+			"de":"Google Play Abbonements",
+			"es":"Plantilla de suscripciones de Google Play",
+			"fr":"Mondèle d'abonnement Google Play",
+			"pt":"Modelo de assinaturas do Google Play",
+			"ru":"Подписки в Google Play",
+			"it":"Templato d'Abbonamento a Google Play"
+	},
+	"SampThemes" : { 
+			"en":"Using themes to style your app", 
+			"de":"App farblich umgestalltbar machen",
+			"es":"Uso de temas para diseñar tu aplicación",
+			"fr":"Utilisation de thèmes pour styliser votre application",
+			"pt":"Usando temas para modelar seu aplicativo",
+			"ru":"Используем темы",
+			"it":"Utilizzo temi per disegnare la tua app"
+	},
+	"SampTips" : { 
+			"en":"Showing ToolTips and Help Popups", 
+			"de":"Showing ToolTips and Help Popups",
+			"es":"Showing ToolTips and Help Popups",
+			"fr":"Showing ToolTips and Help Popupsn",
+			"pt":"Showing ToolTips and Help Popups",
+			"ru":"Showing ToolTips and Help Popups",
+			"it":"Showing ToolTips and Help Popups"
+	},
+	"SampChatHeads" : { 
+			"en":"Creating 'Chat Head' overlays", 
+			"de":"Creating 'Chat Head' overlays",
+			"es":"Creating 'Chat Head' overlays",
+			"fr":"Creating 'Chat Head' overlays",
+			"pt":"Creating 'Chat Head' overlays",
+			"ru":"Creating 'Chat Head' overlays",
+			"it":"Creating 'Chat Head' overlays"
+	},
+	"SampQueryContent" : { 
+			"en":"Getting info from the content database", 
+			"de":"Informationen auf der Inhaltsdatenbank auslesen",
+			"es":"Obtención de información de la base de datos del contenido",
+			"fr":"Récupèration d'informations à partir de la base de données de contenu",
+			"pt":"Obtendo informações",
+			"ru":"Получаем информацию у поставщика контента",
+			"it":"Recupero informazioni dal data base dei contenuti  "
+	},
+	"SampCalendar" : { 
+			"en":"Getting calendar info from the content database", 
+			"de":"Kalenderinformationen auslesen",
+			"es":"Obtención de información del calendario desde la base de datos del contenido",
+			"fr":"Récupération d'informations du calendrier à partir de la base de données de contenu",
+			"pt":"Obtendo informações de calendário",
+			"ru":"Получаем базу данных календаря у поставщика контента",
+			"it":"Recupero informazioni di calendario dal database dei contenuti"
+	},
+	"SampLauncher" : { 
+			"en":"Create your own home screen app launcher", 
+			"de":"Eigene Homescreen-App erstellen",
+			"es":"Cree su propio lanzador de aplicaciones para la pantalla de inicio",
+			"fr":"Créez votre propre écran d'accueil lanceur d'application",
+			"pt":"Crie seu Lançador para dispositivos (launcher)",
+			"ru":"Создаём собственный лаунчер",
+			"it":"Crea la tua home screen app launcher"
+	},
+	"SampTerminal" : { 
+			"en":"Create a basic Linux command shell", 
+			"de":"Eine Linux-Kommandozeile ausführen",
+			"es":"Crear un shell de comandos Linux básico",
+			"fr":"Créé un interpréteur de commandes Linux basique",
+			"pt":"Crie um shell de comando básico do Linux",
+			"ru":"Создаём простейший терминал",
+			"it":"Crea un comando shell base Linux"
+	},
+	"SampAnalytics" : { 
+			"en":"Track your app with Google Analytics", 
+			"de":"Appnutzung mit Google Analytics verfolgen",
+			"es":"Seguimiento de tu aplicación con Google Analytics",
+			"fr":"Suivez votre application avec Google Analytics",
+			"pt":"Acompanhe seu aplicativo com o Google Analytics",
+			"ru":"Отслеживаем действия в программе с помощью Google Analytics",
+			"it":"Traccia la tua app con Google Analytics"
+	},
+	"SampSdcard" : { 
+			"en":"Writing files to the external sd card", 
+			"de":"Dateien auf externe SD-Karte schreiben",
+			"es":"Escribir archivos en la tarjeta sd externa",
+			"fr":"Écriture de fichiers vers la carte sd externe",
+			"pt":"Escrevendo arquivos no cartão sd externo",
+			"ru":"Запись файлов на внешнюю SD-карту",
+			"it":"Redazione di file nell'SDCard esterno "
+	},
+	"SampWizard" : { 
+			"en":"Creating a Wizard dialog", 
+			"de":"Creating a Wizard dialog",
+			"es":"Creating a Wizard dialog",
+			"fr":"Création d'une boîte de dialogue d'Assistant",
+			"pt":"Creating a Wizard dialog",
+			"ru":"Creating a Wizard dialog",
+			"it":"Creating a Wizard dialog"
+	}
+ }
+}
