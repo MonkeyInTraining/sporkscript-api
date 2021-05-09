@@ -1,10 +1,45 @@
 /// <reference path="./globals.d.ts" />
 import { DSView } from "./dsview.ts";
+import { Layout } from "./layout.ts";
 
-export class Button extends DSView {
-  constructor(id: string) {
+export class CheckBox extends DSView {
+  private constructor(id: string) {
     super(id);
   }
+  static create(
+    text?: string,
+    width?: number,
+    height?: number,
+    options?: string,
+  ) {
+    var ret = prompt(
+      "#",
+      `App.CreateCheckBox(${text}\f${width}\f${height}\f${options}`,
+    );
+    if (ret) {
+      return new CheckBox(ret);
+    } else {
+      throw new Error(`Could not create ${this.constructor.name}`);
+    }
+  }
+  static createInLayout(
+    layout: Layout,
+    text?: string,
+    width?: number,
+    height?: number,
+    options?: string,
+  ) {
+    var ret = prompt(
+      (layout ? layout.id : undefined),
+      `App.AddCheckBox(${text}\f${width}\f${height}\f${options}`,
+    );
+    if (ret) {
+      return new CheckBox(ret);
+    } else {
+      throw new Error(`Could not create ${this.constructor.name}`);
+    }
+  }
+
   adjustColor(
     hue: number,
     saturation: number,

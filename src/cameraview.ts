@@ -1,11 +1,40 @@
 /// <reference path="./globals.d.ts" />
 import { DSView } from "./dsview.ts";
 import { Image } from "./image.ts";
+import { Layout } from "./layout.ts";
 
 export class CameraView extends DSView {
-  constructor(id: string) {
+  private constructor(id: string) {
     super(id);
   }
+  create(width?: number, height?: number, options?: string) {
+    var ret = prompt(
+      "#",
+      "App.CreateCameraView(" + width + "\f" + height + "\f" + options,
+    );
+    if (ret) {
+      return new CameraView(ret);
+    } else {
+      throw new Error(`Could not create ${this.constructor.name}`);
+    }
+  }
+  static createInLayout(
+    layout: Layout,
+    width?: number,
+    height?: number,
+    options?: string,
+  ) {
+    var ret = prompt(
+      (layout ? layout.id : undefined),
+      `App.AddCameraView(${width}\f${height}\f${options}`,
+    );
+    if (ret) {
+      return new CameraView(ret);
+    } else {
+      throw new Error(`Could not create ${this.constructor.name}`);
+    }
+  }
+
   autoCapture(path: string, file: string, maxCount: number) {
     prompt(this.id, `Cam.AutoCapture(${path}\f${file}\f${maxCount}`);
   }

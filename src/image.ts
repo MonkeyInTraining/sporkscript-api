@@ -1,13 +1,51 @@
 /// <reference path="./globals.d.ts" />
 import { DSView } from "./dsview.ts";
+import { Layout } from "./layout.ts";
 
 export class Image extends DSView {
   private _auto: boolean;
   private _gfb: string;
-  constructor(id: string) {
+  private constructor(id: string) {
     super(id);
     this._auto = true;
     this._gfb = "";
+  }
+  static create(
+    file: string | null = null,
+    width?: number,
+    height?: number,
+    options?: string,
+    w?: number,
+    h?: number,
+  ) {
+    var ret = prompt(
+      "#",
+      `App.CreateImage(${file}\f${width}\f${height}\f${options}\f${w}\f${h}`,
+    );
+    if (ret) {
+      return new Image(ret);
+    } else {
+      throw new Error(`Could not create ${this.constructor.name}`);
+    }
+  }
+  static createInLayout(
+    layout: Layout,
+    file: string | null = null,
+    width?: number,
+    height?: number,
+    options?: string,
+    w?: number,
+    h?: number,
+  ) {
+    var ret = prompt(
+      (layout ? layout.id : undefined),
+      `App.AddImage(${file}\f${width}\f${height}\f${options}\f${w}\f${h}`,
+    );
+    if (ret) {
+      return new Image(ret);
+    } else {
+      throw new Error(`Could not create ${this.constructor.name}`);
+    }
   }
   adjustColor(
     hue: number,
@@ -20,12 +58,10 @@ export class Image extends DSView {
       `Img.AdjustColor(\f${hue}\f${saturation}\f${brightness}\f${contrast}`,
     );
   }
-
   clear() {
     if (this._auto) prompt(this.id, "Img.Clear(");
     else this.draw("c");
   }
-
   draw(
     func: string,
     p1?: number | null | string,
