@@ -1,5 +1,6 @@
 /// <reference path="./globals.d.ts" />
 import { DSView } from "./dsview.ts";
+import { Layout } from "./layout.ts";
 
 export class Text extends DSView {
   private constructor(id: string) {
@@ -18,9 +19,27 @@ export class Text extends DSView {
     if (ret) {
       return new Text(ret);
     } else {
-      throw new Error("Could not create Text");
+      throw new Error(`Could not create ${this.constructor.name}`);
     }
   }
+  createInLayout(
+    layout: Layout,
+    text?: string,
+    width?: number,
+    height?: number,
+    options?: string,
+  ) {
+    var ret = prompt(
+      (layout ? layout.id : undefined),
+      `App.AddText(${text}\f${width}\f${height}\f${options}`,
+    );
+    if (ret) {
+      return new Text(ret);
+    } else {
+      throw new Error(`Could not create ${this.constructor.name}`);
+    }
+  }
+
   getHtml() {
     return prompt(this.id, "Txt.GetHtml(");
   }
