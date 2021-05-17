@@ -25,7 +25,7 @@ export class Toggle extends DSView {
     options?: string,
   ) {
     var ret = prompt(
-      (layout ? layout.id : null),
+      (layout ? layout.id : undefined),
       `App.AddToggle(${text}\f${width}\f${height}\f${options}`,
     );
     if (ret) {
@@ -45,9 +45,11 @@ export class Toggle extends DSView {
   }
   setChecked(checked: boolean) {
     prompt(this.id, `Tgl.SetChecked(${checked}`);
+    return this;
   }
   setOnTouch(callback: Function) {
     prompt(this.id, `Tgl.SetOnClick(${_Cbm(callback)}`);
+    return this;
   }
   setStyle(
     color1: string,
@@ -62,14 +64,18 @@ export class Toggle extends DSView {
       this.id,
       `Tgl.SetStyle(\f${color1}\f${color2}\f${radius}\f${strokeColor}\f${strokeWidth}\f${shadow}\f${checkColor}`,
     );
+    return this;
   }
   setText(text: string) {
     prompt(this.id, `Tgl.SetText(${text}`);
+    return this;
   }
   setTextColor(color: string) {
     prompt(this.id, `Tgl.SetTextColor(${color}`);
+    return this;
   }
   setTextSize(size: number, mode?: string) {
     prompt(this.id, `Tgl.SetTextSize(\f${size}\f${mode}`);
+    return this;
   }
 }

@@ -28,9 +28,11 @@ export class Locator extends DSObject {
   }
   setOnChange(callback: Function) {
     prompt(this.id, `Loc.SetOnChange(${_Cbm(callback)}`);
+    return this;
   }
   setRate(rate: number) {
     prompt(this.id, `Loc.SetRate(${rate}`);
+    return this;
   }
   start() {
     prompt(this.id, "Loc.Start(");

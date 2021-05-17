@@ -31,12 +31,15 @@ export class AudioRecorder extends DSObject {
   }
   setFile(file: string) {
     prompt(this.id, `Rec.SetFile(${file}`);
+    return this;
   }
   setFrequency(frequency: number) {
     prompt(this.id, `Rec.SetFrequency(\f${frequency}`);
+    return this;
   }
   setSource(source: string) {
     prompt(this.id, `Rec.SetSource(\f${source}`);
+    return this;
   }
   start() {
     prompt(this.id, "Rec.Start(");

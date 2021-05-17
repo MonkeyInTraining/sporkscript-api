@@ -34,7 +34,6 @@ export class Switch extends DSView {
       throw new Error(`Could not create ${this.constructor.name}`);
     }
   }
-
   adjustColor(
     hue: number,
     saturation: number,
@@ -56,21 +55,27 @@ export class Switch extends DSView {
     return parseFloat(prompt(this.id, `Swi.GetTextSize(\f${mode}`) || "");
   }
   setChecked(checked: boolean) {
-    prompt(this.id, "Swi.SetChecked(" + checked);
+    prompt(this.id, `Swi.SetChecked(${checked}`);
+    return this;
   }
   setColorFilter(color: string, mode?: string, options?: string) {
     prompt(this.id, `Swi.SetColorFilter(\f${color}\f${mode}\f${options}`);
+    return this;
   }
   setOnTouch(callback: Function) {
     prompt(this.id, `Swi.SetOnTouch(\f${_Cbm(callback)}`);
+    return this;
   }
   setText(text: string) {
     prompt(this.id, `Swi.SetText(${text}`);
+    return this;
   }
   setTextColor(color: string) {
     prompt(this.id, `Swi.SetTextColor(${color}`);
+    return this;
   }
   setTextSize(size: number, mode?: string) {
     prompt(this.id, `Swi.SetTextSize(\f${size}\f${mode}`);
+    return this;
   }
 }

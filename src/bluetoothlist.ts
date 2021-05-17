@@ -22,8 +22,10 @@ export class BluetoothList extends DSObject {
   }
   setOnTouch(callback: OnTouchCallable) {
     prompt(this.id, `Btl.SetOnClick(${_Cbm(callback)}`);
+    return this;
   }
   setOnTouchEx(callback: OnTouchCallable) {
     prompt(this.id, `Btl.SetOnClick(${callback}`);
+    return this;
   }
 }

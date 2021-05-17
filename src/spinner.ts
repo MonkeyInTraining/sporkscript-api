@@ -9,8 +9,7 @@ export class Spinner extends DSView {
   create(list?: string, width?: number, height?: number, options?: number) {
     var ret = prompt(
       "#",
-      "App.CreateSpinner(" + list + "\f" + width + "\f" + height + "\f" +
-        options,
+      `App.CreateSpinner(${list}\f${width}\f${height}\f${options}`
     );
     if (ret) {
       return new Spinner(ret);
@@ -27,7 +26,7 @@ export class Spinner extends DSView {
   ) {
     var ret = prompt(
       (layout ? layout.id : undefined),
-      "App.AddSpinner(" + list + "\f" + width + "\f" + height + "\f" + options,
+      `App.AddSpinner(${list}\f${width}\f${height}\f${options}`
     );
     if (ret) {
       return new Spinner(ret);
@@ -57,20 +56,26 @@ export class Spinner extends DSView {
   }
   setList(list: string, delimiter?: string) {
     prompt(this.id, `Spn.SetList(\f${list}\f${delimiter}`);
+    return this;
   }
   setOnChange(callback: Function) {
     prompt(this.id, `Spn.SetOnClick(${_Cbm(callback)}`);
+    return this;
   }
   setOnTouch(callback: OnTouchCallable) {
     prompt(this.id, `Spn.SetOnClick(${_Cbm(callback)}`);
+    return this;
   }
   setText(text: string) {
     prompt(this.id, `Spn.SetText(${text}`);
+    return this;
   }
   setTextColor(color: string) {
     prompt(this.id, `Spn.SetTextColor(${color}`);
+    return this;
   }
   setTextSize(size: number, mode?: string) {
     prompt(this.id, `Spn.SetTextSize(\f${size}\f${mode}`);
+    return this;
   }
 }

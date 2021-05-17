@@ -96,21 +96,27 @@ export class NetClient extends DSObject {
   }
   setDataMode(mode: string) {
     prompt(this.id, `Net.SetDataMode(\f${mode}`);
+    return this;
   }
   setOnConnect(callback: Function) {
     prompt(this.id, `Net.SetOnConnect(${_Cbm(callback)}`);
+    return this;
   }
   setOnDownload(callback: Function) {
     prompt(this.id, `Net.SetOnDownload(${_Cbm(callback)}`);
+    return this;
   }
   setOnReceive(callback: Function) {
     prompt(this.id, `Net.SetOnReceive(${_Cbm(callback)}`);
+    return this;
   }
   setSplitMode(mode: string, p2?: string, p3?: string) {
     prompt(this.id, `Net.SetSplitMode(\f${mode}\f${p2}\f${p3}`);
+    return this;
   }
   setTimeout(secs: number) {
     prompt(this.id, `Net.SetTimeout(${secs}`);
+    return this;
   }
   wakeOnLan(ip: string, mac: string) {
     prompt(this.id, `Net.WakeOnLan(\f${ip}\f${mac}`);

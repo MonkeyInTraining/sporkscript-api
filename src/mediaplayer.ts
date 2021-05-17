@@ -48,28 +48,34 @@ export class MediaPlayer extends DSObject {
     prompt(this.id, "Aud.Release(");
     _map[this.id] = null;
   }
-  setFile(file: string) {
-    prompt(this.id, `Aud.SetFile(${file}`);
-  }
-  setLooping(loop: boolean) {
-    prompt(this.id, `Aud.SetLooping(\f${loop}`);
-  }
   stop() {
     prompt(this.id, "Aud.Stop(");
   }
   seekTo(time: number) {
     prompt(this.id, `Aud.SeekTo(${time}`);
   }
+  setFile(file: string) {
+    prompt(this.id, `Aud.SetFile(${file}`);
+    return this;
+  }
+  setLooping(loop: boolean) {
+    prompt(this.id, `Aud.SetLooping(\f${loop}`);
+    return this;
+  }
   setVolume(left: number, right: number) {
     prompt(this.id, `Aud.SetVolume(${left}\f${right}`);
+    return this;
   }
   setOnReady(callback: Function) {
     prompt(this.id, `Aud.SetOnReady(${_Cbm(callback)}`);
+    return this;
   }
   setOnComplete(callback: Function) {
     prompt(this.id, `Aud.SetOnComplete(${_Cbm(callback)}`);
+    return this;
   }
   setOnSeekDone(callback: Function) {
     prompt(this.id, `Aud.SetOnSeekDone(${_Cbm(callback)}`);
+    return this;
   }
 }

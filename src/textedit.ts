@@ -84,39 +84,51 @@ export class TextEdit extends DSView {
   }
   setCursorColor(color: string) {
     prompt(this.id, `Txe.SetCursorColor(\f${color}`);
+    return this;
   }
   setCursorPos(position: number) {
     prompt(this.id, `Txe.SetCursorPos(${position}`);
+    return this;
   }
   setHint(text: string) {
     prompt(this.id, `Txe.SetHint(${text}`);
+    return this;
   }
   setHtml(html: string) {
     prompt(this.id, `Txe.SetHtml(${html}`);
+    return this;
   }
   setOnChange(callback: Function) {
     prompt(this.id, `Txe.SetOnChange(\f${_Cbm(callback)}`);
+    return this;
   }
   setOnEnter(callback: Function) {
     prompt(this.id, `Txe.SetOnEnter(\f${_Cbm(callback)}`);
+    return this;
   }
   setOnFocus(callback: Function) {
     prompt(this.id, `Txe.SetOnFocus(\f${_Cbm(callback)}`);
+    return this;
   }
   setOnTouch(callback: OnTouchCallable) {
     prompt(this.id, `Txe.SetOnTouch(\f${_Cbm(callback)}`);
+    return this;
   }
   setSelection(start: number, stop: number) {
     prompt(this.id, `Txe.SetSelection(\f${start}\f${stop}`);
+    return this;
   }
   setText(text: string) {
     prompt(this.id, `Txe.SetText(${text}`);
+    return this;
   }
   setTextColor(color: string) {
     prompt(this.id, `Txe.SetTextColor(${color}`);
+    return this;
   }
   setTextSize(size: number, mode?: string) {
     prompt(this.id, `Txe.SetTextSize(\f${size}\f${mode}`);
+    return this;
   }
   undo() {
     prompt(this.id, "Txe.Undo(");

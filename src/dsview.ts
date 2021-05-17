@@ -98,9 +98,11 @@ export class DSView extends DSObject {
   }
   setBackAlpha(alpha: number) {
     prompt(this.id, `Obj.SetBackAlpha(\f${alpha}`);
+    return this;
   }
   setBackColor(color: string) {
     prompt(this.id, `Obj.SetBackColor(\f${color}`);
+    return this;
   }
   setBackGradient(
     color1: string,
@@ -112,6 +114,7 @@ export class DSView extends DSObject {
       this.id,
       `Obj.SetBackGradient(Linear\f${color1}\f${color2}\f${color3}\f${options}\f${null}\f${null}\f${null}`,
     );
+    return this;
   }
   setBackGradientRadial(
     x: number,
@@ -126,18 +129,23 @@ export class DSView extends DSObject {
       this.id,
       `Obj.SetBackGradient(Radial\f${x}\f${y}\f${radius}\f${color1}\f${color2}\f${color3}\f${options}`,
     );
+    return this;
   }
   setBackground(file: string, options?: string) {
     prompt(this.id, `Obj.SetBackground(${file}\f${options}`);
+    return this;
   }
   setColorFilter(color: string, mode?: string) {
     prompt(this.id, `Obj.SetColorFilter(\f${color}\f${mode}`);
+    return this;
   }
   setDescription(text: string) {
     prompt(this.id, `Obj.SetDescription(\f${text}`);
+    return this;
   }
   setEnabled(enable: boolean) {
     prompt(this.id, `Obj.SetEnabled(\f${enable}`);
+    return this;
   }
   setMargins(
     left: number,
@@ -150,6 +158,7 @@ export class DSView extends DSObject {
       this.id,
       `Obj.SetMargins(\f${left}\f${top}\f${right}\f${bottom}\f${mode}`,
     );
+    return this;
   }
   setPadding(
     left: number,
@@ -162,6 +171,7 @@ export class DSView extends DSObject {
       this.id,
       `Obj.SetPadding(\f${left}\f${top}\f${right}\f${bottom}\f${mode}`,
     );
+    return this;
   }
   setPosition(
     left: number,
@@ -176,15 +186,19 @@ export class DSView extends DSObject {
     );
     this._left = left;
     this._top = top;
+    return this;
   }
   setScale(x: number, y: number) {
     prompt(this.id, `Obj.SetScale(\f${x}\f${y}`);
+    return this;
   }
   setSize(width: number, height?: number, options?: string) {
     prompt(this.id, `Obj.SetSize(\f${width}\f${height}\f${options}`);
+    return this;
   }
   setVisibility(mode: string) {
     prompt(this.id, `Obj.SetVisibility(${mode}`);
+    return this;
   }
   show() {
     prompt(this.id, "Obj.SetVisibility(Show");

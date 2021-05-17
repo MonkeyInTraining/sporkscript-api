@@ -51,6 +51,7 @@ export class Layout extends DSView {
   }
   setBackColor(color: string) {
     prompt(this.id, `Lay.SetBackColor(\f${color}`);
+    return this;
   }
   setChildMargins(
     left: number,
@@ -63,44 +64,58 @@ export class Layout extends DSView {
       this.id,
       `Lay.SetChildMargins(\f${left}\f${top}\f${right}\f${bottom}\f${mode}`,
     );
+    return this;
   }
   setChildTextSize(size: number, mode?: string) {
     prompt(this.id, `Lay.SetChildTextSize(\f${size}\f${mode}`);
+    return this;
   }
   setCornerRadius(radius: number) {
     prompt(this.id, `Lay.SetCornerRadius(\f${radius}`);
+    return this;
   }
   setElevation(elevation: number) {
     prompt(this.id, `Lay.SetElevation(\f${elevation}`);
+    return this;
   }
   setGravity(gravity: number) {
     prompt(this.id, `Lay.SetGravity(\f${gravity}`);
+    return this;
   }
   setOnChildChange(callback: OnTouchCallable) {
     prompt(this.id, `Lay.SetOnChildChange(\f${_Cbm(callback)}`);
+    return this;
   }
   setOnLongTouch(callback: OnTouchCallable) {
     prompt(this.id, `Lay.SetOnLongTouch(\f${_Cbm(callback)}`);
+    return this;
   }
   setOnTouch(callback: OnTouchCallable) {
     prompt(this.id, `Lay.SetOnTouch(\f${_Cbm(callback)}`);
+    return this;
   }
   setOnTouchDown(callback: OnTouchCallable) {
     prompt(this.id, `Lay.SetOnTouchDown(\f${_Cbm(callback)}`);
+    return this;
   }
   setOnTouchMove(callback: OnTouchCallable) {
     prompt(this.id, `Lay.SetOnTouchMove(\f${_Cbm(callback)}`);
+    return this;
   }
   setOnTouchUp(callback: OnTouchCallable) {
     prompt(this.id, `Lay.SetOnTouchUp(\f${_Cbm(callback)}`);
+    return this;
   }
   setOrientation(orientation: string) {
     prompt(this.id, `Lay.SetOrientation(\f${orientation}`);
+    return this;
   }
   setTouchable(touchable: boolean) {
     prompt(this.id, `Lay.SetTouchable(\f${touchable}`);
+    return this;
   }
   setTouchThrough(through: boolean) {
     prompt(this.id, `Lay.SetTouchThrough(\f${through}`);
+    return this;
   }
 }

@@ -1,0 +1,2 @@
+scripts:
+  cmp: deno run --allow-read --allow-write --unstable cmp.ts

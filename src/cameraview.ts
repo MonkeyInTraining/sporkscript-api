@@ -116,6 +116,7 @@ export class CameraView extends DSView {
   }
   setColorEffect(effect: string) {
     prompt(this.id, `Cam.SetColorEffect(\f${effect}`);
+    return this;
   }
   setDuplicateImage(image1: Image, image2: Image) {
     prompt(
@@ -124,27 +125,35 @@ export class CameraView extends DSView {
         ? image2.id
         : null)}`,
     );
+    return this;
   }
   setFlash(onoff: boolean) {
     prompt(this.id, `Cam.SetFlash(${onoff}`);
+    return this;
   }
   setFocusMode(mode: string) {
     prompt(this.id, `Cam.SetFocusMode(\f${mode}`);
+    return this;
   }
   setOnFocus(callback: Function) {
     prompt(this.id, `Cam.SetOnFocus\f${_Cbm(callback)}`);
+    return this;
   }
   setOnMotion(callback: Function) {
     prompt(this.id, `Cam.SetOnMotion(${_Cbm(callback)}`);
+    return this;
   }
   setOnPicture(callback: Function) {
     prompt(this.id, `Cam.SetOnPicture\f${_Cbm(callback)}`);
+    return this;
   }
   setOnReady(callback: Function) {
     prompt(this.id, `Cam.SetOnReady(${_Cbm(callback)}`);
+    return this;
   }
   setOrientation(angle: number) {
     prompt(this.id, `Cam.SetOrientation(\f${angle}`);
+    return this;
   }
   setParameter(name: string, value: number | string) {
     if (typeof value === "string") {
@@ -152,24 +161,31 @@ export class CameraView extends DSView {
     } else {
       prompt(this.id, `Cam.SetParamNum(\f${name}\f${value}`);
     }
+    return this;
   }
   setPictureSize(width: number, height?: number) {
     prompt(this.id, `Cam.SetPictureSize(\f${width}\f${height}`);
+    return this;
   }
   setPostRotation(angle: number) {
     prompt(this.id, `Cam.SetPostRotation(\f${angle}`);
+    return this;
   }
   setPreviewImage(image: Image) {
     prompt(this.id, `Cam.SetPreviewImage(${(image ? image.id : null)}`);
+    return this;
   }
   setSound(onoff: boolean) {
     prompt(this.id, `Cam.SetSound(${onoff}`);
+    return this;
   }
   setVideoSize(width: number, height?: number) {
     prompt(this.id, `Cam.SetVideoSize(\f${width}\f${height}`);
+    return this;
   }
   setZoom(level: number) {
     prompt(this.id, `Cam.SetZoom(\f${level}`);
+    return this;
   }
   startPreview() {
     prompt(this.id, "Cam.StartPreview(");

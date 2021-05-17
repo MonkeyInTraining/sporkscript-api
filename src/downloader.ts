@@ -30,14 +30,18 @@ export class Downloader extends DSObject {
   }
   SetOnCancel(callback: Function) {
     prompt(this.id, `Dwn.SetOnCancel(\f${_Cbm(callback)}`);
+    return this;
   }
   SetOnComplete(callback: Function) {
     prompt(this.id, `Dwn.SetOnComplete(\f${_Cbm(callback)}`);
+    return this;
   }
   SetOnDownload(callback: Function) {
     prompt(this.id, `Dwn.SetOnDownload(\f${_Cbm(callback)}`);
+    return this;
   }
   SetOnError(callback: Function) {
     prompt(this.id, `Dwn.SetOnError(\f${_Cbm(callback)}`);
+    return this;
   }
 }

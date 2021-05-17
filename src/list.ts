@@ -108,27 +108,35 @@ export class List extends DSView {
       this.id,
       `Lst.SetColumnWidths(\f${icon}\f${title}\f${body}\f${mode}`,
     );
+    return this;
   }
   setDivider(height: number, color?: string) {
     prompt(this.id, `Lst.SetDivider(\f${height}\f${color}`);
+    return this;
   }
   setEllipsize(mode?: string) {
     prompt(this.id, `Lst.SetEllipsize(\f${mode}`);
+    return this;
   }
   setEllipsize1(mode?: string) {
     prompt(this.id, `Lst.SetEllipsize1(\f${mode}`);
+    return this;
   }
   setEllipsize2(mode?: string) {
     prompt(this.id, `Lst.SetEllipsize2(\f${mode}`);
+    return this;
   }
   setFontFile(file: string) {
     prompt(this.id, `Lst.SetFontFile(\f${file}`);
+    return this;
   }
   setHiTextColor1(color: string) {
     prompt(this.id, `Lst.SetHiTextColor1(${color}`);
+    return this;
   }
   setHiTextColor2(color: string) {
     prompt(this.id, `Lst.SetHiTextColor2(${color}`);
+    return this;
   }
   setIconMargins(
     left: number,
@@ -141,9 +149,11 @@ export class List extends DSView {
       this.id,
       `Lst.SetIconMargins(\f${left}\f${top}\f${right}\f${bottom}\f${mode}`,
     );
+    return this;
   }
   setIconSize(size: number, mode?: string) {
     prompt(this.id, `Lst.SetIconSize(\f${size}\f${mode}`);
+    return this;
   }
   setItem(
     title: string,
@@ -155,6 +165,7 @@ export class List extends DSView {
       this.id,
       `Lst.SetItem(\f${title}\f${newTitle}\f${newBody}\f${newImage}`,
     );
+    return this;
   }
   setItemByIndex(
     index: number,
@@ -166,27 +177,35 @@ export class List extends DSView {
       this.id,
       `Lst.SetItemByIndex(\f${index}\f${newTitle}\f${newBody}\f${newImage}`,
     );
+    return this;
   }
   setItemColor(title: string, color: string, bgColor: string) {
     prompt(this.id, `Lst.SetItemColor(\f${title}\f${color}\f${bgColor}`);
+    return this;
   }
   setItemColorByIndex(index: number, color: string, bgColor: string) {
     prompt(this.id, `Lst.SetItemColorByIndex(\f${index}\f${color}\f${bgColor}`);
+    return this;
   }
   setOnLongTouch(callback: OnTouchCallable) {
     prompt(this.id, `Lst.SetOnLongClick(${_Cbm(callback)}`);
+    return this;
   }
   setOnTouch(callback: OnTouchCallable) {
     prompt(this.id, `Lst.SetOnClick(${_Cbm(callback)}`);
+    return this;
   }
   setTextColor(color: string) {
     prompt(this.id, `Lst.SetTextColor1(${color}`);
+    return this;
   }
   setTextColor1(color: string) {
     prompt(this.id, `Lst.SetTextColor1(${color}`);
+    return this;
   }
   setTextColor2(color: string) {
     prompt(this.id, `Lst.SetTextColor2(${color}`);
+    return this;
   }
   setTextMargins(
     left: number,
@@ -200,23 +219,30 @@ export class List extends DSView {
       this.id,
       `Lst.SetTextMargins(\f${left}\f${top}\f${right}\f${bottom}\f${mode}\f${options}`,
     );
+    return this;
   }
   setTextShadow(radius: number, dx: number, dy: number, color: string) {
     prompt(this.id, `Lst.SetTextShadow1(\f${radius}\f${dx}\f${dy}\f${color}`);
+    return this;
   }
   setTextShadow1(radius: number, dx: number, dy: number, color: string) {
     prompt(this.id, `Lst.SetTextShadow1(\f${radius}\f${dx}\f${dy}\f${color}`);
+    return this;
   }
   setTextShadow2(radius: number, dx: number, dy: number, color: string) {
     prompt(this.id, `Lst.SetTextShadow2(\f${radius}\f${dx}\f${dy}\f${color}`);
+    return this;
   }
   setTextSize(size: number, mode?: string) {
     prompt(this.id, `Lst.SetTextSize1(\f${size}\f${mode}`);
+    return this;
   }
   setTextSize1(size: number, mode?: string) {
     prompt(this.id, `Lst.SetTextSize1(\f${size}\f${mode}`);
+    return this;
   }
   setTextSize2(size: number, mode?: string) {
     prompt(this.id, `Lst.SetTextSize2(\f${size}\f${mode}`);
+    return this;
   }
 }

@@ -56,24 +56,31 @@ export class VideoView extends DSView {
   }
   setFile(file: string) {
     prompt(this.id, "Vid.SetFile(" + file);
+    return this;
   }
   setOnComplete(callback: Function) {
     prompt(this.id, "Vid.SetOnComplete(" + _Cbm(callback));
+    return this;
   }
   setOnError(callback: Function) {
     prompt(this.id, "Vid.SetOnError(" + _Cbm(callback));
+    return this;
   }
   setOnReady(callback: Function) {
     prompt(this.id, "Vid.SetOnReady(" + _Cbm(callback));
+    return this;
   }
   setOnSubtitle(callback: Function) {
     prompt(this.id, "Vid.SetOnSubtitle(\f" + _Cbm(callback));
+    return this;
   }
   setSubtitles(file: string) {
     prompt(this.id, "Vid.SetSubtitles(\f" + file);
+    return this;
   }
   setVolume(left: number, right: number) {
     prompt(this.id, "Vid.SetVolume(\f" + left + "\f" + right);
+    return this;
   }
   stop() {
     prompt(this.id, "Vid.Stop(");

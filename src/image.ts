@@ -247,10 +247,12 @@ export class Image extends DSView {
     } else {
       this.draw("k", null, alpha);
     }
+    return this;
   }
   setAutoUpdate(onoff: boolean) {
     this._auto = onoff;
     prompt(this.id, `Img.SetAutoUpdate(\f${onoff}`);
+    return this;
   }
   setColor(color: string) {
     if (this._auto) {
@@ -258,9 +260,11 @@ export class Image extends DSView {
     } else {
       this.draw("o", color);
     }
+    return this;
   }
   setColorFilter(color: string, mode: string) {
     prompt(this.id, `Img.SetColorFilter(\f${color}\f${mode}`);
+    return this;
   }
   setFontFile(file: string) {
     if (this._auto) {
@@ -268,6 +272,7 @@ export class Image extends DSView {
     } else {
       this.draw("f", file);
     }
+    return this;
   }
   setImage(
     image: Image | string,
@@ -288,6 +293,7 @@ export class Image extends DSView {
           : null)}\f${width}\f${height}\f${options}`,
       );
     }
+    return this;
   }
   setLineWidth(width: number) {
     if (this._auto) {
@@ -295,30 +301,39 @@ export class Image extends DSView {
     } else {
       this.draw("w", null, width);
     }
+    return this;
   }
   setMaxRate(ms: number) {
     prompt(this.id, `Img.SetMaxRate(${ms}`);
+    return this;
   }
   setName(name: string) {
     prompt(this.id, `Img.SetName(${name}`);
+    return this;
   }
   setOnLoad(callback: Callable) {
     prompt(this.id, `Img.SetOnLoad\f${_Cbm(callback)}`);
+    return this;
   }
   setOnLongTouch(callback: OnTouchCallable) {
     prompt(this.id, `Img.SetOnLongTouch(${_Cbm(callback)}`);
+    return this;
   }
   setOnTouch(callback: OnTouchCallable) {
     prompt(this.id, `Img.SetOnTouch(${_Cbm(callback)}`);
+    return this;
   }
   setOnTouchDown(callback: OnTouchCallable) {
     prompt(this.id, `Img.SetOnTouchDown(${_Cbm(callback)}`);
+    return this;
   }
   setOnTouchMove(callback: OnTouchCallable) {
     prompt(this.id, `Img.SetOnTouchMove(${_Cbm(callback)}`);
+    return this;
   }
   setOnTouchUp(callback: OnTouchCallable) {
     prompt(this.id, `Img.SetOnTouchUp(${_Cbm(callback)}`);
+    return this;
   }
   setPaintColor(color: string) {
     if (this._auto) {
@@ -326,6 +341,7 @@ export class Image extends DSView {
     } else {
       this.draw("n", color);
     }
+    return this;
   }
   setPaintStyle(style: string) {
     if (this._auto) {
@@ -333,6 +349,7 @@ export class Image extends DSView {
     } else {
       this.draw("s", style);
     }
+    return this;
   }
   setPixelData(
     data: string,
@@ -340,16 +357,19 @@ export class Image extends DSView {
     height?: number,
     options?: string,
   ) {
-    return prompt(
+    prompt(
       this.id,
       `Img.SetPixelData(\f${data}\f${width}\f${height}\f${options}`,
     );
+    return this;
   }
   setPixelMode(onoff: boolean) {
     prompt(this.id, `Img.SetPixelMode(\f${onoff}`);
+    return this;
   }
   setSize(width: number, height?: number, options?: string) {
     prompt(this.id, `Img.SetSize(\f${width}\f${height}\f${options}`);
+    return this;
   }
   setTextSize(size: number) {
     if (this._auto) {
@@ -357,9 +377,11 @@ export class Image extends DSView {
     } else {
       this.draw("x", null, size);
     }
+    return this;
   }
   setTouchable(touchable: boolean) {
     prompt(this.id, `Img.SetTouchable(${touchable}`);
+    return this;
   }
   transform(matrix: string) {
     prompt(this.id, `Img.Transform(\f${matrix}`);

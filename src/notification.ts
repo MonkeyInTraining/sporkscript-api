@@ -26,8 +26,8 @@ export class Notification extends DSObject {
   notify(id: string) {
     prompt(this.id, `Not.Notify(\f${id}`);
   }
-  setLargeImage(image: Image): void;
-  setLargeImage(image: string): void;
+  setLargeImage(image: Image): this;
+  setLargeImage(image: string): this;
   setLargeImage(image: any) {
     if (image.constructor.name === "Image") {
       prompt(
@@ -35,18 +35,22 @@ export class Notification extends DSObject {
         `Not.SetLargeImage(\f${(image ? image.id : null)}`,
       );
     } else prompt(this.id, `Not.SetLargeImageFile(\f${image}`);
+    return this;
   }
   setLights(color: string, onMs: number, offMs: number) {
     prompt(this.id, `Not.SetLights(\f${color}\f${onMs}\f${offMs}`);
+    return this;
   }
   setMessage(ticker: string, title: string, text: string, extra: string) {
     prompt(this.id, `Not.SetMessage(\f${ticker}\f${title}\f${text}\f${extra}`);
+    return this;
   }
   setOnNotify(callback: Function) {
     prompt(this.id, `Not.SetOnNotify(\f${_Cbm(callback)}`);
+    return this;
   }
-  setSmallImage(image: Image): void;
-  setSmallImage(image: string): void;
+  setSmallImage(image: Image): this;
+  setSmallImage(image: string): this;
   setSmallImage(image: any) {
     if (image.constructor.name === "Image") {
       prompt(
@@ -54,5 +58,6 @@ export class Notification extends DSObject {
         `Not.SetSmallImage(\f${(image ? image.id : null)}`,
       );
     } else prompt(this.id, `Not.SetSmallImageFile(\f${image}`);
+    return this;
   }
 }

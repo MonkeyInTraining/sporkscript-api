@@ -119,45 +119,59 @@ export class CodeEdit extends DSView {
   }
   setColorScheme(scheme: string) {
     prompt(this.id, `Cde.SetColorScheme(\f${scheme}`);
+    return this;
   }
   setCursorPos(position: number) {
     prompt(this.id, `Cde.SetCursorPos(${position}`);
+    return this;
   }
   setHtml(html: string) {
     prompt(this.id, `Cde.SetText(\f${html}`);
+    return this;
   }
   setLanguage(ext: string) {
     prompt(this.id, `Cde.SetLanguage(\f${ext}`);
+    return this;
   }
   setNavigationMethod(method: string) {
     prompt(this.id, `Cde.SetNavigationMethod(\f${method}`);
+    return this;
   }
   setOnChange(callback: Function) {
     prompt(this.id, `Cde.SetOnChange(\f${_Cbm(callback)}`);
+    return this;
   }
   setOnDoubleTap(callback: Function) {
     prompt(this.id, `Cde.SetOnDoubleTap(\f${_Cbm(callback)}`);
+    return this;
   }
   setOnKey(callback: Function) {
     prompt(this.id, `Cde.SetOnKey(\f${_Cbm(callback)}`);
+    return this;
   }
   setSelectMode(onOff: boolean) {
     prompt(this.id, `Cde.SetSelectMode(\f${onOff}`);
+    return this;
   }
   setSelection(start: number, stop: number) {
     prompt(this.id, `Cde.SetSelection(\f${start}\f${stop}`);
+    return this;
   }
   setText(text: string) {
     prompt(this.id, `Cde.SetText(\f${text}`);
+    return this;
   }
   setTextColor(color: string) {
     prompt(this.id, `Cde.SetTextColor(\f${color}`);
+    return this;
   }
   setTextSize(size: number, mode?: string) {
     prompt(this.id, `Cde.SetTextSize(\f${size}\f${mode}`);
+    return this;
   }
   setUseKeyboard(onOff: boolean) {
     prompt(this.id, `Cde.SetUseKeyboard(\f${onOff}`);
+    return this;
   }
   undo() {
     prompt(this.id, "Cde.Undo(");

@@ -75,48 +75,62 @@ export class WebView extends DSView {
   }
   setErrorPage(url: string) {
     prompt(this.id, `Web.SetErrorPage(\f${url}`);
+    return this;
   }
   setOnProgress(callback: Function) {
     prompt(this.id, `Web.SetOnProgress(${_Cbm(callback)}`);
+    return this;
   }
   setOnError(callback: Function) {
     prompt(this.id, `Web.SetOnError(\f${_Cbm(callback)}`);
+    return this;
   }
   setOnConsole(callback: Function) {
     prompt(this.id, `Web.SetOnConsole(\f${_Cbm(callback)}`);
+    return this;
   }
   setZoom(zoom: number) {
     prompt(this.id, `Web.SetZoom(\f${zoom}`);
+    return this;
   }
   setTextZoom(zoom: number) {
     prompt(this.id, `Web.SetTextZoom(\f${zoom}`);
+    return this;
   }
   setUserAgent(agent: string) {
     prompt(this.id, `Web.SetUserAgent(\f${agent}`);
+    return this;
   }
   setUserCreds(name: string, password: string) {
     prompt(this.id, `Web.SetUserCreds(\f${name}\f${password}`);
-  }
-  simulateKey(keyName: string, modifiers?: string, pause?: boolean) {
-    prompt(this.id, `Web.SimulateKey(\f${keyName}\f${modifiers}\f${pause}`);
+    return this;
   }
   setRedirect(urlFrom: string, urlTo: string) {
     prompt(this.id, `Web.SetRedirect(\f${urlFrom}\f${urlTo}`);
+    return this;
   }
   setTouchMode(mode: string) {
     prompt(this.id, `Web.SetTouchMode(\f${mode}`);
+    return this;
   }
   setOnTouch(callback: Function) {
     prompt(this.id, `Web.SetOnTouch(\f${_Cbm(callback)}`);
+    return this;
   }
   setOnUrl(callback: Function) {
     prompt(this.id, `Web.SetOnUrl(\f${_Cbm(callback)}`);
+    return this;
   }
   setOnRequest(callback: Function) {
     prompt(this.id, `Web.SetOnRequest(\f${_Cbm(callback)}`);
+    return this;
   }
   setBlockedUrls(urls: string) {
     prompt(this.id, `Web.SetBlockedUrls(\f${urls}`);
+    return this;
+  }
+  simulateKey(keyName: string, modifiers?: string, pause?: boolean) {
+    prompt(this.id, `Web.SimulateKey(\f${keyName}\f${modifiers}\f${pause}`);
   }
   stop() {
     prompt(this.id, "Web.Stop(");

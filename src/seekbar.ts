@@ -48,25 +48,31 @@ export class SeekBar extends DSView {
       `Skb.AdjustColor(\f${hue}\f${saturation}\f${brightness}\f${contrast}`,
     );
   }
-  setColorFilter(color: string, mode?: string, options?: string) {
-    prompt(this.id, `Skb.SetColorFilter(\f${color}\f${mode}\f${options}`);
-  }
-  setMaxRate(rate: number) {
-    prompt(this.id, `Skb.SetMaxRate(${rate}`);
-  }
-  setOnChange(callback: Function) {
-    prompt(this.id, `Skb.SetOnClick(${_Cbm(callback)}`);
-  }
-  setOnTouch(callback: OnTouchCallable) {
-    prompt(this.id, `Skb.SetOnClick(${_Cbm(callback)}`);
-  }
   getValue() {
     return parseFloat(prompt(this.id, "Skb.GetValue(") || "");
   }
+  setColorFilter(color: string, mode?: string, options?: string) {
+    prompt(this.id, `Skb.SetColorFilter(\f${color}\f${mode}\f${options}`);
+    return this;
+  }
+  setMaxRate(rate: number) {
+    prompt(this.id, `Skb.SetMaxRate(${rate}`);
+    return this;
+  }
+  setOnChange(callback: Function) {
+    prompt(this.id, `Skb.SetOnClick(${_Cbm(callback)}`);
+    return this;
+  }
+  setOnTouch(callback: OnTouchCallable) {
+    prompt(this.id, `Skb.SetOnClick(${_Cbm(callback)}`);
+    return this;
+  }
   setValue(value: number) {
     prompt(this.id, `Skb.SetValue(${value}`);
+    return this;
   }
   setRange(range: number) {
     prompt(this.id, `Skb.SetRange(${range}`);
+    return this;
   }
 }

@@ -40,11 +40,14 @@ export class MediaStore extends DSObject {
   }
   setOnAlbumsResult(callback: Function) {
     prompt(this.id, `Med.SetOnAlbumsResult(\f${_Cbm(callback)}`);
+    return this;
   }
   setOnArtistsResult(callback: Function) {
     prompt(this.id, `Med.SetOnArtistsResult(\f${_Cbm(callback)}`);
+    return this;
   }
   setOnMediaResult(callback: Function) {
     prompt(this.id, `Med.SetOnMediaResult(\f${_Cbm(callback)}`);
+    return this;
   }
 }

@@ -62,20 +62,26 @@ export class CheckBox extends DSView {
   }
   setChecked(checked: boolean) {
     prompt(this.id, `Chk.SetChecked(${checked}`);
+    return this;
   }
   setColorFilter(color: string, mode?: string) {
     prompt(this.id, `Chk.SetColorFilter(\f${color}\f${mode}`);
+    return this;
   }
   setOnTouch(callback: OnTouchCallable) {
     prompt(this.id, `Chk.SetOnClick(${_Cbm(callback)}`);
+    return this;
   }
   setText(text: string) {
     prompt(this.id, `Chk.SetText(${text}`);
+    return this;
   }
   setTextColor(color: string) {
     prompt(this.id, `Chk.SetTextColor(${color}`);
+    return this;
   }
   setTextSize(size: number, mode?: string) {
     prompt(this.id, `Chk.SetTextSize(\f${size}\f${mode}`);
+    return this;
   }
 }
