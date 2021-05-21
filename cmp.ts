@@ -10,18 +10,26 @@ if (stats.length) {
 if (ignoredOptions?.length) {
     console.log(ignoredOptions)
 }
-/*
-for (const k in files) {
-    console.log(k)
-    console.log(files[k])
-}
-*/
-let text = files["deno:///bundle.js"]
+
+const text = files["deno:///bundle.js"]
     .replaceAll("\f","\\f")
     .split("\n")
-let end = text.map(x=>x.trim()).lastIndexOf("return {")
+const end = text.map(x=>x.trim()).lastIndexOf("return {")
 console.log(end)
 
 Deno.writeTextFile("./spork-test.js", text.slice(1,end).join("\n"))
 //const e = new TextEncoder()
 //Deno.writeFile("./spork-test.js", e.encode(files["deno:///bundle.js"]))
+
+
+/*
+const { files, diagnostics, stats, ignoredOptions } = await Deno.emit("./spork.test.ts");
+let m = [];
+for (const k in files) {
+    //console.log(k)
+    m.push("// " + k);
+    //console.log(files[k])
+    m.push(files[k].replaceAll("\f","\\f"))
+}
+Deno.writeTextFile("./out.js", m.join("\n"))
+*/
