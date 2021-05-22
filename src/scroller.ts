@@ -6,33 +6,38 @@ export class Scroller extends DSView {
   private constructor(id: string) {
     super(id);
   }
-  static create(width?:number, height?:number, options?:string) {
+  static create(width?: number, height?: number, options?: string) {
     var ret = prompt(
       "#",
-      `App.CreateScroller(${width}\f${height}\f${options}`
+      "App.CreateScroller(" + width + "\f" + height + "\f" + options,
     );
     if (ret) {
-        return new Scroller(ret);
-    }else {
-        throw new Error(`Could not create ${this.constructor.name}`);
+      return new Scroller(ret);
+    } else {
+      throw new Error(`Could not create ${this.constructor.name}`);
     }
   }
-  static createInLayout(layout:Layout, width?:number, height?:number, options?:string) {
+  static createInLayout(
+    layout: Layout,
+    width?: number,
+    height?: number,
+    options?: string,
+  ) {
     var ret = prompt(
       (layout ? layout.id : undefined),
-      `App.AddScroller(${width}\f${height}\f${options}`
+      "App.AddScroller(" + width + "\f" + height + "\f" + options,
     );
     if (ret) {
-        return new Scroller(ret);
-    }else {
-        throw new Error(`Could not create ${this.constructor.name}`);
+      return new Scroller(ret);
+    } else {
+      throw new Error(`Could not create ${this.constructor.name}`);
     }
   }
   addChild(layout: Layout) {
-    prompt(this.id, `Scr.AddChild(\f${(layout ? layout.id : null)}`);
+    prompt(this.id, "Scr.AddChild(\f" + (layout ? layout.id : null));
   }
   destroyChild(layout: Layout) {
-    prompt(this.id, `Scr.DestroyChild(\f${(layout ? layout.id : null)}`);
+    prompt(this.id, "Scr.DestroyChild(\f" + (layout ? layout.id : null));
   }
   getScrollX() {
     return parseFloat(prompt(this.id, "Scr.GetScrollX(") || "");
@@ -41,12 +46,12 @@ export class Scroller extends DSView {
     return parseFloat(prompt(this.id, "Scr.GetScrollY(") || "");
   }
   removeChild(layout: Layout) {
-    prompt(this.id, `Scr.RemoveChild(\f${(layout ? layout.id : null)}`);
+    prompt(this.id, "Scr.RemoveChild(\f" + (layout ? layout.id : null));
   }
   scrollTo(x: number, y: number) {
-    prompt(this.id, `Scr.ScrollTo\f${x}\f${y}`);
+    prompt(this.id, "Scr.ScrollTo\f" + x + "\f" + y);
   }
   scrollBy(x: number, y: number) {
-    prompt(this.id, `Scr.ScrollBy\f${x}\f${y}`);
+    prompt(this.id, "Scr.ScrollBy\f" + x + "\f" + y);
   }
 }

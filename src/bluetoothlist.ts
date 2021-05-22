@@ -10,7 +10,7 @@ export class BluetoothList extends DSObject {
     if (!BluetoothList.instance) {
       const ret = prompt(
         "#",
-        `App.CreateBluetoothList(${filter}`,
+        "App.CreateBluetoothList("+filter
       );
       if (ret) {
         BluetoothList.instance = new BluetoothList(ret);
@@ -21,11 +21,11 @@ export class BluetoothList extends DSObject {
     return BluetoothList.instance;
   }
   setOnTouch(callback: OnTouchCallable) {
-    prompt(this.id, `Btl.SetOnClick(${_Cbm(callback)}`);
+    prompt(this.id, "Btl.SetOnClick("+_Cbm(callback));
     return this;
   }
   setOnTouchEx(callback: OnTouchCallable) {
-    prompt(this.id, `Btl.SetOnClick(${callback}`);
+    prompt(this.id, "Btl.SetOnClick("+callback);
     return this;
   }
 }

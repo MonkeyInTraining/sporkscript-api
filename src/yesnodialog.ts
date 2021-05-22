@@ -8,7 +8,10 @@ export class YesNoDialog extends DSObject {
   }
   public static getInstance(message: string, options?: string): YesNoDialog {
     if (!YesNoDialog.instance) {
-      const ret = prompt("#", `App.CreateYesNoDialog(\f${message}\f${options}`);
+      const ret = prompt(
+        "#",
+        "App.CreateYesNoDialog(\f" + message + "\f" + options,
+      );
       if (ret) {
         YesNoDialog.instance = new YesNoDialog(ret);
       } else {
@@ -25,7 +28,8 @@ export class YesNoDialog extends DSObject {
   ) {
     prompt(
       this.id,
-      `Ynd.AdjustColor(\f${hue}\f${saturation}\f${brightness}\f${contrast}`,
+      "Ynd.AdjustColor(\f" + hue + "\f" + saturation + "\f" + brightness +
+        "\f" + contrast,
     );
   }
   dismiss() {
@@ -35,23 +39,23 @@ export class YesNoDialog extends DSObject {
     prompt(this.id, "Ynd.Hide(");
   }
   setOnTouch(callback: OnTouchCallable) {
-    prompt(this.id, `Ynd.SetOnClick(${_Cbm(callback)}`);
+    prompt(this.id, "Ynd.SetOnClick(" + _Cbm(callback));
     return this;
   }
   setBackColor(color: string, radius?: number) {
-    prompt(this.id, `Ynd.SetBackColor(\f${color}\f${radius}`);
+    prompt(this.id, "Ynd.SetBackColor(\f" + color + "\f" + radius);
     return this;
   }
   setBackground(file: string, options?: string) {
-    prompt(this.id, `Ynd.SetBackground(\f${file}\f${options}`);
+    prompt(this.id, "Ynd.SetBackground(\f" + file + "\f" + options);
     return this;
   }
   setButtonText(yes: string, no: string) {
-    prompt(this.id, `Ynd.SetButtonText(\f${yes}\f${no}`);
+    prompt(this.id, "Ynd.SetButtonText(\f" + yes + "\f" + no);
     return this;
   }
   setSize(width: number, height?: number, options?: string) {
-    prompt(this.id, `Ynd.SetSize(\f${width}\f${height}\f${options}`);
+    prompt(this.id, "Ynd.SetSize(\f" + width + "\f" + height + "\f" + options);
     return this;
   }
   show() {

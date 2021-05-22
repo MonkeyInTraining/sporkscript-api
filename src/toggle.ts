@@ -9,7 +9,8 @@ export class Toggle extends DSView {
   create(text?: string, width?: number, height?: number, options?: string) {
     var ret = prompt(
       "#",
-      `App.CreateToggle(${text}\f${width}\f${height}\f${options}`,
+      "App.CreateToggle(" + text + "\f" + width + "\f" + height + "\f" +
+        options,
     );
     if (ret) {
       return new Toggle(ret);
@@ -18,7 +19,7 @@ export class Toggle extends DSView {
     }
   }
   AddToggle(
-    layout:Layout,
+    layout: Layout,
     text?: string,
     width?: number,
     height?: number,
@@ -26,7 +27,7 @@ export class Toggle extends DSView {
   ) {
     var ret = prompt(
       (layout ? layout.id : undefined),
-      `App.AddToggle(${text}\f${width}\f${height}\f${options}`,
+      "App.AddToggle(" + text + "\f" + width + "\f" + height + "\f" + options,
     );
     if (ret) {
       return new Toggle(ret);
@@ -41,14 +42,14 @@ export class Toggle extends DSView {
     return prompt(this.id, "Tgl.GetText(");
   }
   getTextSize(mode?: string) {
-    return parseFloat(prompt(this.id, `Tgl.GetTextSize(\f${mode}`) || "");
+    return parseFloat(prompt(this.id, "Tgl.GetTextSize(\f" + mode) || "");
   }
   setChecked(checked: boolean) {
-    prompt(this.id, `Tgl.SetChecked(${checked}`);
+    prompt(this.id, "Tgl.SetChecked(" + checked);
     return this;
   }
   setOnTouch(callback: Function) {
-    prompt(this.id, `Tgl.SetOnClick(${_Cbm(callback)}`);
+    prompt(this.id, "Tgl.SetOnClick(" + _Cbm(callback));
     return this;
   }
   setStyle(
@@ -62,20 +63,21 @@ export class Toggle extends DSView {
   ) {
     prompt(
       this.id,
-      `Tgl.SetStyle(\f${color1}\f${color2}\f${radius}\f${strokeColor}\f${strokeWidth}\f${shadow}\f${checkColor}`,
+      "Tgl.SetStyle(\f" + color1 + "\f" + color2 + "\f" + radius + "\f" +
+        strokeColor + "\f" + strokeWidth + "\f" + shadow + "\f" + checkColor,
     );
     return this;
   }
   setText(text: string) {
-    prompt(this.id, `Tgl.SetText(${text}`);
+    prompt(this.id, "Tgl.SetText(" + text);
     return this;
   }
   setTextColor(color: string) {
-    prompt(this.id, `Tgl.SetTextColor(${color}`);
+    prompt(this.id, "Tgl.SetTextColor(" + color);
     return this;
   }
   setTextSize(size: number, mode?: string) {
-    prompt(this.id, `Tgl.SetTextSize(\f${size}\f${mode}`);
+    prompt(this.id, "Tgl.SetTextSize(\f" + size + "\f" + mode);
     return this;
   }
 }

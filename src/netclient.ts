@@ -9,7 +9,7 @@ export class NetClient extends DSObject {
   public static create(type: string) {
     const ret = prompt(
       "#",
-      `App.CreateNetClient(${type}`,
+      `App.CreateNetClient("+type}`,
     );
     if (ret) {
       return new NetClient(ret);
@@ -18,7 +18,7 @@ export class NetClient extends DSObject {
     }
   }
   autoReceive(server: string, port: number, mode?: string) {
-    return prompt(this.id, `Net.AutoReceive(${server}\f${port}\f${mode}`);
+    return prompt(this.id, "Net.AutoReceive("+server+"\f"+port+"\f"+mode);
   }
   clear() {
     prompt(this.id, "Net.Clear(");
@@ -27,13 +27,13 @@ export class NetClient extends DSObject {
     prompt(this.id, "Net.Disconnect(");
   }
   connect(address: string, port: number) {
-    return prompt(this.id, `Net.Connect(${address}\f${port}`) == "true";
+    return prompt(this.id, "Net.Connect("+address+"\f"+port) == "true";
   }
   disconnect() {
     prompt(this.id, "Net.Disconnect(");
   }
   downloadFile(file: string) {
-    return prompt(this.id, `Net.DownloadFile(${file}`);
+    return prompt(this.id, "Net.DownloadFile("+file);
   }
   getBroadcastAddress() {
     return prompt(this.id, "Net.GetBroadcastAddress(");
@@ -45,7 +45,7 @@ export class NetClient extends DSObject {
     return prompt(this.id, "Net.IsEnabled(") === "true";
   }
   receiveBytes(mode: string) {
-    return JSON.parse(prompt(this.id, `Net.ReceiveBytes(\f${mode}`) || "");
+    return JSON.parse(prompt(this.id, "Net.ReceiveBytes(\f"+mode) || "");
   }
   receiveDatagram(
     mode: string,
@@ -55,29 +55,29 @@ export class NetClient extends DSObject {
   ) {
     return prompt(
       this.id,
-      `Net.ReceiveDatagram(\f${mode}\f${port}\f${timeout}\f${options}`,
+      "Net.ReceiveDatagram(\f"+mode+"\f"+port+"\f"+timeout+"\f"+options
     );
   }
   receiveDatagrams(port: number, mode: string, options?: string) {
-    prompt(this.id, `Net.ReceiveDatagrams(\f${port}\f${mode}\f${options}`);
+    prompt(this.id, "Net.ReceiveDatagrams(\f"+port+"\f"+mode+"\f"+options);
   }
   receiveFile(file: string, wait: number) {
-    return prompt(this.id, `Net.ReceiveFile(${file}\f${wait}`);
+    return prompt(this.id, "Net.ReceiveFile("+file+"\f"+wait);
   }
   receiveText(mode: string) {
-    return prompt(this.id, `Net.ReceiveText(${mode}`);
+    return prompt(this.id, "Net.ReceiveText("+mode);
   }
   receiveVideoStream(port: number, image: Image) {
     prompt(
       this.id,
-      `Net.ReceiveVideoStream(\f${port}\f${(image ? image.id : null)}`,
+      "Net.ReceiveVideoStream(\f"+port+"\f"+(image ? image.id : null)
     );
   }
   sendBytes(data: string, mode: string) {
-    prompt(this.id, `Net.SendBytes(\f${data}\f${mode}`);
+    prompt(this.id, "Net.SendBytes(\f"+data+"\f"+mode);
   }
   sendData(text: string, encoding: string) {
-    prompt(this.id, `Net.SendData(\f${text}\f${encoding}`);
+    prompt(this.id, "Net.SendData(\f"+text+"\f"+encoding);
   }
   sendDatagram(
     data: string,
@@ -88,37 +88,37 @@ export class NetClient extends DSObject {
   ) {
     prompt(
       this.id,
-      `Net.SendDatagram(\f${data}\f${mode}\f${address}\f${port}\f${options}`,
+      "Net.SendDatagram(\f"+data+"\f"+mode+"\f"+address+"\f"+port+"\f"+options
     );
   }
   sendText(text: string, mode: string) {
-    prompt(this.id, `Net.SendText(${text}\f${mode}`);
+    prompt(this.id, "Net.SendText("+text+"\f"+mode);
   }
   setDataMode(mode: string) {
-    prompt(this.id, `Net.SetDataMode(\f${mode}`);
+    prompt(this.id, "Net.SetDataMode(\f"+mode);
     return this;
   }
   setOnConnect(callback: Function) {
-    prompt(this.id, `Net.SetOnConnect(${_Cbm(callback)}`);
+    prompt(this.id, "Net.SetOnConnect("+_Cbm(callback));
     return this;
   }
   setOnDownload(callback: Function) {
-    prompt(this.id, `Net.SetOnDownload(${_Cbm(callback)}`);
+    prompt(this.id, "Net.SetOnDownload("+_Cbm(callback));
     return this;
   }
   setOnReceive(callback: Function) {
-    prompt(this.id, `Net.SetOnReceive(${_Cbm(callback)}`);
+    prompt(this.id, "Net.SetOnReceive("+_Cbm(callback));
     return this;
   }
   setSplitMode(mode: string, p2?: string, p3?: string) {
-    prompt(this.id, `Net.SetSplitMode(\f${mode}\f${p2}\f${p3}`);
+    prompt(this.id, "Net.SetSplitMode(\f"+mode+"\f"+p2+"\f"+p3);
     return this;
   }
   setTimeout(secs: number) {
-    prompt(this.id, `Net.SetTimeout(${secs}`);
+    prompt(this.id, "Net.SetTimeout("+secs);
     return this;
   }
   wakeOnLan(ip: string, mac: string) {
-    prompt(this.id, `Net.WakeOnLan(\f${ip}\f${mac}`);
+    prompt(this.id, "Net.WakeOnLan(\f"+ip+"\f"+mac);
   }
 }

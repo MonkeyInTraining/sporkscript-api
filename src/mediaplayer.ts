@@ -8,12 +8,12 @@ export class MediaPlayer extends DSObject {
   public static create() {
     const ret = prompt(
       "#",
-      `App.CreateMediaPlayer(`,
+      "App.CreateMediaPlayer("
     );
     if (ret) {
       return new MediaPlayer(ret);
     } else {
-      throw new Error(`Could not create ${this.constructor.name}`);
+      throw new Error(`Could not create "+this.constructor.name}`);
     }
   }
   close() {
@@ -42,7 +42,7 @@ export class MediaPlayer extends DSObject {
     prompt(this.id, "Aud.Pause(");
   }
   play(from: number) {
-    prompt(this.id, `Aud.Play(\f${from}`);
+    prompt(this.id, "Aud.Play(\f"+from);
   }
   release() {
     prompt(this.id, "Aud.Release(");
@@ -52,30 +52,30 @@ export class MediaPlayer extends DSObject {
     prompt(this.id, "Aud.Stop(");
   }
   seekTo(time: number) {
-    prompt(this.id, `Aud.SeekTo(${time}`);
+    prompt(this.id, "Aud.SeekTo("+time);
   }
   setFile(file: string) {
-    prompt(this.id, `Aud.SetFile(${file}`);
+    prompt(this.id, "Aud.SetFile("+file);
     return this;
   }
   setLooping(loop: boolean) {
-    prompt(this.id, `Aud.SetLooping(\f${loop}`);
+    prompt(this.id, "Aud.SetLooping(\f"+loop);
     return this;
   }
   setVolume(left: number, right: number) {
-    prompt(this.id, `Aud.SetVolume(${left}\f${right}`);
+    prompt(this.id, "Aud.SetVolume("+left+"\f"+right);
     return this;
   }
   setOnReady(callback: Function) {
-    prompt(this.id, `Aud.SetOnReady(${_Cbm(callback)}`);
+    prompt(this.id, "Aud.SetOnReady("+_Cbm(callback));
     return this;
   }
   setOnComplete(callback: Function) {
-    prompt(this.id, `Aud.SetOnComplete(${_Cbm(callback)}`);
+    prompt(this.id, "Aud.SetOnComplete("+_Cbm(callback));
     return this;
   }
   setOnSeekDone(callback: Function) {
-    prompt(this.id, `Aud.SetOnSeekDone(${_Cbm(callback)}`);
+    prompt(this.id, "Aud.SetOnSeekDone("+_Cbm(callback));
     return this;
   }
 }

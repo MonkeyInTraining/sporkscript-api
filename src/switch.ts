@@ -9,7 +9,8 @@ export class Switch extends DSView {
   create(text?: string, width?: number, height?: number, options?: string) {
     const ret = prompt(
       "#",
-      `App.CreateSwitch(${text}\f${width}\f${height}\f${options}`,
+      "App.CreateSwitch(" + text + "\f" + width + "\f" + height + "\f" +
+        options,
     );
     if (ret) {
       return new Switch(ret);
@@ -26,7 +27,7 @@ export class Switch extends DSView {
   ) {
     var ret = prompt(
       (layout ? layout.id : undefined),
-      `App.AddSwitch(${text}\f${width}\f${height}\f${options}`,
+      "App.AddSwitch(" + text + "\f" + width + "\f" + height + "\f" + options,
     );
     if (ret) {
       return new Switch(ret);
@@ -42,7 +43,8 @@ export class Switch extends DSView {
   ) {
     prompt(
       this.id,
-      `Swi.AdjustColor(\f${hue}\f${saturation}\f${brightness}\f${contrast}`,
+      "Swi.AdjustColor(\f" + hue + "\f" + saturation + "\f" + brightness +
+        "\f" + contrast,
     );
   }
   getChecked() {
@@ -52,30 +54,33 @@ export class Switch extends DSView {
     return prompt(this.id, "Swi.GetText(");
   }
   getTextSize(mode?: string) {
-    return parseFloat(prompt(this.id, `Swi.GetTextSize(\f${mode}`) || "");
+    return parseFloat(prompt(this.id, "Swi.GetTextSize(\f" + mode) || "");
   }
   setChecked(checked: boolean) {
-    prompt(this.id, `Swi.SetChecked(${checked}`);
+    prompt(this.id, "Swi.SetChecked(" + checked);
     return this;
   }
   setColorFilter(color: string, mode?: string, options?: string) {
-    prompt(this.id, `Swi.SetColorFilter(\f${color}\f${mode}\f${options}`);
+    prompt(
+      this.id,
+      "Swi.SetColorFilter(\f" + color + "\f" + mode + "\f" + options,
+    );
     return this;
   }
   setOnTouch(callback: Function) {
-    prompt(this.id, `Swi.SetOnTouch(\f${_Cbm(callback)}`);
+    prompt(this.id, "Swi.SetOnTouch(\f" + _Cbm(callback));
     return this;
   }
   setText(text: string) {
-    prompt(this.id, `Swi.SetText(${text}`);
+    prompt(this.id, "Swi.SetText(" + text);
     return this;
   }
   setTextColor(color: string) {
-    prompt(this.id, `Swi.SetTextColor(${color}`);
+    prompt(this.id, "Swi.SetTextColor(" + color);
     return this;
   }
   setTextSize(size: number, mode?: string) {
-    prompt(this.id, `Swi.SetTextSize(\f${size}\f${mode}`);
+    prompt(this.id, "Swi.SetTextSize(\f" + size + "\f" + mode);
     return this;
   }
 }

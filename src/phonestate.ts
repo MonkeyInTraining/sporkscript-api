@@ -12,7 +12,7 @@ export class PhoneState extends DSObject {
     if (!PhoneState.instance) {
       const ret = prompt(
         "#",
-        `App.CreatePhoneState(\f${types}`,
+        "App.CreatePhoneState(\f" + types,
       );
       if (ret) {
         PhoneState.instance = new PhoneState(ret);
@@ -22,8 +22,8 @@ export class PhoneState extends DSObject {
     }
     return PhoneState.instance;
   }
-  setOnChange(callback:Function) {
-    prompt(this.id, `Pst.SetOnChange(${_Cbm(callback)}`);
+  setOnChange(callback: Function) {
+    prompt(this.id, "Pst.SetOnChange(" + _Cbm(callback));
   }
   start() {
     prompt(this.id, "Pst.Start(");

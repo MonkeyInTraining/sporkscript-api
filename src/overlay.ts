@@ -9,20 +9,20 @@ export class Overlay extends DSView {
   addLayout(layout: Layout, left?: number, top?: number, options?: string) {
     prompt(
       this.id,
-      `Ovl.AddLayout(\f${(layout
+      "Ovl.AddLayout(\f"+(layout
         ? layout.id
-        : null)}\f${left}\f${top}\f${options}`,
+        : null)+"\f"+left+"\f"+top+"\f"+options
     );
-  }
+      }
   removeLayout(layout: Layout) {
-    prompt(this.id, `Ovl.RemoveLayout(\f${(layout ? layout.id : null)}`);
+    prompt(this.id, "Ovl.RemoveLayout(\f"+(layout ? layout.id : null));
   }
   setPosition(layout: Layout, left?: number, top?: number, options?: string) {
     prompt(
       this.id,
-      `Ovl.SetPosition(\f${(layout
+      "Ovl.SetPosition(\f"+(layout
         ? layout.id
-        : null)}\f${left}\f${top}\f${options}`,
+        : null)+"\f"+left+"\f"+top+"\f"+options
     );
-  }
-}
+      }
+    }

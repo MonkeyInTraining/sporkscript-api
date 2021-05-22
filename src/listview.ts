@@ -9,6 +9,6 @@ export class ListView extends DSView {
     prompt(this.id, "Lvw.Show(");
   }
   setOnTouch(callback: OnTouchCallable) {
-    prompt(this.id, `Lvw.SetOnClick(${_Cbm(callback)}`);
+    prompt(this.id, "Lvw.SetOnClick("+_Cbm(callback));
   }
 }

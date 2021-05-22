@@ -33,7 +33,7 @@ export class AdView extends DSView {
   ) {
     const ret = prompt(
       (layout ? layout.id : undefined),
-      `App.AddAdView(\f${unitId}\f${testId}\f${width}\f${height}\f${options}`,
+      "App.AddAdView(\f"+unitId+"\f"+testId+"\f"+width+"\f"+height+"\f"+options
     );
     if (ret) {
       return new AdView(ret);
@@ -45,6 +45,6 @@ export class AdView extends DSView {
     prompt(this.id, "Adv.Load(");
   }
   setOnStatus(callback: Function) {
-    prompt(this.id, `Adv.SetOnStatus(\f${_Cbm(callback)}`);
+    prompt(this.id, "Adv.SetOnStatus(\f"+_Cbm(callback));
   }
 }

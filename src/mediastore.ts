@@ -20,34 +20,34 @@ export class MediaStore extends DSObject {
   getAlbumArt(image: Image, id: string, options?: string) {
     return prompt(
       this.id,
-      `Med.GetAlbumArt(\f${(image ? image.id : null)}\f${id}\f${options}`,
+      "Med.GetAlbumArt(\f"+(image ? image.id : null)+"\f"+id+"\f"+options
     ) === "true";
   }
   getSongArt(image: Image, id: string, options?: string) {
     return prompt(
       this.id,
-      `Med.GetSongArt(\f${(image ? image.id : null)}\f${id}\f${options}`,
-    ) == "true";
+      "Med.GetSongArt(\f"+(image ? image.id : null)+"\f"+id+"\f"+options
+    ) === "true";
   }
   queryAlbums(filter: string, sort?: string, options?: string) {
-    prompt(this.id, `Med.QueryAlbums(\f${filter}\f${sort}\f${options}`);
+    prompt(this.id, "Med.QueryAlbums(\f"+filter+"\f"+sort+"\f"+options);
   }
   queryArtists(filter: string, sort?: string, options?: string) {
-    prompt(this.id, `Med.QueryArtists(\f${filter}\f${sort}\f${options}`);
+    prompt(this.id, "Med.QueryArtists(\f"+filter+"\f"+sort+"\f"+options);
   }
   queryMedia(filter: string, sort?: string, options?: string) {
-    prompt(this.id, `Med.QueryMedia(\f${filter}\f${sort}\f${options}`);
+    prompt(this.id, "Med.QueryMedia(\f"+filter+"\f"+sort+"\f"+options);
   }
   setOnAlbumsResult(callback: Function) {
-    prompt(this.id, `Med.SetOnAlbumsResult(\f${_Cbm(callback)}`);
+    prompt(this.id, "Med.SetOnAlbumsResult(\f"+_Cbm(callback));
     return this;
   }
   setOnArtistsResult(callback: Function) {
-    prompt(this.id, `Med.SetOnArtistsResult(\f${_Cbm(callback)}`);
+    prompt(this.id, "Med.SetOnArtistsResult(\f"+_Cbm(callback));
     return this;
   }
   setOnMediaResult(callback: Function) {
-    prompt(this.id, `Med.SetOnMediaResult(\f${_Cbm(callback)}`);
+    prompt(this.id, "Med.SetOnMediaResult(\f"+_Cbm(callback));
     return this;
   }
 }

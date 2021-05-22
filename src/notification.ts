@@ -9,7 +9,7 @@ export class Notification extends DSObject {
   public static create(options: string) {
     const ret = prompt(
       "#",
-      `App.CreateNotification(\f${options}`,
+      `App.CreateNotification(\f"+options}`,
     );
     if (ret) {
       return new Notification(ret);
@@ -18,13 +18,13 @@ export class Notification extends DSObject {
     }
   }
   cancel(id: string) {
-    prompt(this.id, `Not.Cancel(\f${id}`);
+    prompt(this.id, "Not.Cancel(\f" + id);
   }
   listen(options?: string) {
-    prompt(this.id, `Not.Listen(\f${options}`);
+    prompt(this.id, "Not.Listen(\f" + options);
   }
   notify(id: string) {
-    prompt(this.id, `Not.Notify(\f${id}`);
+    prompt(this.id, "Not.Notify(\f" + id);
   }
   setLargeImage(image: Image): this;
   setLargeImage(image: string): this;
@@ -32,21 +32,24 @@ export class Notification extends DSObject {
     if (image.constructor.name === "Image") {
       prompt(
         this.id,
-        `Not.SetLargeImage(\f${(image ? image.id : null)}`,
+        "Not.SetLargeImage(\f" + (image ? image.id : null),
       );
-    } else prompt(this.id, `Not.SetLargeImageFile(\f${image}`);
+    } else prompt(this.id, "Not.SetLargeImageFile(\f" + image);
     return this;
   }
   setLights(color: string, onMs: number, offMs: number) {
-    prompt(this.id, `Not.SetLights(\f${color}\f${onMs}\f${offMs}`);
+    prompt(this.id, "Not.SetLights(\f" + color + "\f" + onMs + "\f" + offMs);
     return this;
   }
   setMessage(ticker: string, title: string, text: string, extra: string) {
-    prompt(this.id, `Not.SetMessage(\f${ticker}\f${title}\f${text}\f${extra}`);
+    prompt(
+      this.id,
+      "Not.SetMessage(\f" + ticker + "\f" + title + "\f" + text + "\f" + extra,
+    );
     return this;
   }
   setOnNotify(callback: Function) {
-    prompt(this.id, `Not.SetOnNotify(\f${_Cbm(callback)}`);
+    prompt(this.id, "Not.SetOnNotify(\f" + _Cbm(callback));
     return this;
   }
   setSmallImage(image: Image): this;
@@ -55,9 +58,9 @@ export class Notification extends DSObject {
     if (image.constructor.name === "Image") {
       prompt(
         this.id,
-        `Not.SetSmallImage(\f${(image ? image.id : null)}`,
+        "Not.SetSmallImage(\f" + (image ? image.id : null),
       );
-    } else prompt(this.id, `Not.SetSmallImageFile(\f${image}`);
+    } else prompt(this.id, "Not.SetSmallImageFile(\f" + image);
     return this;
   }
 }

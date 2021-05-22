@@ -14,7 +14,7 @@ export class CheckBox extends DSView {
   ) {
     var ret = prompt(
       "#",
-      `App.CreateCheckBox(${text}\f${width}\f${height}\f${options}`,
+      "App.CreateCheckBox("+text+"\f"+width+"\f"+height+"\f"+options,
     );
     if (ret) {
       return new CheckBox(ret);
@@ -31,7 +31,7 @@ export class CheckBox extends DSView {
   ) {
     var ret = prompt(
       (layout ? layout.id : undefined),
-      `App.AddCheckBox(${text}\f${width}\f${height}\f${options}`,
+      "App.AddCheckBox("+text+"\f"+width+"\f"+height+"\f"+options,
     );
     if (ret) {
       return new CheckBox(ret);
@@ -48,7 +48,7 @@ export class CheckBox extends DSView {
   ) {
     prompt(
       this.id,
-      `Chk.AdjustColor(\f${hue}\f${saturation}\f${brightness}\f${contrast}`,
+      "Chk.AdjustColor(\f"+hue+"\f"+saturation+"\f"+brightness+"\f"+contrast,
     );
   }
   getChecked() {
@@ -58,30 +58,30 @@ export class CheckBox extends DSView {
     return prompt(this.id, "Chk.GetText(");
   }
   getTextSize(mode?: string) {
-    return parseFloat(prompt(this.id, `Chk.GetTextSize(\f${mode}`) || "");
+    return parseFloat(prompt(this.id, "Chk.GetTextSize(\f"+mode) || "");
   }
   setChecked(checked: boolean) {
-    prompt(this.id, `Chk.SetChecked(${checked}`);
+    prompt(this.id, "Chk.SetChecked("+checked);
     return this;
   }
   setColorFilter(color: string, mode?: string) {
-    prompt(this.id, `Chk.SetColorFilter(\f${color}\f${mode}`);
+    prompt(this.id, "Chk.SetColorFilter(\f"+color+"\f"+mode);
     return this;
   }
   setOnTouch(callback: OnTouchCallable) {
-    prompt(this.id, `Chk.SetOnClick(${_Cbm(callback)}`);
+    prompt(this.id, "Chk.SetOnClick("+_Cbm(callback));
     return this;
   }
   setText(text: string) {
-    prompt(this.id, `Chk.SetText(${text}`);
+    prompt(this.id, "Chk.SetText("+text);
     return this;
   }
   setTextColor(color: string) {
-    prompt(this.id, `Chk.SetTextColor(${color}`);
+    prompt(this.id, "Chk.SetTextColor("+color);
     return this;
   }
   setTextSize(size: number, mode?: string) {
-    prompt(this.id, `Chk.SetTextSize(\f${size}\f${mode}`);
+    prompt(this.id, "Chk.SetTextSize(\f"+size+"\f"+mode);
     return this;
   }
 }

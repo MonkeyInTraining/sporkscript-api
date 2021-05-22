@@ -19,7 +19,8 @@ export class PlayStore extends DSObject {
   GetBillingInfo(prodIDs: string, callback: Function, options?: string) {
     const ret = prompt(
       this.id,
-      `Ply.GetBillingInfo(\f${prodIDs}\f${_Cbm(callback)}\f${options}`,
+      "Ply.GetBillingInfo(\f" + prodIDs + "\f" + _Cbm(callback) + "\f" +
+        options,
     );
   }
   Purchase(
@@ -30,13 +31,14 @@ export class PlayStore extends DSObject {
   ) {
     const ret = prompt(
       this.id,
-      `Ply.Purchase(\f${prodID}\f${token}\f${_Cbm(callback)}\f${options}`,
+      "Ply.Purchase(\f" + prodID + "\f" + token + "\f" + _Cbm(callback) + "\f" +
+        options,
     );
   }
   GetPurchases(callback: Function, options?: string) {
     const ret = prompt(
       this.id,
-      `Ply.GetPurchases(\f${_Cbm(callback)}\f${options}`,
+      "Ply.GetPurchases(\f" + _Cbm(callback) + "\f" + options,
     );
   }
 }

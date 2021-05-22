@@ -19,13 +19,13 @@ export class DSView extends DSObject {
   ) {
     prompt(
       this.id,
-      `Obj.AdjustColor(\f${hue}\f${saturation}\f${brightness}\f${contrast}`,
+      "Obj.AdjustColor(\f"+hue+"\f"+saturation+"\f"+brightness+"\f"+contrast,
     );
   }
   animate(type: string, callback?: (type: string) => void, time?: number) {
     prompt(
       this.id,
-      `Obj.Animate(\f${type}\f${_Cbm(callback)}\f${time}`,
+      "Obj.Animate(\f"+type+"\f"+_Cbm(callback)+"\f"+time,
     );
   }
   clearFocus() {
@@ -45,10 +45,10 @@ export class DSView extends DSObject {
     return prompt(this.id, "Obj.GetVisibility(");
   }
   getWidth(options?: string) {
-    return parseFloat(prompt(this.id, `Obj.GetWidth(\f${options}`) || "");
+    return parseFloat(prompt(this.id, "Obj.GetWidth(\f"+options) || "");
   }
   getHeight(options?: string) {
-    return parseFloat(prompt(this.id, `Obj.GetHeight(\f${options}`) || "");
+    return parseFloat(prompt(this.id, "Obj.GetHeight(\f"+options) || "");
   }
   getAbsWidth() {
     return parseInt(prompt(this.id, "Obj.GetAbsWidth(") || "");
@@ -57,15 +57,15 @@ export class DSView extends DSObject {
     return parseInt(prompt(this.id, "Obj.GetAbsHeight(") || "");
   }
   getLeft(options?: string) {
-    return parseFloat(prompt(this.id, `Obj.GetLeft(\f${options}`) || "");
+    return parseFloat(prompt(this.id, "Obj.GetLeft(\f"+options) || "");
   }
   getTop(options?: string) {
-    return parseFloat(prompt(this.id, `Obj.GetTop(\f"${options}`) || "");
+    return parseFloat(prompt(this.id, "Obj.GetTop(\f"+options) || "");
   }
   getPosition(
     options?: string,
   ): { left: number; top: number; right: number; bottom: number } {
-    return JSON.parse(prompt(this.id, `Obj.GetPosition(\f${options}`) || "");
+    return JSON.parse(prompt(this.id, "Obj.GetPosition(\f"+options) || "");
   }
   gone() {
     prompt(this.id, "Obj.SetVisibility(Gone");
@@ -89,7 +89,7 @@ export class DSView extends DSObject {
   ) {
     return prompt(
       this.id,
-      `Obj.Method(\f${name}\f${types}\f${p1}\f${p2}\f${p3}\f${p4}`,
+      "Obj.Method(\f"+name+"\f"+types+"\f"+p1+"\f"+p2+"\f"+p3+"\f"+p4,
     );
   }
   release() {
@@ -97,11 +97,11 @@ export class DSView extends DSObject {
     _map[this.id] = null;
   }
   setBackAlpha(alpha: number) {
-    prompt(this.id, `Obj.SetBackAlpha(\f${alpha}`);
+    prompt(this.id, "Obj.SetBackAlpha(\f"+alpha);
     return this;
   }
   setBackColor(color: string) {
-    prompt(this.id, `Obj.SetBackColor(\f${color}`);
+    prompt(this.id, "Obj.SetBackColor(\f"+color);
     return this;
   }
   setBackGradient(
@@ -112,7 +112,7 @@ export class DSView extends DSObject {
   ) {
     prompt(
       this.id,
-      `Obj.SetBackGradient(Linear\f${color1}\f${color2}\f${color3}\f${options}\f${null}\f${null}\f${null}`,
+      "Obj.SetBackGradient(Linear\f"+color1+"\f"+color2+"\f"+color3+"\f"+options+"\f"+null+"\f"+null+"\f"+null,
     );
     return this;
   }
@@ -127,24 +127,24 @@ export class DSView extends DSObject {
   ) {
     prompt(
       this.id,
-      `Obj.SetBackGradient(Radial\f${x}\f${y}\f${radius}\f${color1}\f${color2}\f${color3}\f${options}`,
+      "Obj.SetBackGradient(Radial\f"+x+"\f"+y+"\f"+radius+"\f"+color1+"\f"+color2+"\f"+color3+"\f"+options,
     );
     return this;
   }
   setBackground(file: string, options?: string) {
-    prompt(this.id, `Obj.SetBackground(${file}\f${options}`);
+    prompt(this.id, "Obj.SetBackground("+file+"\f"+options);
     return this;
   }
   setColorFilter(color: string, mode?: string) {
-    prompt(this.id, `Obj.SetColorFilter(\f${color}\f${mode}`);
+    prompt(this.id, "Obj.SetColorFilter(\f"+color+"\f"+mode);
     return this;
   }
   setDescription(text: string) {
-    prompt(this.id, `Obj.SetDescription(\f${text}`);
+    prompt(this.id, "Obj.SetDescription(\f"+text);
     return this;
   }
   setEnabled(enable: boolean) {
-    prompt(this.id, `Obj.SetEnabled(\f${enable}`);
+    prompt(this.id, "Obj.SetEnabled(\f"+enable);
     return this;
   }
   setMargins(
@@ -156,7 +156,7 @@ export class DSView extends DSObject {
   ) {
     prompt(
       this.id,
-      `Obj.SetMargins(\f${left}\f${top}\f${right}\f${bottom}\f${mode}`,
+      "Obj.SetMargins(\f"+left+"\f"+top+"\f"+right+"\f"+bottom+"\f"+mode,
     );
     return this;
   }
@@ -169,7 +169,7 @@ export class DSView extends DSObject {
   ) {
     prompt(
       this.id,
-      `Obj.SetPadding(\f${left}\f${top}\f${right}\f${bottom}\f${mode}`,
+      "Obj.SetPadding(\f"+left+"\f"+top+"\f"+right+"\f"+bottom+"\f"+mode,
     );
     return this;
   }
@@ -182,22 +182,22 @@ export class DSView extends DSObject {
   ) {
     prompt(
       this.id,
-      `Obj.SetPosition(\f${left}\f${top}\f${width}\f${height}\f${options}`,
+      "Obj.SetPosition(\f"+left+"\f"+top+"\f"+width+"\f"+height+"\f"+options,
     );
     this._left = left;
     this._top = top;
     return this;
   }
   setScale(x: number, y: number) {
-    prompt(this.id, `Obj.SetScale(\f${x}\f${y}`);
+    prompt(this.id, "Obj.SetScale(\f"+x+"\f"+y);
     return this;
   }
   setSize(width: number, height?: number, options?: string) {
-    prompt(this.id, `Obj.SetSize(\f${width}\f${height}\f${options}`);
+    prompt(this.id, "Obj.SetSize(\f"+width+"\f"+height+"\f"+options);
     return this;
   }
   setVisibility(mode: string) {
-    prompt(this.id, `Obj.SetVisibility(${mode}`);
+    prompt(this.id, "Obj.SetVisibility("+mode);
     return this;
   }
   show() {

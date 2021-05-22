@@ -13,7 +13,7 @@ export class SeekBar extends DSView {
   ) {
     const ret = prompt(
       "#",
-      `App.CreateSeekBar(${width}\f${height}\f${options}`,
+      `App.CreateSeekBar("+width+"\f"+height+"\f"+options}`,
     );
     if (ret) {
       return new SeekBar(ret);
@@ -29,7 +29,7 @@ export class SeekBar extends DSView {
   ) {
     const ret = prompt(
       (layout ? layout.id : undefined),
-      `App.AddSeekBar(${width}\f${height}\f${options}`,
+      "App.AddSeekBar(" + width + "\f" + height + "\f" + options,
     );
     if (ret) {
       return new SeekBar(ret);
@@ -45,34 +45,38 @@ export class SeekBar extends DSView {
   ) {
     prompt(
       this.id,
-      `Skb.AdjustColor(\f${hue}\f${saturation}\f${brightness}\f${contrast}`,
+      "Skb.AdjustColor(\f" + hue + "\f" + saturation + "\f" + brightness +
+        "\f" + contrast,
     );
   }
   getValue() {
     return parseFloat(prompt(this.id, "Skb.GetValue(") || "");
   }
   setColorFilter(color: string, mode?: string, options?: string) {
-    prompt(this.id, `Skb.SetColorFilter(\f${color}\f${mode}\f${options}`);
+    prompt(
+      this.id,
+      "Skb.SetColorFilter(\f" + color + "\f" + mode + "\f" + options,
+    );
     return this;
   }
   setMaxRate(rate: number) {
-    prompt(this.id, `Skb.SetMaxRate(${rate}`);
+    prompt(this.id, "Skb.SetMaxRate(" + rate);
     return this;
   }
   setOnChange(callback: Function) {
-    prompt(this.id, `Skb.SetOnClick(${_Cbm(callback)}`);
+    prompt(this.id, "Skb.SetOnClick(" + _Cbm(callback));
     return this;
   }
   setOnTouch(callback: OnTouchCallable) {
-    prompt(this.id, `Skb.SetOnClick(${_Cbm(callback)}`);
+    prompt(this.id, "Skb.SetOnClick(" + _Cbm(callback));
     return this;
   }
   setValue(value: number) {
-    prompt(this.id, `Skb.SetValue(${value}`);
+    prompt(this.id, "Skb.SetValue(" + value);
     return this;
   }
   setRange(range: number) {
-    prompt(this.id, `Skb.SetRange(${range}`);
+    prompt(this.id, "Skb.SetRange(" + range);
     return this;
   }
 }

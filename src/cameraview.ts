@@ -26,7 +26,7 @@ export class CameraView extends DSView {
   ) {
     var ret = prompt(
       (layout ? layout.id : undefined),
-      `App.AddCameraView(${width}\f${height}\f${options}`,
+      "App.AddCameraView("+width+"\f"+height+"\f"+options,
     );
     if (ret) {
       return new CameraView(ret);
@@ -36,10 +36,10 @@ export class CameraView extends DSView {
   }
 
   autoCapture(path: string, file: string, maxCount: number) {
-    prompt(this.id, `Cam.AutoCapture(${path}\f${file}\f${maxCount}`);
+    prompt(this.id, "Cam.AutoCapture("+path+"\f"+file+"\f"+maxCount);
   }
   findFaces(max: number) {
-    return JSON.parse(prompt(this.id, `Cam.FindFaces(\f${max}`) || "");
+    return JSON.parse(prompt(this.id, "Cam.FindFaces(\f"+max) || "");
   }
   focus() {
     prompt(this.id, "Cam.Focus(");
@@ -71,7 +71,7 @@ export class CameraView extends DSView {
   ) {
     return prompt(
       this.id,
-      `Cam.GetPixelData(\f${format}\f${left}\f${top}\f${width}\f${height}`,
+      "Cam.GetPixelData(\f"+format+"\f"+left+"\f"+top+"\f"+width+"\f"+height,
     );
   }
   getImageWidth() {
@@ -95,13 +95,13 @@ export class CameraView extends DSView {
   ) {
     prompt(
       this.id,
-      `Cam.MotionMosaic(${xtiles}\f${ytiles}\f${sensitivity}\f${minPeriod}\f${(image
+      "Cam.MotionMosaic("+xtiles+"\f"+ytiles+"\f"+sensitivity+"\f"+minPeriod+"\f"+(image
         ? image.id
-        : null)}`,
+        : null),
     );
   }
   record(file: string, seconds: number) {
-    prompt(this.id, `Cam.Record(\f${file}\f${seconds}`);
+    prompt(this.id, "Cam.Record(\f"+file+"\f"+seconds);
   }
   reportColors(
     list: string,
@@ -111,80 +111,80 @@ export class CameraView extends DSView {
   ) {
     prompt(
       this.id,
-      `Cam.ReportColors(\f${list}\f${_Cbm(callback)}\f${sampSize}\f${maxRate}`,
+      "Cam.ReportColors(\f"+list+"\f"+_Cbm(callback)+"\f"+sampSize+"\f"+maxRate,
     );
   }
   setColorEffect(effect: string) {
-    prompt(this.id, `Cam.SetColorEffect(\f${effect}`);
+    prompt(this.id, "Cam.SetColorEffect(\f"+effect);
     return this;
   }
   setDuplicateImage(image1: Image, image2: Image) {
     prompt(
       this.id,
-      `Cam.SetDuplicateImage(\f${(image1 ? image1.id : null)}\f${(image2
+      "Cam.SetDuplicateImage(\f"+(image1 ? image1.id : null)+"\f"+(image2
         ? image2.id
-        : null)}`,
+        : null),
     );
     return this;
   }
   setFlash(onoff: boolean) {
-    prompt(this.id, `Cam.SetFlash(${onoff}`);
+    prompt(this.id, "Cam.SetFlash("+onoff);
     return this;
   }
   setFocusMode(mode: string) {
-    prompt(this.id, `Cam.SetFocusMode(\f${mode}`);
+    prompt(this.id, "Cam.SetFocusMode(\f"+mode);
     return this;
   }
   setOnFocus(callback: Function) {
-    prompt(this.id, `Cam.SetOnFocus\f${_Cbm(callback)}`);
+    prompt(this.id, "Cam.SetOnFocus\f"+_Cbm(callback));
     return this;
   }
   setOnMotion(callback: Function) {
-    prompt(this.id, `Cam.SetOnMotion(${_Cbm(callback)}`);
+    prompt(this.id, "Cam.SetOnMotion("+_Cbm(callback));
     return this;
   }
   setOnPicture(callback: Function) {
-    prompt(this.id, `Cam.SetOnPicture\f${_Cbm(callback)}`);
+    prompt(this.id, "Cam.SetOnPicture\f"+_Cbm(callback));
     return this;
   }
   setOnReady(callback: Function) {
-    prompt(this.id, `Cam.SetOnReady(${_Cbm(callback)}`);
+    prompt(this.id, "Cam.SetOnReady("+_Cbm(callback));
     return this;
   }
   setOrientation(angle: number) {
-    prompt(this.id, `Cam.SetOrientation(\f${angle}`);
+    prompt(this.id, "Cam.SetOrientation(\f"+angle);
     return this;
   }
   setParameter(name: string, value: number | string) {
     if (typeof value === "string") {
-      prompt(this.id, `Cam.SetParam(\f${name}\f${value}`);
+      prompt(this.id, "Cam.SetParam(\f"+name+"\f"+value);
     } else {
-      prompt(this.id, `Cam.SetParamNum(\f${name}\f${value}`);
+      prompt(this.id, "Cam.SetParamNum(\f"+name+"\f"+value);
     }
     return this;
   }
   setPictureSize(width: number, height?: number) {
-    prompt(this.id, `Cam.SetPictureSize(\f${width}\f${height}`);
+    prompt(this.id, "Cam.SetPictureSize(\f"+width+"\f"+height);
     return this;
   }
   setPostRotation(angle: number) {
-    prompt(this.id, `Cam.SetPostRotation(\f${angle}`);
+    prompt(this.id, "Cam.SetPostRotation(\f"+angle);
     return this;
   }
   setPreviewImage(image: Image) {
-    prompt(this.id, `Cam.SetPreviewImage(${(image ? image.id : null)}`);
+    prompt(this.id, "Cam.SetPreviewImage("+(image ? image.id : null));
     return this;
   }
   setSound(onoff: boolean) {
-    prompt(this.id, `Cam.SetSound(${onoff}`);
+    prompt(this.id, "Cam.SetSound("+onoff);
     return this;
   }
   setVideoSize(width: number, height?: number) {
-    prompt(this.id, `Cam.SetVideoSize(\f${width}\f${height}`);
+    prompt(this.id, "Cam.SetVideoSize(\f"+width+"\f"+height);
     return this;
   }
   setZoom(level: number) {
-    prompt(this.id, `Cam.SetZoom(\f${level}`);
+    prompt(this.id, "Cam.SetZoom(\f"+level);
     return this;
   }
   startPreview() {
@@ -197,9 +197,9 @@ export class CameraView extends DSView {
     prompt(this.id, "Cam.StopPreview(");
   }
   stream(ip: string, port: number, quality: string, fps: number, mtu: number) {
-    prompt(this.id, `Cam.Stream(${ip}\f${port}\f${quality}\f${fps}\f${mtu}`);
+    prompt(this.id, "Cam.Stream("+ip+"\f"+port+"\f"+quality+"\f"+fps+"\f"+mtu);
   }
   takePicture(file: string) {
-    prompt(this.id, `Cam.TakePicture(${file}`);
+    prompt(this.id, "Cam.TakePicture("+file);
   }
 }

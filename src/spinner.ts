@@ -9,7 +9,8 @@ export class Spinner extends DSView {
   create(list?: string, width?: number, height?: number, options?: number) {
     var ret = prompt(
       "#",
-      `App.CreateSpinner(${list}\f${width}\f${height}\f${options}`
+      "App.CreateSpinner(" + list + "\f" + width + "\f" + height + "\f" +
+        options,
     );
     if (ret) {
       return new Spinner(ret);
@@ -26,7 +27,7 @@ export class Spinner extends DSView {
   ) {
     var ret = prompt(
       (layout ? layout.id : undefined),
-      `App.AddSpinner(${list}\f${width}\f${height}\f${options}`
+      "App.AddSpinner(" + list + "\f" + width + "\f" + height + "\f" + options,
     );
     if (ret) {
       return new Spinner(ret);
@@ -42,40 +43,41 @@ export class Spinner extends DSView {
   ) {
     prompt(
       this.id,
-      `Spn.AdjustColor(\f${hue}\f${saturation}\f${brightness}\f${contrast}`,
+      "Spn.AdjustColor(\f" + hue + "\f" + saturation + "\f" + brightness +
+        "\f" + contrast,
     );
   }
   getText() {
     return prompt(this.id, "Spn.GetText(");
   }
   getTextSize(mode?: string) {
-    return parseFloat(prompt(this.id, `Spn.GetTextSize(\f${mode}`) || "");
+    return parseFloat(prompt(this.id, "Spn.GetTextSize(\f" + mode) || "");
   }
   selectItem(item: string) {
-    prompt(this.id, `Spn.SetText(${item}`);
+    prompt(this.id, "Spn.SetText(" + item);
   }
   setList(list: string, delimiter?: string) {
-    prompt(this.id, `Spn.SetList(\f${list}\f${delimiter}`);
+    prompt(this.id, "Spn.SetList(\f" + list + "\f" + delimiter);
     return this;
   }
   setOnChange(callback: Function) {
-    prompt(this.id, `Spn.SetOnClick(${_Cbm(callback)}`);
+    prompt(this.id, "Spn.SetOnClick(" + _Cbm(callback));
     return this;
   }
   setOnTouch(callback: OnTouchCallable) {
-    prompt(this.id, `Spn.SetOnClick(${_Cbm(callback)}`);
+    prompt(this.id, "Spn.SetOnClick(" + _Cbm(callback));
     return this;
   }
   setText(text: string) {
-    prompt(this.id, `Spn.SetText(${text}`);
+    prompt(this.id, "Spn.SetText(" + text);
     return this;
   }
   setTextColor(color: string) {
-    prompt(this.id, `Spn.SetTextColor(${color}`);
+    prompt(this.id, "Spn.SetTextColor(" + color);
     return this;
   }
   setTextSize(size: number, mode?: string) {
-    prompt(this.id, `Spn.SetTextSize(\f${size}\f${mode}`);
+    prompt(this.id, "Spn.SetTextSize(\f" + size + "\f" + mode);
     return this;
   }
 }

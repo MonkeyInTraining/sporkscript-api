@@ -14,7 +14,7 @@ export class CodeEdit extends DSView {
   ) {
     var ret = prompt(
       "#",
-      `App.CreateCodeEdit(\f${text}\f${width}\f${height}\f${options}`,
+      "App.CreateCodeEdit(\f"+text+"\f"+width+"\f"+height+"\f"+options,
     );
     if (ret) {
       return new CodeEdit(ret);
@@ -32,7 +32,7 @@ export class CodeEdit extends DSView {
   ) {
     var ret = prompt(
       (layout ? layout.id : undefined),
-      `App.AddCodeEdit(\f${text}\f${width}\f${height}\f${options}`,
+      "App.AddCodeEdit(\f"+text+"\f"+width+"\f"+height+"\f"+options,
     );
     if (ret) {
       return new CodeEdit(ret);
@@ -57,7 +57,7 @@ export class CodeEdit extends DSView {
     return parseInt(prompt(this.id, "Cde.GetCursorPos(") || "");
   }
   getLineStart(line: number) {
-    return parseInt(prompt(this.id, `Cde.GetLineStart(${line}`) || "");
+    return parseInt(prompt(this.id, "Cde.GetLineStart("+line) || "");
   }
   getSelectedText() {
     return prompt(this.id, "Cde.GetSelectedText(");
@@ -75,10 +75,10 @@ export class CodeEdit extends DSView {
     return prompt(this.id, "Cde.GetText(");
   }
   highlightLine(line: number) {
-    prompt(this.id, `Cde.HighlightLine(\f${line}`);
+    prompt(this.id, "Cde.HighlightLine(\f"+line);
   }
   insertText(text: string, start?: number, end?: number) {
-    prompt(this.id, `Cde.InsertText(\f${text}\f${start}`);
+    prompt(this.id, "Cde.InsertText(\f"+text+"\f"+start);
   }
   paste() {
     prompt(this.id, "Cde.Paste(");
@@ -87,7 +87,7 @@ export class CodeEdit extends DSView {
     prompt(this.id, "Cde.Redo(");
   }
   replace(text: string) {
-    prompt(this.id, `Cde.Replace(\f${text}`);
+    prompt(this.id, "Cde.Replace(\f"+text);
   }
   replaceAll(
     text: string,
@@ -97,11 +97,11 @@ export class CodeEdit extends DSView {
   ) {
     prompt(
       this.id,
-      `Cde.ReplaceAll(\f${text}\f${newText}\f${matchCase}\f${wholeWord}`,
+      "Cde.ReplaceAll(\f"+text+"\f"+newText+"\f"+matchCase+"\f"+wholeWord,
     );
   }
   replaceText(text: string, start: number, end: number) {
-    prompt(this.id, `Cde.ReplaceText(\f${text}\f${start}\f${end}`);
+    prompt(this.id, "Cde.ReplaceText(\f"+text+"\f"+start+"\f"+end);
   }
   search(
     text: string,
@@ -111,66 +111,66 @@ export class CodeEdit extends DSView {
   ) {
     prompt(
       this.id,
-      `Cde.Search(\f${text}\f${direction}\f${matchCase}\f${wholeWord}`,
+      "Cde.Search(\f"+text+"\f"+direction+"\f"+matchCase+"\f"+wholeWord,
     );
   }
   selectAll() {
     prompt(this.id, "Cde.SelectAll(");
   }
   setColorScheme(scheme: string) {
-    prompt(this.id, `Cde.SetColorScheme(\f${scheme}`);
+    prompt(this.id, "Cde.SetColorScheme(\f"+scheme);
     return this;
   }
   setCursorPos(position: number) {
-    prompt(this.id, `Cde.SetCursorPos(${position}`);
+    prompt(this.id, "Cde.SetCursorPos("+position);
     return this;
   }
   setHtml(html: string) {
-    prompt(this.id, `Cde.SetText(\f${html}`);
+    prompt(this.id, "Cde.SetText(\f"+html);
     return this;
   }
   setLanguage(ext: string) {
-    prompt(this.id, `Cde.SetLanguage(\f${ext}`);
+    prompt(this.id, "Cde.SetLanguage(\f"+ext);
     return this;
   }
   setNavigationMethod(method: string) {
-    prompt(this.id, `Cde.SetNavigationMethod(\f${method}`);
+    prompt(this.id, "Cde.SetNavigationMethod(\f"+method);
     return this;
   }
   setOnChange(callback: Function) {
-    prompt(this.id, `Cde.SetOnChange(\f${_Cbm(callback)}`);
+    prompt(this.id, "Cde.SetOnChange(\f"+_Cbm(callback));
     return this;
   }
   setOnDoubleTap(callback: Function) {
-    prompt(this.id, `Cde.SetOnDoubleTap(\f${_Cbm(callback)}`);
+    prompt(this.id, "Cde.SetOnDoubleTap(\f"+_Cbm(callback));
     return this;
   }
   setOnKey(callback: Function) {
-    prompt(this.id, `Cde.SetOnKey(\f${_Cbm(callback)}`);
+    prompt(this.id, "Cde.SetOnKey(\f"+_Cbm(callback));
     return this;
   }
   setSelectMode(onOff: boolean) {
-    prompt(this.id, `Cde.SetSelectMode(\f${onOff}`);
+    prompt(this.id, "Cde.SetSelectMode(\f"+onOff);
     return this;
   }
   setSelection(start: number, stop: number) {
-    prompt(this.id, `Cde.SetSelection(\f${start}\f${stop}`);
+    prompt(this.id, "Cde.SetSelection(\f"+start+"\f"+stop);
     return this;
   }
   setText(text: string) {
-    prompt(this.id, `Cde.SetText(\f${text}`);
+    prompt(this.id, "Cde.SetText(\f"+text);
     return this;
   }
   setTextColor(color: string) {
-    prompt(this.id, `Cde.SetTextColor(\f${color}`);
+    prompt(this.id, "Cde.SetTextColor(\f"+color);
     return this;
   }
   setTextSize(size: number, mode?: string) {
-    prompt(this.id, `Cde.SetTextSize(\f${size}\f${mode}`);
+    prompt(this.id, "Cde.SetTextSize(\f"+size+"\f"+mode);
     return this;
   }
   setUseKeyboard(onOff: boolean) {
-    prompt(this.id, `Cde.SetUseKeyboard(\f${onOff}`);
+    prompt(this.id, "Cde.SetUseKeyboard(\f"+onOff);
     return this;
   }
   undo() {

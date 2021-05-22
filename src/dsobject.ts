@@ -25,7 +25,7 @@ export class DSObject {
   ) {
     return prompt(
       this.id,
-      `SObj.Method(\f${name}\f${types}\f${p1}\f${p2}\f${p3}\f${p4}`,
+      "SObj.Method(\f"+name+"\f"+types+"\f"+p1+"\f"+p2+"\f"+p3+"\f"+p4
     );
   }
   release() {
