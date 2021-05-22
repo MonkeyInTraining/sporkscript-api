@@ -49,7 +49,7 @@ export class Api {
   ) {
     var ret = prompt(
       (layout ? layout.id : undefined),
-      `App.AddCanvas(\f${width}\f${height}\f${options}\f${w}\f${h}`,
+      "App.AddCanvas(\f"+width+"\f"+height+"\f"+options+"\f"+w+"\f"+h,
     );
     if (ret) {
       return new Image(ret);
@@ -66,7 +66,7 @@ export class Api {
   ) {
     prompt(
       "#",
-      `App.AddDrawer(\f${layout.id}\f${side}\f${width}\f${grabWidth}`,
+      "App.AddDrawer(\f$"+layout.id+"\f"+side+"\f"+width+"\f"+grabWidth
     );
   }
 
@@ -84,10 +84,10 @@ export class Api {
     options?: string,
     hue?: number,
   ) {
-    prompt("#", `App.Alert(\f${message}\f${title}\f${options}\f${hue}`);
+    prompt("#", "App.Alert(\f"+message+"\f"+title+"\f"+options+"\f"+hue);
   }
   static broadcast(type: string, message: string) {
-    prompt("#", `App.Broadcast(${type}\f${message}`);
+    prompt("#", "App.Broadcast("+type+"\f"+message);
   }
   static broadcastIntent(
     action: string | null,
@@ -99,27 +99,27 @@ export class Api {
   ) {
     prompt(
       "#",
-      `App.BroadcastIntent(\f${action}\f${category}\f${data}\f${type}\f${extras}\f${options}`,
+      "App.BroadcastIntent(\f"+action+"\f"+category+"\f"+data+"\f"+type+"\f"+extras+"\f"+options,
     );
   }
 
   static call(number: string) {
-    prompt("#", `App.Call(\f${number}`);
+    prompt("#", "App.Call(\f"+number);
   }
   static cancelJob() {
     prompt("#", "App.CancelJob(");
   }
   static checkLicense(key: string) {
-    prompt("#", `App.CheckLicense(\f${key}`);
+    prompt("#", "App.CheckLicense(\f"+key);
   }
   static checkPermission(type: string) {
-    return prompt("#", `App.CheckPermission(\f${type}`);
+    return prompt("#", "App.CheckPermission(\f"+type);
   }
   static chooseAccount(callback: Function) {
-    prompt("#", `App.ChooseAccount(\f${_Cbm(callback)}`);
+    prompt("#", "App.ChooseAccount(\f"+_Cbm(callback));
   }
   static chooseContact(type: string, callback: Function) {
-    prompt("#", `App.ChooseContact(\f${type}\f${_Cbm(callback)}`);
+    prompt("#", "App.ChooseContact(\f"+type+"\f"+_Cbm(callback));
   }
   static chooseFile(
     message: string,
@@ -129,26 +129,26 @@ export class Api {
   ) {
     prompt(
       "#",
-      `App.ChooseFile(\f${message}\f${type}\f${_Cbm(callback)}\f${folder}`,
+      "App.ChooseFile(\f"+message+"\f"+type+"\f"+_Cbm(callback)+"\f"+folder,
     );
   }
   static chooseImage(options: string, callback: Function) {
-    prompt("#", `App.ChooseImage(\f${options}\f${_Cbm(callback)}`);
+    prompt("#", "App.ChooseImage(\f"+options+"\f"+_Cbm(callback));
   }
   static clearCookies(session: string) {
-    prompt("#", `App.ClearCookies(\f${session}`);
+    prompt("#", "App.ClearCookies(\f"+session);
   }
   static clearData(file: string) {
-    prompt("#", `App.ClearData(\f${file}`);
+    prompt("#", "App.ClearData(\f"+file);
   }
   static clearValue(name: string, file?: string) {
-    prompt("#", `App.ClearValue(\f${name}\f${file}`);
+    prompt("#", "App.ClearValue(\f"+name+"\f"+file);
   }
   static closeDrawer(side: string) {
-    prompt("#", `App.CloseDrawer(\f${side}`);
+    prompt("#", "App.CloseDrawer(\f"+side);
   }
   static copyFile(source: string, destination: string) {
-    prompt("#", `App.CopyFile(${source}\f${destination}`);
+    prompt("#", "App.CopyFile("+source+"\f"+destination);
   }
   static copyFolder(
     source: string,
@@ -158,7 +158,7 @@ export class Api {
   ) {
     prompt(
       "#",
-      `App.CopyFolder(\f${source}\f${destination}\f${overwrite}\f${filter}`,
+      "App.CopyFolder(\f"+source+"\f"+destination+"\f"+overwrite+"\f"+filter,
     );
   }
   static createDebug() {
@@ -172,30 +172,30 @@ export class Api {
   ) {
     prompt(
       "#",
-      `App.CreateShortcut(\f${name}\f${iconFile}\f${file}\f${options}`,
+      "App.CreateShortcut(\f"+name+"\f"+iconFile+"\f"+file+"\f"+options,
     );
   }
 
   static debug(message: string) {
-    prompt("#", `App.Debug(\f${message}`);
+    prompt("#", "App.Debug(\f"+message);
   }
   static destroyLayout(layout: Layout) {
-    prompt("#", `App.DestroyLayout(${layout.id}`);
+    prompt("#", "App.DestroyLayout("+layout.id);
   }
   static deleteDatabase(name: string) {
-    prompt("#", `App.DeleteDatabase(\f${name}`);
+    prompt("#", "App.DeleteDatabase(\f"+name);
   }
   static deleteFile(file: string) {
-    prompt("#", `App.DeleteFile(${file}`);
+    prompt("#", "App.DeleteFile("+file);
   }
   static deleteFolder(folder: string) {
-    prompt("#", `App.DeleteFolder(${folder}`);
+    prompt("#", "App.DeleteFolder("+folder);
   }
   static disableKeys(keyList: string) {
-    prompt("#", `App.DisableKeys(\f${keyList}`);
+    prompt("#", "App.DisableKeys(\f"+keyList);
   }
   static disableTouch(disable: boolean) {
-    prompt("#", `App.DisableTouch(\f${disable}`);
+    prompt("#", "App.DisableTouch(\f"+disable);
   }
   static discoverBtDevices(
     filter: string,
@@ -204,9 +204,9 @@ export class Api {
   ) {
     prompt(
       "#",
-      `App.DiscoverBtDevices(\f${filter}\f${_Cbm(onFound)}\f${
+      "App.DiscoverBtDevices(\f"+filter+"\f"+_Cbm(onFound)+"\f"+
         _Cbm(onComplete)
-      }`,
+      ,
     );
   }
   static downloadFile(
@@ -218,7 +218,7 @@ export class Api {
   ) {
     prompt(
       "#",
-      `App.DownloadFile(\f${source}\f${destination}\f${title}\f${description}\f${options}`,
+      "App.DownloadFile(\f"+source+"\f"+destination+"\f"+title+"\f"+description+"\f"+options,
     );
   }
 
@@ -226,16 +226,16 @@ export class Api {
     prompt("#", "App.EnableBackKey(" + enable);
   }
   static error(message: string, line?: number, file?: string, quit?: boolean) {
-    prompt("#", `App.Error(\f${message}\f${line}\f${file}\f${quit}`);
+    prompt("#", "App.Error(\f"+message+"\f"+line+"\f"+file+"\f"+quit);
   }
   static execute(js: string) {
-    prompt("#", `App.Execute(${js}`);
+    prompt("#", "App.Execute("+js);
   }
   static exit(kill?: boolean) {
-    prompt("#", `App.Exit(${kill}`);
+    prompt("#", "App.Exit("+kill);
   }
   static extExec(name: string, file: string, args: string, options?: string) {
-    return prompt("#", `App.ExtExec(\f${name}\f${file}\f${args}\f${options}`);
+    return prompt("#", "App.ExtExec(\f"+name+"\f"+file+"\f"+args+"\f"+options);
   }
   static extractAssets(
     source: string,
@@ -245,7 +245,7 @@ export class Api {
   ) {
     prompt(
       "#",
-      `App.ExtractAssets(\f${source}\f${destination}\f${overwrite}\f${options}`,
+      "App.ExtractAssets(\f"+source+"\f"+destination+"\f"+overwrite+"\f"+options,
     );
   }
   static extractPlugins() {
@@ -253,10 +253,10 @@ export class Api {
   }
 
   static folderExists(folder: string) {
-    return prompt("#", `App.FolderExists(${folder}`) === "true";
+    return prompt("#", "App.FolderExists("+folder) === "true";
   }
   static fileExists(file: string) {
-    return prompt("#", `App.FileExists(${file}`) === "true";
+    return prompt("#", "App.FileExists("+file) === "true";
   }
 
   static getAccessibility() {
@@ -285,7 +285,7 @@ export class Api {
     return prompt("#", "App.GetBluetoothName(");
   }
   static getBtProfileState(type: string) {
-    return prompt("#", `App.GetBtProfileState(\f${type}`);
+    return prompt("#", "App.GetBtProfileState(\f"+type);
   }
   static getBuildNum() {
     return parseInt(prompt("#", "App.GetBuildNum(") || "");
@@ -305,13 +305,13 @@ export class Api {
   }
 
   static getData(name: string) {
-    return prompt("#", `App.GetData(\f${name}`);
+    return prompt("#", "App.GetData(\f"+name);
   }
   static getDatabaseFolder() {
     return prompt("#", "App.GetDatabaseFolder(");
   }
   static getDrawerState(side: string) {
-    return prompt("#", `App.GetDrawerState(\f${side}`);
+    return prompt("#", "App.GetDrawerState(\f"+side);
   }
   static getDefaultOrientation() {
     return prompt("#", "App.GetDefaultOrientation(");
@@ -330,22 +330,22 @@ export class Api {
   }
 
   static getEnv(name: string) {
-    return prompt("#", `App.GetEnv(\f${name}`);
+    return prompt("#", "App.GetEnv(\f"+name);
   }
   static getExternalFolder() {
     return prompt("#", "App.GetExternalFolder(");
   }
 
   static getFileDate(file: string) {
-    var d = parseInt(prompt("#", `App.GetFileDate(\f${file}`) || "");
+    var d = parseInt(prompt("#", "App.GetFileDate(\f"+file) || "");
     if (d) return new Date(d);
     else return null;
   }
   static getFileSize(file: string) {
-    return parseInt(prompt("#", `App.GetFileSize(\f${file}`) || "");
+    return parseInt(prompt("#", "App.GetFileSize(\f"+file) || "");
   }
   static getFreeSpace(mode: string) {
-    return parseFloat(prompt("#", `App.GetFreeSpace(\f${mode}`) || "");
+    return parseFloat(prompt("#", "App.GetFreeSpace(\f"+mode) || "");
   }
 
   static getInstalledApps() {
@@ -364,13 +364,13 @@ export class Api {
   }
 
   static getJoystickState(id: string, key: string) {
-    return parseFloat(prompt("#", `App.GetJoyState(\f${id}\f${key}`) || "");
+    return parseFloat(prompt("#", "App.GetJoyState(\f"+id+"\f"+key) || "");
   }
   static getJoystickStates(id: string) {
-    return JSON.parse(prompt("#", `App.GetJoyStates(\f${id}`) || "");
+    return JSON.parse(prompt("#", "App.GetJoyStates(\f"+id) || "");
   }
   static getJoystickName(id: string) {
-    return prompt("#", `App.GetJoyName(\f${id}`);
+    return prompt("#", "App.GetJoyName(\f"+id);
   }
 
   static getKeyboardHeight() {
@@ -408,10 +408,10 @@ export class Api {
     return prompt("#", "App.GetMacAddress(");
   }
   static getMediaFile(appName: string, ext?: string) {
-    return prompt("#", `App.GetMediaFile(\f${appName}\f${ext}`);
+    return prompt("#", "App.GetMediaFile(\f"+appName+"\f"+ext);
   }
   static GetMetadata(file: string, keys: string) {
-    return prompt("#", `App.GetMetadata(\f${file}\f${keys}`);
+    return prompt("#", "App.GetMetadata(\f"+file+"\f"+keys);
   }
   static getMemoryInfo() {
     return JSON.parse(prompt("#", "App.GetMemoryInfo(\f") || "");
@@ -450,10 +450,10 @@ export class Api {
     return prompt("#", "App.GetPath(");
   }
   static getPermission(type: string, callback: Function) {
-    prompt("#", `App.GetPermission(\f${type}\f${_Cbm(callback)}`);
+    prompt("#", "App.GetPermission(\f"+type+"\f"+_Cbm(callback));
   }
   static getPrivateFolder(name: string, options?: string) {
-    return prompt("#", `App.GetPrivateFolder(\f${name}\f${options}`);
+    return prompt("#", "App.GetPrivateFolder(\f"+name+"\f"+options);
   }
 
   static getResourceId(name: string, options?: string) {
@@ -481,10 +481,10 @@ export class Api {
     return parseFloat(prompt("#", "App.GetScreenDensity(") || "");
   }
   static getScreenHeight(options?: string) {
-    return parseFloat(prompt("#", `App.GetScreenHeight(\f${options}`) || "");
+    return parseFloat(prompt("#", "App.GetScreenHeight(\f"+options) || "");
   }
   static getScreenWidth(options?: string) {
-    return parseFloat(prompt("#", `App.GetScreenWidth(\f${options}`) || "");
+    return parseFloat(prompt("#", "App.GetScreenWidth(\f"+options) || "");
   }
   static getSharedFiles() {
     var s = prompt("#", "App.GetSharedFiles(") || "";
@@ -492,13 +492,13 @@ export class Api {
     else return null;
   }
   static getSharedText(index: string) {
-    return prompt("#", `App.GetSharedText(${index}`);
+    return prompt("#", "App.GetSharedText("+index);
   }
   static getSpeakerPhone() {
     return prompt("#", "App.GetSpeakerPhone(") === "true";
   }
   static getSpecialFolder(name: string) {
-    return prompt("#", `App.GetSpecialFolder(\f${name}`);
+    return prompt("#", "App.GetSpecialFolder(\f"+name);
   }
   static getSpeechEngines() {
     return JSON.parse(prompt("#", "App.GetSpeechEngines(") || "");
@@ -511,9 +511,9 @@ export class Api {
     return JSON.parse(
       prompt(
         "#",
-        `App.GetTextBounds(\f${text}\f${size}\f${width}\f${(obj
+        "App.GetTextBounds(\f"+text+"\f"+size+"\f"+width+"\f"+(obj
           ? obj.id
-          : null)}`,
+          : null),
       ) || "",
     );
   }
@@ -528,7 +528,7 @@ export class Api {
   ) {
     prompt(
       "#",
-      `App.GetThumbnail(\f${source}\f${destination}\f${width}\f${height}`,
+      "App.GetThumbnail(\f"+source+"\f"+destination+"\f"+width+"\f"+height,
     );
   }
   static getTop() {
@@ -543,7 +543,7 @@ export class Api {
     return parseFloat(prompt("#", "App.GetVersion(") || "");
   }
   static getVolume(stream: string) {
-    return parseFloat(prompt("#", `App.GetVolume(\f${stream}`) || "");
+    return parseFloat(prompt("#", "App.GetVolume(\f"+stream) || "");
   }
 
   static goToSleep() {
@@ -572,9 +572,9 @@ export class Api {
   ) {
     prompt(
       "#",
-      `App.HttpRequest(\f${type}\f${baseUrl}\f${path}\f${params}\f${
+      "App.HttpRequest(\f"+type+"\f"+baseUrl+"\f"+path+"\f"+params+"\f"+
         _Cbm(callback)
-      }\f${headers}`,
+      +"\f"+headers,
     );
   }
 
@@ -582,17 +582,17 @@ export class Api {
     return prompt("#", "App.InIDE(") === "true";
   }
   static installApp(apkFile: string, callback?: Function, options?: string) {
-    prompt("#", `App.InstallApp(\f${apkFile}\f${_Cbm(callback)}\f${options}`);
+    prompt("#", "App.InstallApp(\f"+apkFile+"\f"+_Cbm(callback)+"\f"+options);
   }
   static installWallpaper(packageName: string, className: string) {
-    prompt("#", `App.InstallWallpaper\f${packageName}\f${className}`);
+    prompt("#", "App.InstallWallpaper\f"+packageName+"\f"+className);
   }
 
   static isAPK() {
     return prompt("#", "App.IsAPK(") === "true";
   }
   static isAppInstalled(packageName: string) {
-    return prompt("#", `App.IsAppInstalled(\f${packageName}`) === "true";
+    return prompt("#", "App.IsAppInstalled(\f"+packageName) === "true";
   }
   static isBluetoothEnabled() {
     return prompt("#", "App.IsBluetoothEnabled(") === "true";
@@ -601,7 +601,7 @@ export class Api {
     return prompt("#", "App.IsBluetoothOn(") === "true";
   }
   static isBtDevicePaired(name: string) {
-    return prompt("#", `App.IsBtDevicePaired(\f${name}`) === "true";
+    return prompt("#", "App.IsBtDevicePaired(\f"+name) === "true";
   }
   static isCharging() {
     return prompt("#", "App.IsCharging(") === "true";
@@ -622,13 +622,13 @@ export class Api {
     return prompt("#", "App.IsEngine(") === "true";
   }
   static isFolder(folder: string) {
-    return prompt("#", `App.IsFolder(${folder}`) === "true";
+    return prompt("#", "App.IsFolder("+folder) === "true";
   }
   static isKeyboardShown() {
     return prompt("#", "App.IsKeyboardShown(") === "true";
   }
   static isLocationEnabled(types: string) {
-    return prompt("#", `App.IsLocationEnabled(\f${types}`) === "true";
+    return prompt("#", "App.IsLocationEnabled(\f"+types) === "true";
   }
   static isNavBarOnRight() {
     return prompt("#", "App.IsNavBarOnRight(") === "true";
@@ -668,7 +668,7 @@ export class Api {
   }
 
   static killApp(procId: string) {
-    prompt("#", `App.KillApp(${procId}`);
+    prompt("#", "App.KillApp("+procId);
   }
 
   static launchApp(packageName: string, noPlay?: boolean) {
@@ -712,35 +712,35 @@ export class Api {
     prompt("#", "App.Lock(");
   }
   static lockDrawer(side: string) {
-    prompt("#", `App.LockDrawer(\f${side}`);
+    prompt("#", "App.LockDrawer(\f"+side);
   }
   static makeFolder(folder: string) {
-    prompt("#", `App.MakeFolder(${folder}`);
+    prompt("#", "App.MakeFolder("+folder);
   }
   static openDrawer(side: string) {
-    prompt("#", `App.OpenDrawer(\f${side}`);
+    prompt("#", "App.OpenDrawer(\f"+side);
   }
   static openFile(file: string, type: string, choose: string) {
-    prompt("#", `App.OpenFile(\f${file}\f${type}\f${choose}`);
+    prompt("#", "App.OpenFile(\f"+file+"\f"+type+"\f"+choose);
   }
   static openUrl(url: string, type: string, choose: string) {
-    prompt("#", `App.OpenUrl(\f${url}\f${type}\f${choose}`);
+    prompt("#", "App.OpenUrl(\f"+url+"\f"+type+"\f"+choose);
   }
 
   static pairBtDevice(address: string, callback: Function) {
-    prompt("#", `App.PairBtDevice(\f${address}\f${_Cbm(callback)}`);
+    prompt("#", "App.PairBtDevice(\f"+address+"\f"+_Cbm(callback));
   }
   static path2Uri(path: string) {
-    return prompt("#", `App.Path2Uri(\f${path}`);
+    return prompt("#", "App.Path2Uri(\f"+path);
   }
   static pinScreen(enable: boolean) {
-    prompt("#", `App.PinScreen(\f${enable}`);
+    prompt("#", "App.PinScreen(\f"+enable);
   }
   static playRingtone(type: string) {
-    prompt("#", `App.PlayRingtone(\f${type}`);
+    prompt("#", "App.PlayRingtone(\f"+type);
   }
   static preventScreenLock(mode?: string) {
-    prompt("#", `App.PreventScreenLock(${mode}`);
+    prompt("#", "App.PreventScreenLock("+mode);
   }
   static preventWifiSleep() {
     prompt("#", "App.PreventWifiSleep(");
@@ -756,31 +756,31 @@ export class Api {
     return JSON.parse(
       prompt(
         "#",
-        `App.QueryContent(\f${uri}\f${columns}\f${select}\f${args}\f${sort}`,
+        "App.QueryContent(\f"+uri+"\f"+columns+"\f"+select+"\f"+args+"\f"+sort,
       ) || "",
     );
   }
   static quit(message?: string, title?: string, options?: string) {
-    prompt("#", `App.Quit(\f${message}\f${title}\f${options}`);
+    prompt("#", "App.Quit(\f"+message+"\f"+title+"\f"+options);
   }
 
   static readFile(file: string, encoding: string) {
-    return prompt("#", `App.ReadFile(\f${file}\f${encoding}`);
+    return prompt("#", "App.ReadFile(\f"+file+"\f"+encoding);
   }
   static redirectAssets(dir: string) {
-    prompt("#", `App.RedirectAssets(\f${dir}`);
+    prompt("#", "App.RedirectAssets(\f"+dir);
   }
   static removeDrawer(side: string) {
-    prompt("#", `App.RemoveDrawer(\f${side}`);
+    prompt("#", "App.RemoveDrawer(\f"+side);
   }
   static removeLayout(layout: Layout) {
-    prompt("#", `App.RemoveLayout(${layout.id}`);
+    prompt("#", "App.RemoveLayout("+layout.id);
   }
   static renameFile(source: string, destination: string) {
-    prompt("#", `App.RenameFile(\f${source}\f${destination}`);
+    prompt("#", "App.RenameFile(\f"+source+"\f"+destination);
   }
   static renameFolder(source: string, destination: string) {
-    prompt("#", `App.RenameFile(\f${source}\f${destination}`);
+    prompt("#", "App.RenameFile(\f"+source+"\f"+destination);
   }
   static replaceInFile(
     file: string,
@@ -788,32 +788,32 @@ export class Api {
     rep: string,
     options?: string,
   ) {
-    prompt("#", `App.ReplaceInFile(\f${file}\f${text}\f${rep}\f${options}`);
+    prompt("#", "App.ReplaceInFile(\f"+file+"\f"+text+"\f"+rep+"\f"+options);
   }
 
   static saveText(name: string, value: string, file?: string) {
-    prompt("#", `App.SaveText(${name}\f${value}\f${file}`);
+    prompt("#", "App.SaveText("+name+"\f"+value+"\f"+file);
   }
   static saveNumber(name: string, value: number, file?: string) {
-    prompt("#", `App.SaveNumber(${name}\f${value}\f${file}`);
+    prompt("#", "App.SaveNumber("+name+"\f"+value+"\f"+file);
   }
   static saveBoolean(name: string, value: boolean, file?: string) {
-    prompt("#", `App.SaveBoolean(${name}\f${value}\f${file}`);
+    prompt("#", "App.SaveBoolean("+name+"\f"+value+"\f"+file);
   }
   static saveCookies() {
     prompt("#", "App.SaveCookies(");
   }
   static scheduleJob(delay: number, options?: string) {
-    prompt("#", `App.ScheduleJob(\f${delay}\f${options}`);
+    prompt("#", "App.ScheduleJob(\f"+delay+"\f"+options);
   }
   static script(file: string) {
     _LoadScriptSync(file);
   }
   static scanFile(file: string) {
-    prompt("#", `App.ScanFile(\f${file}`);
+    prompt("#", "App.ScanFile(\f"+file);
   }
   static screenShot(fileName: string, quality: string) {
-    prompt("#", `App.ScreenShot(\f${fileName}\f${quality}`);
+    prompt("#", "App.ScreenShot(\f"+fileName+"\f"+quality);
   }
   static sendIntent(
     packageName: string | null,
@@ -828,13 +828,13 @@ export class Api {
   ) {
     prompt(
       "#",
-      `App.SendIntent(\f${packageName}\f${className}\f${action}\f${category}\f${uri}\f${type}\f${extras}\f${options}\f${
+      "App.SendIntent(\f"+packageName+"\f"+className+"\f"+action+"\f"+category+"\f"+uri+"\f"+type+"\f"+extras+"\f"+options+"\f"+
         _Cbm(callback)
-      }`,
+      ,
     );
   }
   static sendMessage(message: string) {
-    prompt("#", `App.SendMessage(\f${message}`);
+    prompt("#", "App.SendMessage(\f"+message);
   }
   static sendMail(
     address: string,
@@ -846,7 +846,7 @@ export class Api {
   ) {
     prompt(
       "#",
-      `App.SendMail(\f${address}\f${subject}\f${body}\f${attach}\f${type}\f${options}`,
+      "App.SendMail(\f"+address+"\f"+subject+"\f"+body+"\f"+attach+"\f"+type+"\f"+options,
     );
   }
   static sendFile(
@@ -855,13 +855,13 @@ export class Api {
     text?: string,
     choose?: string,
   ) {
-    prompt("#", `App.SendFile(\f${file}\f${subject}\f${text}\f${choose}`);
+    prompt("#", "App.SendFile(\f"+file+"\f"+subject+"\f"+text+"\f"+choose);
   }
   static sendText(text: string, subject?: string, choose?: string) {
-    prompt("#", `App.SendText(\f${text}\f${subject}\f${choose}`);
+    prompt("#", "App.SendText(\f"+text+"\f"+subject+"\f"+choose);
   }
   static sendImage(file: string, choose: string) {
-    prompt("#", `App.SendImage(\f${file}\f${choose}`);
+    prompt("#", "App.SendImage(\f"+file+"\f"+choose);
   }
   static sendSMS(message: string, number: string) {
     Api.sendIntent(
@@ -889,25 +889,25 @@ export class Api {
     );
   }
   static setAutoBoot(auto: boolean) {
-    prompt("#", `App.SetAutoBoot(\f${auto}`);
+    prompt("#", "App.SetAutoBoot(\f"+auto);
   }
   static setAutoStart(appName: string) {
-    prompt("#", `App.SetAutoStart(\f${appName}`);
+    prompt("#", "App.SetAutoStart(\f"+appName);
   }
   static setAutoWifi(auto: boolean) {
-    prompt("#", `App.SetAutoWifi(\f${auto}`);
+    prompt("#", "App.SetAutoWifi(\f"+auto);
   }
   static setBackColor(color: string) {
-    prompt("#", `App.SetBackColor(\f${color}`);
+    prompt("#", "App.SetBackColor(\f"+color);
   }
   static setBluetoothEnabled(enable: boolean) {
-    prompt("#", `App.SetBluetoothEnabled(\f${enable}`);
+    prompt("#", "App.SetBluetoothEnabled(\f"+enable);
   }
   static setClipboardText(text: string) {
-    prompt("#", `App.SetClipboardText(${text}`);
+    prompt("#", "App.SetClipboardText("+text);
   }
   static setData(name: string, value: string) {
-    prompt("#", `App.SetData(\f${name}\f${value}`);
+    prompt("#", "App.SetData(\f"+name+"\f"+value);
   }
   static setDebug(switches: boolean) {
     prompt("#", "_UseDbg(\f" + switches);
@@ -918,7 +918,7 @@ export class Api {
     _dbg = enable;
   }
   static setDensity(dpi: number) {
-    prompt("#", `App.SetDensity(\f${dpi}`);
+    prompt("#", "App.SetDensity(\f"+dpi);
   }
   static setInBackground() {
     prompt("#", "App.SetInBackground(\f");
@@ -932,17 +932,17 @@ export class Api {
   ) {
     prompt(
       "#",
-      `App.SetInForeground(\f${title}\f${text}\f${largeIcon}\f${smallIcon}\f${importance}`,
+      "App.SetInForeground(\f"+title+"\f"+text+"\f"+largeIcon+"\f"+smallIcon+"\f"+importance,
     );
   }
   static setJoystickOptions(options: string) {
-    prompt("#", `App.SetJoystickOptions(\f${options}`);
+    prompt("#", "App.SetJoystickOptions(\f"+options);
   }
   static setKioskMode(mode: string, enable: boolean, options?: string) {
-    prompt("#", `App.SetKioskMode(\f${mode}\f${enable}\f${options}`);
+    prompt("#", "App.SetKioskMode(\f"+mode+"\f"+enable+"\f"+options);
   }
   static setMenu(list: string, iconPath: string) {
-    prompt("#", `App.SetMenu(${list}\f${iconPath}`);
+    prompt("#", "App.SetMenu("+list+"\f"+iconPath);
   }
   static setMockLocation(
     latitude: number,
@@ -952,35 +952,35 @@ export class Api {
   ) {
     prompt(
       "#",
-      `App.SetMockLocation(\f${latitude}\f${longitude}\f${accuracy}\f${speed}`,
+      "App.SetMockLocation(\f"+latitude+"\f"+longitude+"\f"+accuracy+"\f"+speed,
     );
   }
   static setNavBarColor(color: string) {
-    prompt("#", `App.SetNavBarColor(\f${color}`);
+    prompt("#", "App.SetNavBarColor(\f"+color);
   }
   static setOnBroadcast(callback: Function, action: string) {
-    prompt("#", `App.SetOnBroadcast(\f${_Cbm(callback)}\f${action}`);
+    prompt("#", "App.SetOnBroadcast(\f"+_Cbm(callback)+"\f"+action);
   }
   static setOnDebug(callback: Function) {
-    prompt("#", `App.SetOnDebug(\f${_Cbm(callback)}`);
+    prompt("#", "App.SetOnDebug(\f"+_Cbm(callback));
   }
   static setOnError(callback: Function) {
-    prompt("#", `App.SetOnError(\f${_Cbm(callback)}`);
+    prompt("#", "App.SetOnError(\f"+_Cbm(callback));
   }
   static setOnKey(callback: Function) {
-    prompt("#", `App.SetOnKey(\f${_Cbm(callback)}`);
+    prompt("#", "App.SetOnKey(\f"+_Cbm(callback));
   }
   static setOnShowKeyboard(callback: Function) {
-    prompt("#", `App.SetOnShowKeyboard(\f${_Cbm(callback)}`);
+    prompt("#", "App.SetOnShowKeyboard(\f"+_Cbm(callback));
   }
   static setOnWifiChange(callback: Function) {
-    prompt("#", `App.SetOnWifiChange(\f${_Cbm(callback)}`);
+    prompt("#", "App.SetOnWifiChange(\f"+_Cbm(callback));
   }
   static setOptions(options: string) {
-    prompt("#", `App.SetOptions(\f${options}`);
+    prompt("#", "App.SetOptions(\f"+options);
   }
   static setOrientation(orient: string, callback?: Function) {
-    prompt("#", `App.SetOrientation(\f${orient}\f${_Cbm(callback)}`);
+    prompt("#", "App.SetOrientation(\f"+orient+"\f"+_Cbm(callback));
   }
   static setPosition(
     left: number,
@@ -991,68 +991,68 @@ export class Api {
   ) {
     prompt(
       "#",
-      `App.SetPosition(\f${left}\f${top}\f${width}\f${height}\f${options}`,
+      "App.SetPosition(\f"+left+"\f"+top+"\f"+width+"\f"+height+"\f"+options,
     );
   }
   static setPriority(level: string) {
-    prompt("#", `App.SetPriority(\f${level}`);
+    prompt("#", "App.SetPriority(\f"+level);
   }
   static setRingerMode(mode: string) {
-    prompt("#", `App.SetRingerMode(\f${mode}`);
+    prompt("#", "App.SetRingerMode(\f"+mode);
   }
   static setScreenBrightness(level: number) {
-    prompt("#", `App.SetScreenBrightness(\f${level}`);
+    prompt("#", "App.SetScreenBrightness(\f"+level);
   }
   static setScreenMode(mode: string) {
-    prompt("#", `App.SetScreenMode(\f${mode}`);
+    prompt("#", "App.SetScreenMode(\f"+mode);
   }
   static setSharedApp(name: string) {
-    prompt("#", `App.SetSharedApp(${name}`);
+    prompt("#", "App.SetSharedApp("+name);
   }
   static setSpeakerPhone(on: boolean) {
-    prompt("#", `App.SetSpeakerPhone(\f${on}`);
+    prompt("#", "App.SetSpeakerPhone(\f"+on);
   }
   static setStatusBarColor(color: string) {
-    prompt("#", `App.SetStatusBarColor(\f${color}`);
+    prompt("#", "App.SetStatusBarColor(\f"+color);
   }
   static setTheme(theme: any) {
-    prompt("#", `App.SetTheme(\f${(theme ? theme.id : null)}`);
+    prompt("#", "App.SetTheme(\f"+(theme ? theme.id : null));
   }
   static setTitle(title: string) {
-    prompt("#", `App.SetTitle(${title}`);
+    prompt("#", "App.SetTitle("+title);
   }
   static setUserAgent(agent: string) {
-    prompt("#", `App.SetUserAgent(\f${agent}`);
+    prompt("#", "App.SetUserAgent(\f"+agent);
   }
   static setUserCreds(name: string, password: string) {
-    prompt("#", `App.SetUserCreds(\f${name}\f${password}`);
+    prompt("#", "App.SetUserCreds(\f"+name+"\f"+password);
   }
   static setVolume(stream: string, level: number, options?: string) {
-    prompt("#", `App.SetVolume(\f${stream}\f${level}\f${options}`);
+    prompt("#", "App.SetVolume(\f"+stream+"\f"+level+"\f"+options);
   }
   static setWifiApEnabled(enable: boolean, ssid: string, key?: string) {
-    prompt("#", `App.SetWifiApEnabled(\f${enable}\f${ssid}\f${key}`);
+    prompt("#", "App.SetWifiApEnabled(\f"+enable+"\f"+ssid+"\f"+key);
   }
   static setWifiEnabled(enable: boolean) {
-    prompt("#", `App.SetWifiEnabled(\f${enable}`);
+    prompt("#", "App.SetWifiEnabled(\f"+enable);
   }
   static showDebug(show: boolean) {
-    prompt("#", `App.ShowDebug(${show}`);
+    prompt("#", "App.ShowDebug("+show);
   }
   static showKeyboard(obj: any) {
-    return prompt("#", `App.ShowKeyboard(\f${obj.id}`) === "true";
+    return prompt("#", "App.ShowKeyboard(\f"+obj.id) === "true";
   }
   static showMenu() {
     prompt("#", "App.ShowMenu(");
   }
   static showPopup(message: string, options?: string) {
-    prompt("#", `App.ShowPopup(${message}\f${options}`);
+    prompt("#", "App.ShowPopup("+message+"\f"+options);
   }
   static showProgress(message: string, options?: string) {
-    prompt("#", `App.ShowProgress(\f${message}\f${options}`);
+    prompt("#", "App.ShowProgress(\f"+message+"\f"+options);
   }
   static showProgressBar(title: string, percent: number, options?: string) {
-    prompt("#", `App.ShowProgressBar(\f${title}\f${percent}\f${options}`);
+    prompt("#", "App.ShowProgressBar(\f"+title+"\f"+percent+"\f"+options);
   }
   static simulateDrag(
     obj: any,
@@ -1065,7 +1065,7 @@ export class Api {
   ) {
     prompt(
       "#",
-      `App.SimulateDrag(\f${obj.id}\f${x1}\f${y1}\f${x2}\f${y2}\f${step}\f${pause}`,
+      "App.SimulateDrag(\f"+obj.id+"\f"+x1+"\f"+y1+"\f"+x2+"\f"+y2+"\f"+step+"\f"+pause,
     );
   }
   static simulateKey(
@@ -1076,7 +1076,7 @@ export class Api {
   ) {
     prompt(
       "#",
-      `App.SimulateKey(\f${obj.id}\f${keyName}\f${modifiers}\f${pause}`,
+      "App.SimulateKey(\f"+obj.id+"\f"+keyName+"\f"+modifiers+"\f"+pause,
     );
   }
   static simulateScroll(
@@ -1090,23 +1090,23 @@ export class Api {
   ) {
     prompt(
       "#",
-      `App.SimulateScroll(\f${obj.id}\f${x}\f${y}\f${dx}\f${dy}\f${count}\f${fling}`,
+      "App.SimulateScroll(\f"+obj.id+"\f"+x+"\f"+y+"\f"+dx+"\f"+dy+"\f"+count+"\f"+fling,
     );
   }
   static simulateTouch(obj: any, x: number, y: number, dir: string) {
-    prompt("#", `App.SimulateTouch(\f${obj.id}\f${x}\f${y}\f${dir}`);
+    prompt("#", "App.SimulateTouch(\f"+obj.id+"\f"+x+"\f"+y+"\f"+dir);
   }
   static startApp(file: string, options?: string, intent?: string) {
-    prompt("#", `App.StartApp(\f${file}\f${options}\f${intent}`);
+    prompt("#", "App.StartApp(\f"+file+"\f"+options+"\f"+intent);
   }
   static startDebugServer() {
     prompt("#", "App.StartDebugServer(");
   }
   static startService(packageName: string, className: string) {
-    prompt("#", `App.StartService(\f${packageName}\f${className}`);
+    prompt("#", "App.StartService(\f"+packageName+"\f"+className);
   }
   static stopApp(name: string) {
-    prompt("#", `App.StopApp(${name}`);
+    prompt("#", "App.StopApp("+name);
   }
   static stopDebugServer() {
     prompt("#", "App.StopDebugServer(");
@@ -1122,7 +1122,7 @@ export class Api {
   ) {
     return prompt(
       "#",
-      `App.SysExec(\f${cmd}\f${options}\f${maxRead}\f${timeout}`,
+      "App.SysExec(\f"+cmd+"\f"+options+"\f"+maxRead+"\f"+timeout,
     );
   }
   static textToSpeech(
@@ -1136,9 +1136,9 @@ export class Api {
   ) {
     prompt(
       "#",
-      `App.TextToSpeech(\f${text}\f${pitch}\f${rate}\f${
+      "App.TextToSpeech(\f"+text+"\f"+pitch+"\f"+rate+"\f"+
         _Cbm(callback)
-      }\f${stream}\f${locale}\f${engine}`,
+      +"\f"+stream+"\f"+locale+"\f"+engine,
     );
   }
   static toBack() {
@@ -1148,23 +1148,23 @@ export class Api {
     prompt("#", "App.ToFront(");
   }
   static translate(cancel: string, ok: string) {
-    prompt("#", `App.Translate(\f${cancel}\f${ok}`);
+    prompt("#", "App.Translate(\f"+cancel+"\f"+ok);
   }
 
   static unlock() {
     prompt("#", "App.Unlock(");
   }
   static unlockDrawer(side: string) {
-    prompt("#", `App.UnlockDrawer(\f${side}`);
+    prompt("#", "App.UnlockDrawer(\f"+side);
   }
   static unpairBtDevice(address: string, callback: Function) {
-    prompt("#", `App.UnpairBtDevice(\f${address}\f${_Cbm(callback)}`);
+    prompt("#", "App.UnpairBtDevice(\f"+address+"\f"+_Cbm(callback));
   }
   static unzipFile(source: string, destination: string) {
-    prompt("#", `App.UnzipFile(\f${source}\f${destination}`);
+    prompt("#", "App.UnzipFile(\f"+source+"\f"+destination);
   }
   static updateProgressBar(percent: number) {
-    prompt("#", `App.UpdateProgressBar(\f${percent}`);
+    prompt("#", "App.UpdateProgressBar(\f"+percent);
   }
   static uploadFile(
     url: string,
@@ -1172,10 +1172,10 @@ export class Api {
     name: string,
     callback: Function,
   ) {
-    prompt("#", `App.UploadFile(\f${url}\f${file}\f${name}\f${_Cbm(callback)}`);
+    prompt("#", "App.UploadFile(\f"+url+"\f"+file+"\f"+name+"\f"+_Cbm(callback));
   }
   static uri2Path(uri: string) {
-    return prompt("#", `App.Uri2Path(\f${uri}`);
+    return prompt("#", "App.Uri2Path(\f"+uri);
   }
 
   static vibrate(pattern: string) {
@@ -1207,10 +1207,10 @@ export class Api {
   }
 
   static zipFile(source: string, destination: string) {
-    prompt("#", `App.ZipFile(\f${source}\f${destination}`);
+    prompt("#", "App.ZipFile(\f"+source+"\f"+destination);
   }
   static zipFolder(source: string, destination: string) {
-    prompt("#", `App.ZipFile(\f${source}\f${destination}`);
+    prompt("#", "App.ZipFile(\f".concat(source,"\f",destination));
   }
   /*
   */
